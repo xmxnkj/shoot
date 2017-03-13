@@ -1,0 +1,114 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+ 
+    <property name="log.base" value="logs" /> 日志路径，这里是相对路径，web项目eclipse下会输出到eclipse的安装目录下，如果部署到linux上的tomcat下，会输出到tomcat/bin目录 下  
+
+	<jmxConfigurator />
+	控制台输出
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d [%thread] [%X{ip}] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="console2" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d [%X{ip}] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	日志文件输出
+	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>
+			${log.base}/wooyee-fanli-seller.log
+		</file>
+		每天生成一个日志文件
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>
+				${log.base}/wooyee-fanli-seller.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>
+				%d [%thread] [%X{ip}] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	日志文件输出
+	<appender name="businessLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>
+			${log.base}/business(wooyee-fanli-seller).log
+		</file>
+		每天生成一个日志文件
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>
+				${log.base}/business(wooyee-fanli-seller).%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		独立的pattern
+		<encoder>
+			<pattern>
+				%d [%thread] [%X{ip}] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="smscodeutilLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>
+			${log.base}/smscodeutil(wooyee-fanli-seller).log
+		</file>
+		每天生成一个日志文件
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>
+				${log.base}/smscodeutil(wooyee-fanli-seller).%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		独立的pattern
+		<encoder>
+			<pattern>
+				%d [%thread] [%X{ip}] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="operateLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>
+			${log.base}/operate(wooyee-fanli-seller).log
+		</file>
+		每天生成一个日志文件
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>
+				${log.base}/operate(wooyee-fanli-seller).%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		独立的pattern
+		<encoder>
+			<pattern>
+				%d [%X{ip}] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="rollingFile" />
+	</root>
+	<logger name="business" level="INFO" additivity="false">
+		<appender-ref ref="console2" />
+		<appender-ref ref="businessLogFile" />
+	</logger>
+	<logger name="operate" level="INFO" additivity="false">
+		<appender-ref ref="console2" />
+		<appender-ref ref="operateLogFile" />
+	</logger>
+	<logger name="com.wooyee.commons.utils.alidayu.SmsCodeUtil" level="INFO" additivity="false">
+		<appender-ref ref="console2" />
+		<appender-ref ref="smscodeutilLogFile" />
+	</logger>
+	
+	
+</configuration> -->

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="per-default" namespace="/" extends="json-default">
+		<interceptors>
+			<!-- 定义拦截器performanceInterceptor -->
+			<interceptor name="performanceInterceptor"
+				class="com.hsit.common.interceptor.PerformanceInterceptor" />
+				<!-- 配置拦截器栈中的拦截器performanceInterceptor和defaultStack按顺序抢劫 -->
+			<interceptor-stack name="masInterceptorStack">
+				<interceptor-ref name="performanceInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 默认使用masInterceptorStack拦截器栈 -->
+		<default-interceptor-ref name="masInterceptorStack" />
+
+		<global-results> 
+			<result name="appException">/WEB-INF/jsp/exceptions/appexception.jsp</result>
+			<result name="sysException">/WEB-INF/jsp/exceptions/sysexception.jsp</result>
+			<result name="weblogin">/WEB-INF/jsp/web/notlogin.jsp</result>
+			<result name="login" type="redirectAction">
+				<param name="actionName">login</param>
+				<param name="namespace">/uac/user</param>
+			</result>
+			<result name="wxauth" type="redirect">
+				https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&amp;redirect_uri=${url}&amp;response_type=code&amp;scope=snsapi_base#wechat_redirect			
+			</result>
+		</global-results>
+
+		<!-- <global-exception-mappings>
+			<exception-mapping result="appException" exception="com.hsit.common.exceptions.StrutsAppException" />
+			<exception-mapping result="appException" exception="java.lang.Exception" />
+		</global-exception-mappings> -->
+
+		<action name="applicationException" class="applicationExceptionAction">
+			<result>/WEB-INF/jsp/exceptions/appexception.jsp</result>
+		</action>
+	</package>
+
+	<include file="com/szit/comment/action/struts-*.xml" />
+	<include file="com/hsit/common/actions/struts-*.xml" />
+	
+	<include file="com/szit/arbitrate/api/log/action/struts-*.xml" />
+	<!-- 路径映射 -->
+	<include file="com/szit/arbitrate/api/client/action/struts-app-client.xml" />
+	<include file="com/szit/arbitrate/api/news/action/struts-app-news.xml" />
+	<include file="com/szit/arbitrate/api/mediation/action/struts-app-mediation.xml" />
+	<include file="com/szit/arbitrate/api/chat/action/struts-app-chat.xml" />
+    <include file="com/szit/arbitrate/api/basisset/action/struts-app-basisset.xml" />
+    <include file="com/szit/arbitrate/client/action/struts-admin-client.xml" />
+    <include file="com/szit/arbitrate/chat/action/struts-admin-chat.xml" />
+    <include file="com/szit/arbitrate/basisset/action/struts-basicset.xml" />
+    <include file="com/szit/arbitrate/mediation/action/struts-admin-mediation.xml" />
+    <include file="com/szit/arbitrate/news/action/struts-admin-news.xml" />
+</struts>
