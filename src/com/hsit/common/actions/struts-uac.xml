@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 用户  -->
+	<package name="performance-uac-user" namespace="/uac/user" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="userAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/list.jsp</result>
+		</action>
+		<action name="roleUser" class="userAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/roleUser.jsp</result>
+		</action>
+		<action name="select" class="userAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/select.jsp</result>
+		</action>
+		<action name="selectactor" class="userAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/selectActor.jsp</result>
+		</action>
+			
+		<action name="listjson" class="userAction" method="getEntityListJson" />
+		
+		<action name="edit" class="userAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/user/form.jsp</result>
+		</action>
+		<action name="save" class="userAction" method="saveJson" />
+		<action name="get" class="userAction" method="getEntityJson" />
+		
+		<action name="delete" class="userAction" method="deleteJson" />
+		<action name="validatename" class="userAction" method="validateNameExist" />
+		<action name="validateaccount" class="userAction" method="validateAccountExist" />
+		
+		<action name="userlogin" class="userAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/login.jsp</result>
+		</action>
+		<action name="logout" class="userAction" method="logout">
+			<result>/WEB-INF/jsp/uac/user/login.jsp</result>
+		</action>
+		<action name="logoutjson" class="userAction" method="logoutjson"/>
+		<action name="login" class="userAction" method="login">
+			<result type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/sys</param>
+			</result>
+			<result name="error">/WEB-INF/jsp/uac/user/login.jsp</result>
+		</action>
+		<action name="loginjson" class="userAction" method="loginJson" />
+		<action name="setpasswd" class="userAction" method="showSetPasswd">
+			<result>/WEB-INF/jsp/uac/user/setpasswd.jsp</result>
+		</action>
+		<action name="savepasswdjson" class="userAction" method="savePasswd" />
+		<action name="saveUserSettingJson" class="userAction" method="saveUserSetting" />
+		<action name="showchangeleader" class="userAction" method="showChangeLeader">
+			<result>/WEB-INF/jsp/uac/user/changeLeader.jsp</result>
+		</action>
+		<action name="changeleaderjson" class="userAction" method="changeLeader" />
+		
+		<action name="showimportuser" class="importUserDataAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/importUser.jsp</result>
+		</action>
+		<action name="importuser" class="importUserDataAction" method="importLeaders">
+			<result>/WEB-INF/jsp/uac/user/importUser.jsp</result>
+		</action>
+		
+		<action name="showUserInfo" class="userAction" method="showUserInfo">
+			<result>/WEB-INF/jsp/uac/user/userInfo.jsp</result>
+		</action>
+		<action name="saveUserInfo" class="userAction" method="saveUserInfoJson" />
+		
+		<action name="showuploadfile" class="userAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/user/uploadFile.jsp</result>
+		</action>
+		<action name="uploadfile" class="userAction" method="upload">
+			<result>/WEB-INF/jsp/uac/user/uploadFileResult.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 部门 -->
+	<package name="performance-uac-department" namespace="/uac/department" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="departmentAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/department/list.jsp</result>
+		</action>	
+		<action name="selectdepartmentactor" class="departmentAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/department/selectDepartmentActor.jsp</result>
+		</action>		
+		<action name="listjson" class="departmentAction" method="getEntityListJson" />
+		<action name="needassessjson" class="departmentAction" method="getAssessDepartmentsJson" />
+		
+		<action name="edit" class="departmentAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/department/form.jsp</result>
+		</action>
+		<action name="save" class="departmentAction" method="saveJson" />
+		<action name="get" class="departmentAction" method="getEntityJson" />
+		
+		<action name="delete" class="departmentAction" method="deleteJson" />
+		<action name="validatename" class="departmentAction" method="validateNameExist" />
+		
+	</package>
+	
+	<!-- 角色  -->
+	<package name="performance-uac-role" namespace="/uac/role" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="roleAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/role/list.jsp</result>
+		</action>		
+		<action name="select" class="roleAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/role/select.jsp</result>
+		</action>		
+		<action name="listjson" class="roleAction" method="getEntityListJson" />
+		<action name="addroleusersjson" class="roleAction" method="addRoleUsersJson" />
+		<action name="deleteroleusersjson" class="roleAction" method="deleteRoleUsersJson" />
+		
+		<action name="edit" class="roleAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/role/form.jsp</result>
+		</action>
+		<action name="save" class="roleAction" method="saveJson" />
+		<action name="get" class="roleAction" method="getEntityJson" />
+		
+		<action name="delete" class="roleAction" method="deleteJson" />
+		<action name="validatename" class="roleAction" method="validateNameExist" />
+	</package>
+	
+	<!-- 职务  -->
+	<package name="performance-uac-position" namespace="/uac/position" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="positionAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/position/list.jsp</result>
+		</action>		
+		<action name="select" class="positionAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/position/select.jsp</result>
+		</action>		
+		<action name="listjson" class="positionAction" method="getEntityListJson" />
+		
+		<action name="edit" class="positionAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/position/form.jsp</result>
+		</action>
+		<action name="save" class="positionAction" method="saveJson" />
+		<action name="get" class="positionAction" method="getEntityJson" />
+		
+		<action name="delete" class="positionAction" method="deleteJson" />
+		<action name="validatename" class="positionAction" method="validateNameExist" />
+	</package>
+	
+	<!-- 职级  -->
+	<package name="performance-uac-positiongrade" namespace="/uac/positiongrade" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="positionGradeAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/positiongrade/list.jsp</result>
+		</action>		
+		<action name="listjson" class="positionGradeAction" method="getEntityListJson" />
+		
+		<action name="edit" class="positionGradeAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/positiongrade/form.jsp</result>
+		</action>
+		<action name="save" class="positionGradeAction" method="saveJson" />
+		<action name="get" class="positionGradeAction" method="getEntityJson" />
+		
+		<action name="delete" class="positionGradeAction" method="deleteJson" />
+		<action name="validatename" class="positionGradeAction" method="validateNameExist" />
+	</package>
+	
+	
+	
+	<!-- 操作类别  -->
+	<package name="performance-uac-operationcategory" namespace="/uac/operationcategory" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="operationCategoryAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/operationCategory/list.jsp</result>
+		</action>		
+		<action name="select" class="operationCategoryAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/operationCategory/select.jsp</result>
+		</action>		
+		<action name="listjson" class="operationCategoryAction" method="getEntityListJson" />
+		
+		<action name="edit" class="operationCategoryAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/operationCategory/form.jsp</result>
+		</action>
+		<action name="save" class="operationCategoryAction" method="saveJson" />
+		<action name="get" class="operationCategoryAction" method="getEntityJson" />
+		
+		<action name="delete" class="operationCategoryAction" method="deleteJson" />
+		<action name="validatename" class="operationCategoryAction" method="validateNameExist" />
+	</package>
+	
+	
+	<!-- 操作  -->
+	<package name="performance-uac-operation" namespace="/uac/operation" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="operationAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/operation/list.jsp</result>
+		</action>		
+		<action name="listjson" class="operationAction" method="getEntityListJson" />
+		
+		<action name="edit" class="operationAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/operation/form.jsp</result>
+		</action>
+		<action name="save" class="operationAction" method="saveJson" />
+		<action name="get" class="operationAction" method="getEntityJson" />
+		
+		<action name="delete" class="operationAction" method="deleteJson" />
+		<action name="validatename" class="operationAction" method="validateNameExist" />
+	</package>
+	
+	<!-- 权限  -->
+	<package name="performance-uac-ace" namespace="/uac/ace" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="aceAction" method="showJsp">
+			<result>/WEB-INF/jsp/uac/ace/list.jsp</result>
+		</action>		
+		<action name="listjson" class="aceAction" method="getEntityListJson" />
+		<action name="saveoperationsjson" class="aceAction" method="saveActorOperationsJson" />
+		
+		<action name="edit" class="aceAction" method="showEditView">
+			<result>/WEB-INF/jsp/uac/ace/form.jsp</result>
+		</action>
+		<action name="save" class="aceAction" method="saveJson" />
+		<action name="get" class="aceAction" method="getEntityJson" />
+		
+		<action name="delete" class="aceAction" method="deleteJson" />
+		<action name="validatename" class="aceAction" method="validateNameExist" />
+	</package>
+	
+ </struts>

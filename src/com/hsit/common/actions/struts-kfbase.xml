@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<!-- ConstSet  -->
+	<package name="performance-kfbase-constset" namespace="/kfbase/constset" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="getsetting" class="constSetAction" method="getSetting" />
+		<action name="savesetting" class="constSetAction" method="saveSetting" />
+		
+	</package>
+	
+	<!-- ObjectFile  -->
+	<package name="performance-kfbase-objectfile" namespace="/kfbase/objectfile" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="download" class="objectFileAction" method="download">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<action name="downloadswf" class="objectFileAction" method="download">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+				<param name="inputName">swfInputStream</param>
+				<param name="contentDisposition">attachment;filename="${swfFileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		
+		<action name="showuploadfile" class="objectFileAction" method="showJsp">
+			<result>/WEB-INF/jsp/kfbase/objectFile/uploadFile.jsp</result>
+		</action>
+		<action name="uploadfile" class="objectFileAction" method="upload">
+			<result>/WEB-INF/jsp/kfbase/objectFile/uploadFileResult.jsp</result>
+		</action>
+		<action name="listjson"  class="objectFileAction" method="getEntityListJson" />
+		<action name="delete" class="objectFileAction" method="deleteJson" />
+	</package>
+	
+	<!-- 自定义属性  -->
+	<package name="performance-kfbase-property" namespace="/kfbase/property" extends="per-default">
+		<global-results>
+			<result name="query" type="redirectAction">
+				<param name="actionName">query</param>
+			</result>
+		</global-results>
+		
+		<action name="list" class="propertyAction" method="showJsp">
+			<result>/WEB-INF/jsp/kfbase/property/list.jsp</result>
+		</action>		
+		<action name="listjson" class="propertyAction" method="getEntityListJson" />
+		
+		<action name="edit" class="propertyAction" method="showEditView">
+			<result>/WEB-INF/jsp/kfbase/property/form.jsp</result>
+		</action>
+		<action name="save" class="propertyAction" method="saveJson" />
+		<action name="get" class="propertyAction" method="getEntityJson" />
+		
+		<action name="delete" class="propertyAction" method="deleteJson" />
+		<action name="validatename" class="propertyAction" method="validateNameExist" />
+	</package>
+	
+ </struts>
