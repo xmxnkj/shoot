@@ -9,7 +9,7 @@ package com.hsit.common.exceptions;
 * @ClassName: WapBizExcetion
 * @Description:Api接口业务异常处理类
 * @author XUJC
-* @date 2017年6月21日 上午10:15:03
+* @date 2017年3月21日 上午10:15:03
 * @UpdateUser:
 * @UpdateDate:   
 * @UpdateRemark:

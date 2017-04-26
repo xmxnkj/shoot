@@ -15,7 +15,7 @@ package com.hsit.common.exceptions;
  * @ClassName: WapErrorException
  * @Description:Api异常错误处理类
  * @author XUJC
- * @date 2017年6月21日 上午10:17:05
+ * @date 2017年3月21日 上午10:17:05
  * @UpdateUser:
  * @UpdateDate:   
  * @UpdateRemark:
