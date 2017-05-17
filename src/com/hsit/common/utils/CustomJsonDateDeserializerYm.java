@@ -12,8 +12,6 @@ import com.hp.hpl.sparta.ParseException;
 
 /**   
  *    
- * 项目名称：XMSZIT-COWELL
- * 项目说明：运动APP项目
  * 类名称：CustomJsonDateDeserializer   
  * 类描述：
  * 事件记录：
