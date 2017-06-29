@@ -2,9 +2,7 @@ package com.szit.neteasecloud.config;
 
 /**
  * 
-* @ProjectName:调解项目app
 * @ClassName: NeteaseCloudConfig
-* @Description:网易云信配置信息
 * @author Administrator
 * @date 2017年5月5日 上午2:41:52
 * @UpdateUser:
