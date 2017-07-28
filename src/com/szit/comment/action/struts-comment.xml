@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 报料 -->
+	<package name="app-report" namespace="/app/report" extends="per-default">
+		<action name="listjson" class="reportAction" method="getEntityListJson" />
+		<action name="saveReport" class="reportAction" method="saveReport" />
+		<action name="getReportDetail" class="reportAction" method="getReportDetail" />
+	</package>
+	
+	<!-- 回复 -->
+	<package name="app-comment" namespace="/app/comment" extends="per-default">
+		<action name="save" class="commentAction" method="saveJson" />
+		<action name="listjson" class="commentAction" method="getEntityListJson" />
+		<action name="hotComments" class="commentAction" method="hotCommentsJson" />
+		<action name="likeComment" class="commentAction" method="likeCommentJson" />
+	</package>
+	<package name="app-appuser" namespace="/app/appUser" extends="per-default">
+		<action name="save" class="appUserAction" method="saveJson" />
+	</package>
+	
+	<!-- 地区-->
+	<package name="app-area" namespace="/app/area" extends="per-default">
+		<action name="listjson" class="areaAction" method="getEntityListJson" />
+	</package>
+	<!-- 栏目 -->
+	<package name="app-category" namespace="/app/category" extends="per-default">
+		<action name="listjson" class="categoryAction" method="getEntityListJson" />
+	</package>
+	<!-- 事件类型 -->
+	<package name="app-eventtype" namespace="/app/eventtype" extends="per-default">
+		<action name="listjson" class="eventTypeAction" method="getEntityListJson" />
+	</package>
+	<!-- 内容类型 -->
+	<package name="app-contenttype" namespace="/app/contenttype" extends="per-default">
+		<action name="listjson" class="contentTypeAction" method="getEntityListJson" />
+	</package>
+
+
+	<!-- 报料 -->
+	<package name="sys-report" namespace="/sys/report" extends="per-default">
+		<action name="save" class="reportAction" method="saveJson" />
+		<action name="delete" class="reportAction" method="deleteJson" />
+		<action name="deletes" class="reportAction" method="deletesJson" />
+		<action name="listjson" class="reportAction" method="getEntityListJson" />
+		<action name="validatename" class="reportAction" method="validateNameExist" />
+		
+		<action name="accept" class="reportAction" method="accept" />
+		<action name="reply" class="reportAction" method="reply" />
+		
+		<action name="delFile" class="reportAction" method="delFile" />
+		
+		<action name="edit" class="reportAction" method="showEditView">
+			<result>/WEB-INF/jsp/sys/report/form.jsp</result>
+		</action>
+		<action name="view" class="reportAction" method="view">
+			<result>/WEB-INF/jsp/sys/report/view.jsp</result>
+		</action>
+		<action name="list" class="reportAction" method="showReport">
+			<result>/WEB-INF/jsp/sys/report/list.jsp</result>
+		</action>
+		<action name="image" class="reportAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/report/image.jsp</result>
+		</action>
+		<action name="video" class="reportAction" method="video">
+			<result>/WEB-INF/jsp/sys/report/video.jsp</result>
+		</action>
+		<action name="audio" class="reportAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/report/audio.jsp</result>
+		</action>
+		
+		<action name="import" class="importDataAction" method="importData" />
+	</package>
+	
+	<!-- 报料回复 -->
+	<package name="sys-reply" namespace="/sys/reply" extends="per-default">
+		<action name="save" class="replyAction" method="saveJson" />
+		<action name="delete" class="replyAction" method="deleteJson" />
+		<action name="deletes" class="replyAction" method="deletesJson" />
+		<action name="listjson" class="replyAction" method="getEntityListJson" />
+		<action name="validatename" class="replyAction" method="validateNameExist" />
+		
+		<action name="edit" class="replyAction" method="showEditView">
+			<result>/WEB-INF/jsp/sys/area/form.jsp</result>
+		</action>
+		<action name="list" class="replyAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/area/list.jsp</result>
+		</action>
+		
+	</package>
+
+
+	<!-- 地区设置 -->
+	<package name="sys-index" namespace="/sys" extends="per-default">
+		<action name="index" class="indexAction" method="index">
+			<result>/WEB-INF/jsp/sys/index.jsp</result>
+		</action>
+		<action name="main" class="indexAction" method="main">
+			<result>/WEB-INF/jsp/sys/mainn.jsp</result>
+		</action>
+		<action name="test" class="indexAction" method="test">
+			<result>/WEB-INF/jsp/sys/mainn.jsp</result>
+		</action>
+	</package>
+
+	<!-- 地区设置 -->
+	<package name="sys-area" namespace="/sys/area" extends="per-default">
+		<action name="save" class="areaAction" method="saveJson" />
+		<action name="delete" class="areaAction" method="deleteJson" />
+		<action name="deletes" class="areaAction" method="deletesJson" />
+		<action name="listjson" class="areaAction" method="getEntityListJson" />
+		<action name="validatename" class="areaAction" method="validateNameExist" />
+		
+		<action name="edit" class="areaAction" method="showEditView">
+			<result>/WEB-INF/jsp/sys/area/form.jsp</result>
+		</action>
+		<action name="list" class="areaAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/area/list.jsp</result>
+		</action>
+		
+	</package>
+	
+	<!-- 栏目设置 -->
+	<package name="sys-category" namespace="/sys/category" extends="per-default">
+		<action name="save" class="categoryAction" method="saveJson" />
+		<action name="delete" class="categoryAction" method="deleteJson" />
+		<action name="deletes" class="categoryAction" method="deletesJson" />
+		<action name="listjson" class="categoryAction" method="getEntityListJson" />
+		<action name="validatename" class="categoryAction" method="validateNameExist" />
+		
+		<action name="edit" class="categoryAction" method="showEditView">
+			<result>/WEB-INF/jsp/sys/category/form.jsp</result>
+		</action>
+		<action name="list" class="categoryAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/category/list.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	<!-- 内容类型设置 -->
+	<package name="sys-contenttype" namespace="/sys/contentType" extends="per-default">
+		<action name="save" class="contentTypeAction" method="saveJson" />
+		<action name="delete" class="contentTypeAction" method="deleteJson" />
+		<action name="deletes" class="contentTypeAction" method="deletesJson" />
+		<action name="listjson" class="contentTypeAction" method="getEntityListJson" />
+		<action name="validatename" class="contentTypeAction" method="validateNameExist" />
+		
+		<action name="edit" class="contentTypeAction" method="showEditView">
+			<result>/WEB-INF/jsp/sys/contentType/form.jsp</result>
+		</action>
+		<action name="list" class="contentTypeAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/contentType/list.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	<!-- 内容类型设置 -->
+	<package name="sys-eventtype" namespace="/sys/eventType" extends="per-default">
+		<action name="save" class="eventTypeAction" method="saveJson" />
+		<action name="delete" class="eventTypeAction" method="deleteJson" />
+		<action name="deletes" class="eventTypeAction" method="deletesJson" />
+		<action name="listjson" class="eventTypeAction" method="getEntityListJson" />
+		<action name="validatename" class="eventTypeAction" method="validateNameExist" />
+		
+		<action name="edit" class="eventTypeAction" method="showEditView">
+			<result>/WEB-INF/jsp/sys/eventType/form.jsp</result>
+		</action>
+		<action name="list" class="eventTypeAction" method="showJsp">
+			<result>/WEB-INF/jsp/sys/eventType/list.jsp</result>
+		</action>
+		
+	</package>
+	
+ </struts>
