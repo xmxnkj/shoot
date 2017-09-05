@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+	
+	<hibernate-mapping package="com.szit.arbitrate.news.entity">
+	<class name="NewsClickLike" table="new_click_like">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+	
+		<property name="newsid" column="NEWS_ID" type="string"/>
+		<property name="likeclientid" column="LIKE_CLIENTID"  type="string"/>
+        <property name="likeip" column="CLICK_IP" type="string"/>
+        <property name="likedatetime" column="LIKE_DATETIME" type="java.util.Date"/>
+        
+	</class>
+</hibernate-mapping>

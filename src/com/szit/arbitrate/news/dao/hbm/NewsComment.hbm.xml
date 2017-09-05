@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+	
+	<hibernate-mapping package="com.szit.arbitrate.news.entity">
+	<class name="NewsComment" table="new_comment">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+		 
+		<property name="newsId" column="NEWS_ID" type="string"/>
+		<property name="commentclientid" column="COMMENT_CLIENT_ID"  type="string"/>
+        <property name="commentip" column="COMMENT_IP" type="string"/>
+
+		<property name="commentcontent" column="COMMENT_CONTENT" type="string"/>
+        <property name="commentdatetime" column="COMMENT_DATE" type="java.util.Date"/>
+		
+		<property name="isRead" column="isRead"/>
+		
+		<property name="ishow" column="IS_SHOW">
+			<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.news.entity.enumvo.NewsCommentIshowEnum</param>
+        		<param name="type">4</param>
+        	</type>
+		</property>
+	</class>
+</hibernate-mapping>
