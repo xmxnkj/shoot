@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+	
+	<hibernate-mapping package="com.szit.arbitrate.news.entity">
+	<class name="NewsHeadInfo" table="new_head_info">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+		<property name="authorName" column="AUTHOR_NAME" type="string"  length="50"/>
+		<property name="articletitle" column="ARTICLE_TITLE"  type="string" length="50"/>
+		<property name="articledatetime" column="ARTICLE_DATETIME" type="java.util.Date" />
+		<property name="likenums" column="LIKE_NUMS" type="java.lang.Integer"/>
+		<property name="commentnums" column="COMMENT_NUMS" type="java.lang.Integer"/>
+		<property name="newsUnit" column="NEWS_UNIT" type="string"/>
+		<property name="simpleDesc" column="SIMPLE_DESC" type="string"/>
+		<property name="newsContent" column="NEWSCON_TENT" length = "16777216"/>
+		<property name="orderdisplay" column="orderdisplay"/>
+		
+		<many-to-one name="momentsResources" class="MomentsResources" column="momentsResources_id" unique="true" lazy="false" cascade="save-update,delete"></many-to-one>
+		
+		<property name="ishow" column="IS_SHOW">
+			<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.news.entity.enumvo.NewsIshowEnum</param>
+        		<param name="type">4</param>
+        	</type>
+		</property>
+        
+	</class>
+</hibernate-mapping>

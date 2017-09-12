@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+	
+	<hibernate-mapping package="com.szit.arbitrate.news.entity">
+	<class name="NewsDetails" table="new_details">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+		<property name="newsId" column="NEWS_ID" type="string"  length="50"/>
+		<property name="newsSeq" column="NEWS_SEQ"  type="java.lang.Integer" length="50"/>
+        <property name="newsContent" column="NEWS_CONTENT" type="text"/>
+        
+        <many-to-one name="momentsResources" class="MomentsResources" column="momentsResources_id" unique="true" lazy="false" cascade="save-update,delete"></many-to-one>
+		
+		
+	</class>
+</hibernate-mapping>
