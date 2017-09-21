@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<decorators defaultdir="/WEB-INF/jsp/templates">
+	<!-- Any urls that are excluded will never be decorated by Sitemesh -->
+	<excludes>
+		<pattern>/workflow/designer/designer.*</pattern>
+		<pattern>/workflow/designer/view.*</pattern>
+		<pattern>/workflow/runtime/flowimage.*</pattern>
+		<pattern>/uac/user/logout.*</pattern>
+		<pattern>/uac/user/login.*</pattern>
+		<pattern>/sys/index*.*</pattern>
+		<pattern>/sys/main*.*</pattern>
+	</excludes>
+
+	<decorator name="wx" page="wx.jsp" webapp="/pub">
+		<pattern>/labour/wx/*</pattern>
+	</decorator>
+	
+	<decorator name="form" page="content.jsp">
+		<pattern>/uac/*</pattern>
+		<pattern>/workflow/*</pattern>
+		<pattern>/kfbase/*</pattern>
+		<pattern>/kfbase/*/*</pattern>
+		<pattern>/logs/*</pattern>
+		<pattern>/sys/*</pattern>
+		<pattern>/admin/*</pattern>
+	</decorator>
+	
+	<decorator name="pub" page="pub.jsp" webapp="/pub">
+		<pattern>/pub/*</pattern>
+	</decorator>
+    <decorator name="web" page="web.jsp" webapp="/web">
+		<pattern>/web/*</pattern>
+	</decorator>
+</decorators>
