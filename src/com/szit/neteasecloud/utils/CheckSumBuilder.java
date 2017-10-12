@@ -4,9 +4,7 @@ import java.security.MessageDigest;
 
 /**
  * 
-* @ProjectName:调解项目app
 * @ClassName: CheckSumBuilder
-* @Description:网易云信工具类
 * @author Administrator
 * @date 2017年5月5日 上午2:50:02
 * @UpdateUser:

@@ -1,0 +1,35 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<package name="admin-news" namespace="/admin/news" extends="per-default">
+		<action name="list" class="newsAction" method="list">
+			<result>/WEB-INF/jsp/admin/news/list.jsp</result>
+		</action>
+		<action name="showEditView" class="newsAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/news/editform.jsp</result>
+		</action>
+		<action name="addPage" class="newsAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/news/addform.jsp</result>
+		</action>
+	</package>
+	
+	<package name="admin-news-MomentsResources" namespace="/admin/news/MomentsResources" extends="per-default">
+		<action name="resourceList" class="momentsResourcesAction" method="list">
+			<result>/WEB-INF/jsp/admin/news/MomentsResources/list.jsp</result>
+		</action>
+		<action name="uploadResources" class="momentsResourcesAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/news/MomentsResources/uploadResources.jsp</result>
+		</action>
+	</package>
+	
+	<package name="admin-news-details" namespace="/admin/news/newsDetails" extends="per-default">
+		<action name="editform" class="newsDetailsAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/news/newsDetails/editform.jsp</result>
+		</action>
+	</package>
+	
+	
+	
+</struts>
