@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="MediationRecord" table="ME_MEDIATION_RECORD">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="caseId" column="CASE_ID" />	
+        <property name="recordContent" column="RECORD_CONTENT" />			<!-- 调解记录 -->
+        
+        <property name="recordTypeEnum" column="RECORD_TYPE_ENUM" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.RecordTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="recordStateEnum" column="RECORD_STATE_ENUM" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.RecordStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="involvedPerson" column="InvolvedPerson_PERSON" />	<!-- 当事人 -->
+        <property name="joinPerson" column="JOIN_PERSON" />					<!-- 参与人 -->
+		<property name="address" column="ADDRESS" />						<!-- 地点-->
+		<property name="recordTime" column="RECORD_TIME" type="java.util.Date"/>	<!-- 地点-->
+	</class>
+</hibernate-mapping>

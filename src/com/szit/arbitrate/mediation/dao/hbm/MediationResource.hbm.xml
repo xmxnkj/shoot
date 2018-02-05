@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="MediationResource" table="ME_MEDIATION_RESOURCE">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="caseId" column="CASE_ID" />
+        <property name="clientName" column="CLIENT_NAME" />
+        <property name="clientImage" column="CLIENT_IMAGE" />
+        <property name="clientId" column="CLIENT_ID" />
+        <property name="resType" column="RES_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.CaseResTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="resseq" column="RESSEQ" />
+        <property name="resuploadfileid" column="RESUPLOADFILE_ID" />
+        <property name="resuploadfilepath" column="RESUPLOADFILE_PATH" />
+        <property name="rescreatedatatime" column="RESCREATE_DATATIME" />
+	</class>
+</hibernate-mapping>

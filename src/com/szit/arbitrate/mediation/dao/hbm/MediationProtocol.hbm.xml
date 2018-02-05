@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="MediationProtocol" table="ME_MEDIATION_PROTOCOL">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="caseId" column="CASE_ID" />
+        <property name="title" column="TITLE" />
+        <property name="serialNumber" column="SERIAL_NUMBER" />
+        <property name="mediatorTel" column="MEDIATOR_TEL" />
+        
+        <property name="applyClientId" column="APPLY_CLIENT_ID" />
+		
+		<property name="gender" column="GENDER" />
+		<property name="identify" column="IDENTIFY" />
+		<property name="identifyName" column="IDENTIFY_NAME" />
+		<property name="tel" column="TEL" />
+		<property name="address" column="ADDRESS" />
+        <property name="birth" column="BIRTH" />
+        <property name="nation" column="NATION" />
+        <property name="profession" column="PROFESSION" />	
+        <property name="partAState" column="PARTA_STATE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="partATime" column="PARTA_TIME" />
+        
+        <property name="content" column="CONTENT" />
+        <property name="controversy" column="CONTROVERSY" />
+        <property name="execute" column="EXECUTE" />
+        <property name="externalDesc" column="EXTERNAL_DESC" />
+        <property name="message" column="MESSAGE" />
+        <property name="finalVersion" column="FINAL_VERSION" />
+        <property name="oralAgree" column="ORAL_AGREE" />
+	</class>
+</hibernate-mapping>

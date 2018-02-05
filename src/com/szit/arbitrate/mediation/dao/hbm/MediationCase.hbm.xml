@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="MediationCase" table="ME_MEDIATION_CASE">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="mediateType" column="MEDIATE_TYPE" />
+        <property name="caseType" column="CASE_TYPE" />
+        <property name="caseExplain" column="CASE_EXPLAIN" />
+        <property name="address" column="ADDRESS" />
+        
+        <property name="difficult" column="DIFFICULT" />
+        <property name="people" column="PEOPLE" />
+        <property name="caseMoney" column="CASE_MONEY" />
+        <property name="protocolForm" column="PROTOCOL_FORM" />
+        <property name="caseSource" column="CASE_SOURCE" />
+        <property name="applyClientId" column="APPLY_CLIENT_ID" />
+        
+        <many-to-one name="applyClient" column="APPLY_CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>	
+			
+        <property name="applyClientName" column="APPLY_CLIENT_NAME" />
+        <property name="applyTime" column="APPLY_TIME" />
+        <property name="acceptProtocol" column="ACCEPT_PROTOCOL" />
+        <property name="mediateTime" column="MEDIATE_TIME" />
+                <property name="mediatorName" column="MEDIATOR_NAME" />
+        
+        
+        
+        <property name="caseState" column="CASE_STATE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.CaseStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="differenceSubject" column="DIFFERENCE_SUBJECT" />
+        <!--  <property name="differenceSubject" column="DIFFERENCE_SUBJECT" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.DifferentSubjects</param>
+        		<param name="type">4</param>
+        	</type>
+        </property> -->
+        <property name="allocationState" column="ALLOCATION_STATE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.CaseAllocationStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="refuseReason" column="REFUSE_REASON" />
+        <property name="failReason" column="FAIL_REASON" />
+       
+        
+        <property name="mediationAgencyId" column="MEDIATION_AGENCY_ID" />
+        <property name="agencyBelongsTo" column="AGENCY_BELONGS_TO" />
+        <property name="agencyClassify" column="AGENCY_CLASSIFY" />
+        
+        <property name="mediatorClientId" column="MEDIATOR_CLIENT_ID" />
+        <many-to-one name="mediatorClient" column="MEDIATOR_CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+			
+		<property name="mediatorInfo" column="MEDIATOR_INFO" />
+		<property name="roomOpen" column="ROOM_OPEN" />
+		
+	</class>
+</hibernate-mapping>

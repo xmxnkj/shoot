@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="MediatorApply" table="ME_MEDIATOR_APPLY">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="applyClientId" column="APPLY_CLIENT_ID" />
+        <many-to-one name="applyClient" column="APPLY_CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+        <property name="applyReason" column="APPLY_REASON" />
+        <property name="applyTime" column="APPLY_TIME" />
+        <property name="applyState" column="APPLY_STATE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.ApplyStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="auditTime" column="AUDIT_TIME" />
+        <property name="notifyMsg" column="NOTIFY_MSG" />
+	</class>
+</hibernate-mapping>
