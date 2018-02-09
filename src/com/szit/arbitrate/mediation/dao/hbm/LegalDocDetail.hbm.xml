@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="LegalDocDetail" table="ME_LEGALDOC_DETAIL">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="legalDocId" column="LEGAL_DOC_ID" />
+        <many-to-one name="legalDoc" column="LEGAL_DOC_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.mediation.entity.LegalDoc" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+			
+        <property name="content" column="CONTENT" />
+        <property name="seq" column="SEQ" />
+	</class>
+</hibernate-mapping>

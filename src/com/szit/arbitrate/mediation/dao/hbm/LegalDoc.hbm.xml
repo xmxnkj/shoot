@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="LegalDoc" table="ME_LEGAL_DOC">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="docType" column="DOC_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.DocTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="classicCase" column="CLASSIC_CASE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.ClassicCaseTypeEnum</param>
+        		<param name="type">12</param>
+        	</type>
+        </property>
+        <property name="mediatorClientId" column="MEDIATOR_CLIENT_ID" />
+        <many-to-one name="mediatorClient" column="MEDIATOR_CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+        <property name="title" column="TITLE" />
+        <property name="image" column="IMAGE" />
+        <property name="publishUnit" column="PUBLISH_UNIT" />
+        <property name="publishTime" column="PUBLISH_TIME" />
+        <property name="docDescription" column="DOC_DESCRIPTION" />
+        <property name="content" column="CONTENT" />
+        <property name="commentCounts" column="COMMENT_COUNTS" />
+        <property name="likeCounts" column="LIKE_COUNTS" />
+        <property name="download" column="DOWNLOAD" />
+        <property name="display" column="DISPLAY" />
+        <property name="filePath" column="FilePath" />
+        <property name="orderdisplay" column="orderdisplay" />
+	</class>
+</hibernate-mapping>

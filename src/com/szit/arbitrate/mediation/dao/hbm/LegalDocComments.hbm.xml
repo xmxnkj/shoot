@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="LegalDocComments" table="ME_LEGALDOC_COMMENTS">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="legalDocId" column="LEGAL_DOC_ID" />
+        <property name="commentsClientId" column="COMMENTS_CLIENT_ID" />
+        <property name="commentsClientName" column="COMMENTS_CLIENT_NAME" />
+        <property name="commentsClientImage" column="COMMENTS_CLIENT_IMAGE" />
+        <property name="commentsContent" column="COMMENTS_CONTENT" />
+        <property name="commentsTime" column="COMMENTS_TIME" />
+        <property name="audit" column="AUDIT" />
+	</class>
+</hibernate-mapping>

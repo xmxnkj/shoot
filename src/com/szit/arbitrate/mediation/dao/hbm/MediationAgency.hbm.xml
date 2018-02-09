@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="MediationAgency" table="ME_MEDIATION_AGENCY">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="agencyType" column="AGENCY_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.AgencyTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="agencyName" column="AGENCY_NAME" />
+        <property name="belongsTo" column="BELONGS_TO" />
+        <property name="agencyClassify" column="AGENCY_CLASSIFY" />
+        <property name="address" column="ADDRESS" />
+        <property name="tel" column="TEL" />
+        <property name="mediationResourceId" column="MEDIATION_RESOURCE_ID" />
+		
+        <property name="managerClientId" column="MANAGER_CLIENT_ID" />
+        <many-to-one name="managerClient" column="MANAGER_CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+        <property name="openOrNot" column="OPEN_OR_NOT" />
+        <property name="lon" column="LON" scale="10"/>
+        <property name="lat" column="LAT" scale="10"/>
+        <property name="lonBaiDu" column="LON_BAIDU" scale="10"/>
+        <property name="latBaiDu" column="LAT_BAIDU" scale="10"/>
+        <property name="description" column="DESCRIPTION" />
+	</class>
+</hibernate-mapping>

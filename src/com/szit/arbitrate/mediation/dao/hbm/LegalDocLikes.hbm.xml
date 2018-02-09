@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.mediation.entity">
+	<class name="LegalDocLikes" table="ME_LEGALDOC_LIKES">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="legalDocId" column="LEGAL_DOC_ID" />
+        <property name="likeClientId" column="LIKE_CLIENT_ID" />
+        <property name="likeClientName" column="LIKE_CLIENT_NAME" />
+        <property name="likeClientImage" column="LIKE_CLIENT_IMAGE" />
+        <property name="likeTime" column="LIKE_TIME" />
+	</class>
+</hibernate-mapping>
