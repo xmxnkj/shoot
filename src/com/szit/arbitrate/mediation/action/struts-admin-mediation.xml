@@ -1,0 +1,80 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<package name="admin-mediation-mediationcase" namespace="/admin/mediation/mediationcase" extends="per-default">
+		<action name="list" class="mediationCaseAction" method="list">
+			<result>/WEB-INF/jsp/admin/mediation/mediationcase/list.jsp</result>
+		</action>
+		<action name="showAddView" class="mediationCaseAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/mediationcase/editform.jsp</result>
+		</action>
+		<action name="showEditView" class="mediationCaseAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/mediationcase/editform.jsp</result>
+		</action>
+	</package>
+
+	<package name="admin-mediation-legaldoc" namespace="/admin/mediation/legaldoc" extends="per-default">
+		<action name="list" class="legalDocAction" method="list">
+			<result>/WEB-INF/jsp/admin/mediation/legaldoc/list.jsp</result>
+		</action>
+		<action name="showAddView" class="legalDocAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/legaldoc/editform.jsp</result>
+		</action>
+		<action name="showEditView" class="legalDocAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/legaldoc/editform.jsp</result>
+		</action>
+		<action name="classiclist" class="legalDocAction" method="list">
+			<result>/WEB-INF/jsp/admin/mediation/classiccase/list.jsp</result>
+		</action>
+		<action name="showClassicCaseAddView" class="legalDocAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/classiccase/editform.jsp</result>
+		</action>
+		<action name="showClassicCaseEditView" class="legalDocAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/classiccase/editform.jsp</result>
+		</action>
+	</package>
+	
+	<package name="admin-mediation-legaldocdetail" namespace="/admin/mediation/legaldocdetail" extends="per-default">
+		<action name="showAddView" class="legalDocDetailAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/legaldoc/docdetaileditform.jsp</result>
+		</action>
+		<action name="showEditView" class="legalDocDetailAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/legaldoc/docdetaileditform.jsp</result>
+		</action>
+	</package>
+	
+	
+	<package name="admin-mediation-mediationagency" namespace="/admin/mediation/mediationagency" extends="per-default">
+		<action name="list" class="mediationAgencyAction" method="list">
+			<result>/WEB-INF/jsp/admin/mediation/mediationagency/list.jsp</result>
+		</action>
+		<action name="showAddView" class="mediationAgencyAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/mediationagency/editform.jsp</result>
+		</action>
+		<action name="showEditView" class="mediationAgencyAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/mediationagency/editform.jsp</result>
+		</action>
+	</package>
+	
+	<package name="admin-mediation-basicdata" namespace="/admin/mediation/basicdata" extends="per-default">
+		<action name="list" class="basicDataAction" method="list">
+			<result>/WEB-INF/jsp/admin/mediation/basicdata/list.jsp</result>
+		</action>
+		<action name="showAddView" class="basicDataAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/basicdata/editform.jsp</result>
+		</action>
+		<action name="showEditView" class="basicDataAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/basicdata/editform.jsp</result>
+		</action>
+		<action name="showDetailAddView" class="basicDataAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/mediation/basicdata/detaileditform.jsp</result>
+		</action>
+		<action name="showDetailEditView" class="basicDataAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/mediation/basicdata/detaileditform.jsp</result>
+		</action>
+	</package>
+	
+	
+</struts>
