@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="content/scripts/jquery-easyui/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+window.onload=function(){
+	$.ajax({
+	     type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/sys/test.shtml' ,
+	    data: {} ,
+	    success: function(){
+	    } ,
+	    dataType: 'json'
+	});
+	
+	var inbo = {"account":"13950087615","passwd":"123456","clienttype":"Mediator",
+			"terminaltype":"IOS","uuid":"445106b724b9ac3813ee9f975a36ba74000c032449d81b279432ead0734263515626"};
+	$.post( 'http://localhost:8080/arbitrate/app/mediation/apic.shtml' ,
+			{code:'wapApiClientController_login',inbo:JSON.stringify(inbo)} );
+};
+function ckbd(){
+	var inbo = {clientid:"41f8bb0c-0172-4ab7-abfc-8857c998bd85",tabindex:0};
+	$.ajax({
+	     type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/app/mediation/apic.shtml' ,
+	    data: {code:'wapApiMediationCaseController_getListByClientIdAndCaseType',inbo:JSON.stringify(inbo)} ,
+	    success: function(){
+	    } ,
+	    dataType: 'json'
+	});
+};
+
+var tc = function (){
+	var inbo = {sendclientid :"41f8bb0c-0172-4ab7-abfc-8857c998bd85",
+			receiveid:"504f039a-3601-4bf6-84c7-314b4d20243d",
+			rectype:"ChatRoom",
+			contenttype:"Text",
+			content:"回家了",
+			caseid:"1bbf6c2b-ccef-462e-9abf-343ebdd53c96"};
+	$.ajax({
+	    type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/app/mediation/apic.shtml',
+	   data: {code:'wapApiChatMessageController_sendMessage',inbo:JSON.stringify(inbo)},
+	   success: function(){
+	   } ,
+	   dataType: 'json'
+	});
+};
+
+function czyhid(){
+	var inbo = {caseid :"a64a4610-7d21-4008-8ba6-ede4f5f7b243" };
+	$.ajax({
+	     type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/app/mediation/apic.shtml' ,
+	    data: {code:'wapApiMediationCaseController_fileToZipByCaseId',inbo:JSON.stringify(inbo)} ,
+	    success: function(){
+	    } ,
+	    dataType: 'json'
+	});
+};
+
+function zxtjs(){
+	var inbo = {clientid :"41f8bb0c-0172-4ab7-abfc-8857c998bd85"
+			,startTime:"2017-10-10",endTime:"",mediationAgencyId:""};
+	$.ajax({
+	     type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/app/mediation/apic.shtml' ,
+	    data: {code:'wapApiMediationCaseController_getCaseDistribution',inbo:JSON.stringify(inbo)} ,
+	    success: function(){
+	    } ,
+	    dataType: 'json'
+	});
+};
+
+function zzcz(){
+	var inbo = {};
+	$.ajax({
+	     type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/app/mediation/apic.shtml' ,
+	    data: {code:'wapApiMediationCaseController_getMediation',inbo:JSON.stringify(inbo)} ,
+	    success: function(){
+	    } ,
+	    dataType: 'json'
+	});
+};
+
+function cxz(){
+	var inbo = {clientid :"1"
+			,caseid:"1079bfcf-131b-4947-bb7d-3ff33db93b53",mediatorid:"0d6d2170-4005-489b-b98a-ba3679dc742b"};
+	$.ajax({
+	     type: 'POST',
+	    url: 'http://localhost:8080/arbitrate/app/mediation/apic.shtml' ,
+	    data: {code:'wapApiMediationCaseController_getDifferentSubjects',inbo:JSON.stringify(inbo)} ,
+	    success: function(){
+	    } ,
+	    dataType: 'json'
+	});
+};
+
+</script>
+</head>
+<body>
+<button onclick="ckbd();">管理员拿不到</button><br/><br/>
+<button onclick="czyhid();">查找用户id</button><br/><br/>
+<button onclick="zxtjs();">在线调解统计</button><br/><br/>
+<button onclick="cxz();">按组织查找</button><br/><br/>
+<button onclick="tc();">退出</button>
+</body>
+</html>
