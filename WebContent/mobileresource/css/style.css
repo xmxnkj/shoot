@@ -1,0 +1,132 @@
+.top-bar{
+	width:100%;
+	height:44px;
+	background:#000000;
+	line-height:44px;
+	text-align:center;
+	position: fixed;
+	color:#FFFFFF;
+	top: 0;
+	}
+.top-bar img {
+	position:absolute;
+	width:10px;
+	left: 10px;
+    top: 12px;
+	}
+.top-bar span{
+	position:absolute;
+	right:10px;
+	top:0px;
+	color:#FFFFFF;
+	}	
+.main-body{
+	padding:0px 20px;
+	box-sizing:border-box;
+	}
+.pay_list_c1 {
+width: 24px;
+height: 18px;
+float: left;
+padding-top: 3px;
+cursor: pointer;
+text-align: center;
+margin-right: 10px;
+background-image:url(../images/inputradio.gif);
+background-repeat: no-repeat;
+background-position: -24px 0;
+}
+.radioclass {
+opacity: 0;
+cursor: pointer;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+filter: alpha(opacity=0);
+}
+.on {
+background-position: 0 0;
+}
+.function{
+	margin-top:20px;
+	}
+.qwee{
+	color:#218546;
+	}
+.function p{
+	color:#000000;
+	font-size:16px;
+	}
+.dddd{
+	color:#000000
+	}
+.legaldoc{
+    padding: 12px 6px 0px 6px;	
+	}
+.title{
+	margin-left: 5px;
+	}
+.title p{
+	font-size:17px;
+	}
+.title-time p{
+	font-size:14px;
+	}
+.title-time{
+	float: right;
+    color: #888888;
+    font-size: 11px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+	}
+.data-img img{
+    width:100%; 	
+	}
+.data-body{
+	margin-top: 10px;
+	}
+.data-body p{
+	font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+	}
+.ovf textarea{
+	width:100%;
+	height:90px;
+	}
+.ovf 
+.piaochecked {
+	width: 20px;
+	height: 20px;
+	float: left;
+	cursor: pointer;
+	margin-right: 10px;
+	text-align: center;
+	background-image:url(../images/checkbox_01.png);
+	background-repeat: no-repeat;
+	background-position: 0 -21px;
+	}
+
+.on_check {
+background-position: 0 0;
+}
+.radioclass {
+opacity: 0;
+cursor: pointer;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+filter: alpha(opacity=0);
+}
+.download{
+	margin: 0 auto;
+    width: 80%;
+    background:#F7A348;
+    margin-top: 8%;
+    margin-bottom:8%;
+    height: 40px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+	}
+.pt44{
+		    padding-top: 44px;
+}

@@ -1,0 +1,164 @@
+* {
+
+    margin   : 0px;
+
+    padding  : 0px;
+
+    border   : 0px;
+
+    outline  : 0px;
+
+ -webkit-box-sizing: border-box; 
+
+    -moz-box-sizing: border-box;
+
+         box-sizing: border-box;
+
+}
+
+*:before,*:after {
+
+  -webkit-box-sizing: border-box;
+
+     -moz-box-sizing: border-box;
+
+          box-sizing: border-box;
+
+}
+
+html {
+
+    width    : 100%;
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+body {
+
+    width      : 100%;
+
+    max-width  : 100%;
+
+    text-align : left;
+
+    font-family: "Microsoft Yahei","sans-serif","Helvetica","Arial","Lucida Grande", "Lucida Sans Unicode", "Verdana"; 
+
+    font-weight: normal;
+
+    font-style : normal;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    display: block;
+
+    color:#333;
+
+}
+
+h1{font-size:0.9rem;font-weight:normal;}
+
+h2{font-size:.85rem;font-weight:normal;}
+
+h3{font-size:.8rem; font-weight:normal;}
+
+h4{font-size:.75rem;font-weight:normal;}
+
+h5{font-size:.7rem;font-weight:normal;}
+
+h6{font-size:.65rem;font-weight:normal;}
+
+ul{list-style: none;}
+
+a {
+
+    color      : rgb(0,0,0);
+
+    text-decoration : none;  
+
+}
+
+a:active,a:hover,a:focus {
+
+  outline: 0;
+
+  text-decoration: none;
+
+}
+
+p {
+	font-family:"微软雅黑";
+    width:100%;
+
+}
+span{
+	font-family:"微软雅黑"
+	}
+button,select,input[type="button"],input[type="reset"],input[type="submit"] {
+
+  cursor: pointer;
+
+}
+
+button,input,select,textarea {
+
+  font-family: inherit;
+
+  font-size  : inherit;
+
+  line-height: inherit;
+
+}
+
+/****************************************
+
+               闁归潧顑嗗┃锟介柛婵嗙Т缁ㄦ彃顕ｉ敓锟�
+****************************************/
+
+#wraper{
+
+    width:100%;
+
+    max-width:640px;
+
+    margin:0px auto;
+
+}
+
+/****************************************
+
+              閻㈩垰鍟惇顒勫冀瀹勬壆纭�
+
+****************************************/
+
+/*
+
+  闁革腹鍟廍6濞寸姰鍎卞鐑藉即缂堢姷绉甸柣妤�墛濠�増绋夐敓锟�闂侇偅淇虹换鍍瞐rgin闁汇劌瀚弻鐔奉嚕韫囨梹闄嶉柟绋挎搐閻ｉ箖宕滆閼垫垿寮伴娑欙骏闁轰礁鐗忓▓锟�
+
+  闂傚浄鎷烽々锔剧磼濞嗗繐缍栭悗鍦嚀閸樻挾妲愰悩鍨暠閻庡湱鎳撳▍鎺撴媴鐠恒劍鏆弔ext-align:center;
+
+*/
+
+.center{
+
+    float:none; 
+
+    margin:0px auto;
+
+}
+.ovf{
+	overflow:hidden
+	}
+.fll{
+	float:left;
+}
+.mgr1{
+	    margin-right: 10px;
+}
+.posire{
+	position: relative;
+	}

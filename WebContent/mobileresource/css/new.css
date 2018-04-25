@@ -1,0 +1,150 @@
+body{
+	background:#EEEEEE
+}
+.header {
+	font-size: 20px;
+    color: #666666;
+    font-family: "SourceHanSansCN-Regular";
+    line-height: 30px;
+    font-weight: bold;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.content {
+    padding: 0px 10px 10px 10px;
+    box-sizing: border-box;
+    width: 100%;
+    background:#fff;
+}
+
+.content p {
+    font-size: 16px;
+    line-height:1.5
+}
+
+.content img {
+    width: 100%!important;
+}
+
+.operate {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: text-bottom;
+}
+.text-daau{
+	width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.operate-user {
+    font-size: 0;
+    margin-top: 10px;
+}
+
+.operate-user img {
+    width: initial;
+    vertical-align: text-bottom;
+}
+
+.operate-user span {
+    font-size: 14px;
+}
+
+.uesr {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.uesr_photo {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50px;
+    float: left;
+}
+
+.uesr_photo img {
+    width: 100%;
+}
+
+.thumbs_up {
+    color: #028ce5;
+}
+
+.comment {
+    color: #b1b1b1;
+}
+
+.discuss {
+    width: 100%;
+    margin-top:20px;
+}
+
+.discuss-user {
+    padding: 10px 10px 10px 10px;
+
+}
+
+.discuss-title {
+	height:30ox;
+	line-height:30px;
+    padding: 0px 10px;
+    border-bottom: #b1b1b1 solid 1px;
+}
+
+.discuss-title p {
+    color: #888888;
+}
+.discuss-title p span{
+    color: #3A3A3A;
+    font-weight: bold;
+}
+
+.discuss-input {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #f4f5f6;
+    border-top: #d8d8d8 solid 1px;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.discuss-input form{
+    width: 100%;
+}
+.discuss-input textarea {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border: #d8d8d8 solid 1px;
+    border-radius: 30px;
+    background: #fff;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 14px;
+    resize: none;
+    overflow: hidden;
+}
+
+.publish {
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    background: #b2b2b2;
+    width: 60px;
+    right: 5%;
+    top: 120px;
+    position: absolute;
+    border-radius: 5px;
+}
