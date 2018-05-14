@@ -1,0 +1,67 @@
+package com.szit.arbitrate.client.entity;
+
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.hsit.common.kfbase.entity.DomainEntity;
+import com.szit.arbitrate.client.entity.enumvo.ThirdPartyEnum;
+
+/**
+ * @ClassName: ClientThirdpartyAccount
+ * @Description: 会员第三方账号实体类
+ * @author yuyb
+ * @date
+ * @UpdateUser:
+ * @UpdateDate:   
+ * @UpdateRemark:
+ * @Copyright: 2017 厦门西牛科技有限公司
+ * @versions:1.0
+ */
+@JsonIgnoreProperties({"name","description","displayOrder","createTime"})
+public class ClientThirdpartyAccount extends DomainEntity{
+	
+	private String clientid;//会员ID 
+	private String thirdprttyid;//第三方账号ID 
+	private String thirdprttyheadimageurl;//第三方账号头像URL
+	private ThirdPartyEnum thirdpartytype;//第三方账号类型 
+	private String thirdpartynickname;//第三方账号昵称 
+	private Date bindingdatetime;//绑定时间
+	
+	public String getClientid() {
+		return clientid;
+	}
+	public void setClientid(String clientid) {
+		this.clientid = clientid;
+	}
+	public String getThirdprttyid() {
+		return thirdprttyid;
+	}
+	public void setThirdprttyid(String thirdprttyid) {
+		this.thirdprttyid = thirdprttyid;
+	}
+	public String getThirdprttyheadimageurl() {
+		return thirdprttyheadimageurl;
+	}
+	public void setThirdprttyheadimageurl(String thirdprttyheadimageurl) {
+		this.thirdprttyheadimageurl = thirdprttyheadimageurl;
+	}
+	public ThirdPartyEnum getThirdpartytype() {
+		return thirdpartytype;
+	}
+	public void setThirdpartytype(ThirdPartyEnum thirdpartytype) {
+		this.thirdpartytype = thirdpartytype;
+	}
+	public String getThirdpartynickname() {
+		return thirdpartynickname;
+	}
+	public void setThirdpartynickname(String thirdpartynickname) {
+		this.thirdpartynickname = thirdpartynickname;
+	}
+	public Date getBindingdatetime() {
+		return bindingdatetime;
+	}
+	public void setBindingdatetime(Date bindingdatetime) {
+		this.bindingdatetime = bindingdatetime;
+	}
+
+}
