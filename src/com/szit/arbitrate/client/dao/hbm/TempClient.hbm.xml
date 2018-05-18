@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="TempClient" table="CL_TEMPCLIENT">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="caseId" column="CASE_ID" />
+			
+        <property name="identifyName" column="IDENTIFY_NAME" />
+        <property name="gender" column="GENDER" />
+        <property name="birth" column="BIRTH" />
+        <property name="nation" column="NATION" />
+        <property name="profession" column="PROFESSION" />
+        <property name="identify" column="IDENTIFY" />
+        <property name="tel" column="TEL" />
+        <property name="address" column="ADDRESS" />
+        <property name="partB" column="PARTB" />
+        <property name="gather" column="GATHER" />
+        
+        <property name="clientId" column="CLIENT_ID" />
+        <property name="sign" column="SIGN" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+	</class>
+</hibernate-mapping>

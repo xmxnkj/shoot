@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="ClientThirdpartyAccount" table="cl_client_thirdparty_account">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+		<property name="clientid" column="CLIENT_ID" type="string"  length="50"/>
+		<property name="thirdprttyid" column="THIRDPRTTY_ID" type="string" length="50"/>
+		<property name="thirdprttyheadimageurl" column="THIRDPRTTY_HEADIMAGE_URL" type="string" length="300"/>
+	
+    	<property name="thirdpartytype" column="THIRDPARTY_TYPE">
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.ThirdPartyEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+		
+		<property name="thirdpartynickname" column="THIRDPARTY_NICKNAME" type="string"  length="100"/>
+		<property name="bindingdatetime" column="BINDING_DATETIME"/>
+	</class>
+</hibernate-mapping>

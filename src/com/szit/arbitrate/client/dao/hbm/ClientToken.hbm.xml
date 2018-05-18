@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="ClientToken" table="cl_Client_Token">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id> 
+        <property name="clientId" column="CLIENTID" />
+        <property name="sessionId" column="SESSION_ID" />
+        <property name="uuid" column="UUID" />
+        
+        <property name="terminalType" column="TERMINAL_TYPE">
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.TerminalType</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>	
+        
+        <property name="online" column="ONLINE" />
+        <property name="loginTime" column="LOGIN_TIME" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="SmsVerifyRecord" table="cl_sms_verifyrecord">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id>
+		<property name="bizmodel" column="BIZ_MODEL">
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.SmsBizModelEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>			
+		<property name="recphone" column="REC_PHONE"/>
+		<property name="sendcontent" column="SEND_CONTENT"/>
+		<property name="smscheckcode" column="SMS_CHECKCODE"/>
+		<property name="smsapiresult" column="SMS_APIRESULT"/>
+		<property name="sendstate" column="SEND_STATE"/>
+		<property name="senddatetiem" column="SEND_DATETIEM"/>
+	</class>
+</hibernate-mapping>
