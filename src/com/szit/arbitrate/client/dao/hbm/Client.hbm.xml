@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="Client" table="CL_CLIENT">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="nickName" column="NICK_NAME" />
+        <property name="account" column="ACCOUNT" />
+        <property name="passwd" column="PASSWD" />
+        <property name="identifyName" column="IDENTIFY_NAME" />
+        
+        <property name="gender" column="GENDER" />
+        <property name="nation" column="NATION" />
+        <property name="birth" column="BIRTH" />
+        <property name="profession" column="PROFESSION" />
+        
+        <property name="identify" column="IDENTIFY" />
+        <property name="identifyImgFile1" column="IDENTIFY_IMG_FILE1" />
+        <property name="identifyImgFile2" column="IDENTIFY_IMG_FILE2" />
+        <property name="identifyImgFile3" column="IDENTIFY_IMG_FILE3" />
+        
+        <property name="auditInfo" column="AUDIT_INFO" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.CertificateStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="mediationAgencyId" column="MEDIATION_AGENCY_ID" />
+        <property name="agencyName" column="AGENCY_NAME" />
+        <property name="thirdPartyId" column="THIRD_PARTY_ID" />
+        <property name="thirdParty" column="THIRD_PARTY" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.ThirdPartyEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="headImgFile" column="HEAD_IMG_FILE" />
+        <property name="clientType" column="CLIENT_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.ClientTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="address" column="ADDRESS" />
+        <property name="tel" column="TEL" />
+        <property name="ip" column="IP" />
+        <property name="description" column="DESCRIPTION" />
+        <property name="skill" column="SKILL" />
+        <property name="neteaseClientId" column="NETEASE_CLIENT_ID" />
+        <property name="sessionId" column="SESSION_ID" />
+        <property name="clientState" column="CLIENT_STATE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.ClientStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="loginType" column="LOGIN_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.ClientLoginTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="mediatorType" column="mediatorType" />
+        <property name="showDisplay" column="showDisplay" />
+        <property name="resgitTime" column="resgitTime" />
+        
+	</class>
+</hibernate-mapping>

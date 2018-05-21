@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="AuthorityGroupOperation" table="AG_AUTHORITY_GROUP_OPERATION">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id>
+		<property name="authorityGroupId" column="AUTHORITY_GROUP_ID"/>
+		<property name="authorityGroupName" column="AUTHORITY_GROUP_NAME"/>
+		<property name="clientOperationId" column="CLIENT_OPERATION_ID"/>
+		<property name="clientOperationName" column="CLIENT_OPERATION_NAME"/>
+		<property name="clientId" column="CLIENT_ID"/>
+		<property name="clientName" column="CLIENT_NAME"/>
+	</class>
+</hibernate-mapping>

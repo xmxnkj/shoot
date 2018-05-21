@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.client.entity">
+	<class name="ClientAuthorityGroup" table="CL_CLIENT_AUTHORITY_GROUP">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id>
+		<property name="clientId" column="CLIENT_ID"/>
+		<property name="clientName" column="CLIENT_NAME"/>
+		<property name="authorityGroupId" column="AUTHORITY_GROUP_ID"/>
+		<property name="authorityGroupName" column="AUTHORITY_GROUP_NAME">
+			<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.client.entity.enumvo.AuthorityGroupEnum</param>
+        		<param name="type">4</param>
+        	</type>
+		</property>
+		
+		<many-to-one name="client" column="CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>		
+		
+		<many-to-one name="authorityGroup" column="AUTHORITY_GROUP_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.AuthorityGroup" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+	</class>
+</hibernate-mapping>
