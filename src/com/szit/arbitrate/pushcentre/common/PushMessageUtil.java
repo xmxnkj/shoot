@@ -72,13 +72,13 @@ public class PushMessageUtil {
 					//IOSPushUtils.getInstance().setIsdebug(isIsdebug());
 					if(andorios[0].equals(IosClientTypeEnum.Normal.toString())){//用户端
 						IOSPushUtils.getInstance().pushUserMessage(topicString, andorios[0], alertmessage, customdata, apnsCount,true);
-					}else if(andorios[0].equals(IosClientTypeEnum.Mediator.toString())){//调解员端
+					}else if(andorios[0].equals(IosClientTypeEnum.Mediator.toString())){//员端
 						IOSPushUtils.getInstance().pushMeMessage(topicString, andorios[0], alertmessage, customdata, apnsCount,true);
 					}
 				} else if("ANDROID".equals(andorios[1])){//android推送
 					if(andorios[0].equals(IosClientTypeEnum.Normal.toString())){//用户端
 						IOSPushUtils.getInstance().pushUserMessage(topicString, andorios[0], alertmessage, customdata, apnsCount,false);
-					}else if(andorios[0].equals(IosClientTypeEnum.Mediator.toString())){//调解员端
+					}else if(andorios[0].equals(IosClientTypeEnum.Mediator.toString())){//员端
 						IOSPushUtils.getInstance().pushMeMessage(topicString, andorios[0], alertmessage, customdata, apnsCount,false);
 					}
 				}
@@ -88,7 +88,7 @@ public class PushMessageUtil {
 					//IOSPushUtils.getInstance().setIsdebug(isIsdebug());
 					if(iostoken.equals(IosClientTypeEnum.Normal.toString())){//用户端
 						IOSPushUtils.getInstance().pushUserMessage(topicString, iostoken, alertmessage, customdata, apnsCount,true);
-					}else if(iostoken.equals(IosClientTypeEnum.Mediator.toString())){//调解员端
+					}else if(iostoken.equals(IosClientTypeEnum.Mediator.toString())){//员端
 						IOSPushUtils.getInstance().pushMeMessage(topicString, iostoken, alertmessage, customdata, apnsCount,true);
 					}
 					

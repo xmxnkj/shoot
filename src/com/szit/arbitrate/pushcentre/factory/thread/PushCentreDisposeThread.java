@@ -62,10 +62,10 @@ public class PushCentreDisposeThread implements Runnable{
 	        case System:
 	        	fac.createProduct(BuildSystemNotifyProduct.class).buildPushDispose(params,PushTypeEnum.System);
 	        	break;
-	        case MediationApply://申请调解
+	        case MediationApply://申请
 	        	fac.createProduct(BuildSystemNotifyProduct.class).buildPushDispose(params,PushTypeEnum.MediationApply);
 	        	break;
-	        case RefuseMediation://拒绝调解
+	        case RefuseMediation://拒绝
 	        	fac.createProduct(BuildSystemNotifyProduct.class).buildPushDispose(params,PushTypeEnum.RefuseMediation);
 	        	break;
 	        case NotifyMediatorProtocol:

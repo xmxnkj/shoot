@@ -37,10 +37,10 @@ public class PushSetting {
 	
 	//本地单元测试用
 	public final static String devCertificationJunitTest = "d:\\cer\\media_user_Dev_push.p12";//用户端
-	public final static String mediatorCertificationJunitTest = "d:\\cer\\mediator_push_dev.p12";//调解员端
+	public final static String mediatorCertificationJunitTest = "d:\\cer\\mediator_push_dev.p12";//员端
 	
 	public final static String prodCertificationJunitTest = "d:\\cer\\media_user_Dis_push.p12";//用户端
-	public final static String mediatorprodCertificationJunitTest = "d:\\cer\\mediator_push_Dis.p12";//调解员端
+	public final static String mediatorprodCertificationJunitTest = "d:\\cer\\mediator_push_Dis.p12";//员端
 	
 	
 	//true 正式  false 测试

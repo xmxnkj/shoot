@@ -28,16 +28,13 @@ import com.szit.arbitrate.mediation.entity.dto.MediationCaseExcelDto;
 public class ExportExcelUtil {
 	
 	*//**
-	 * 所有案件分类
+	 * 所有分类
 	 * @param ma
 	 * @param pattern
 	 * @param typeBranch
 	 * @return
 	 * @throws Exception
 	 *//*
-	public static HSSFWorkbook  exportExcel(HashMap<String,HashMap<String,Object>> ma, String pattern,List<String> typeBranch)throws Exception{  
-		return exportExcel("海沧区矛盾纠纷排查调处情况表", ma, pattern,typeBranch);  
-	}
 	
 	private static String getString(String sourcestring){
 		StringBuilder sb = new StringBuilder();
@@ -53,7 +50,7 @@ public class ExportExcelUtil {
 	 * @param title
 	 * @param ma
 	 * @param pattern
-	 * @param typeBranch 所有案件分类
+	 * @param typeBranch 所有分类
 	 * @return
 	 * @throws Exception
 	 *//*
@@ -120,7 +117,6 @@ public class ExportExcelUtil {
 		//创建单元格（excel的单元格，参数为列索引，可以是0～255之间的任何一个  
 		HSSFCell cell00=row0.createCell(0);
 		//设置单元格内容  
-		cell00.setCellValue(pattern+"海沧区矛盾纠纷排查调处情况表"); 
 		cell00.setCellStyle(style2);
 		
 		
@@ -268,7 +264,7 @@ public class ExportExcelUtil {
 				cell1x.setCellValue("");
 				cell1x.setCellStyle(style);
 				HSSFCell cell2x=row2.createCell(columnIndex);
-				cell2x.setCellValue("不同主体调解情况");
+				cell2x.setCellValue("不同主体情况");
 				cell2x.setCellStyle(style);
 				
 				HSSFCell cell3x=row3.createCell(columnIndex);
@@ -284,7 +280,7 @@ public class ExportExcelUtil {
 			//合并单元格CellRangeAddress构造参数依次表示起始行，截至行，起始列， 截至列  
 			sheet.addMergedRegion(new CellRangeAddress(2,2,6,index-1));
 			
-			//2.循环案件来源数据   写死长度8
+			//2.循环来源数据   写死长度8
 			int sourceNumList = 8;
 //			List<Map<String, Object>> sourceNumList = dto.getSourceNumList();
 			for(int i = 0; i < sourceNumList; i ++){
@@ -293,7 +289,7 @@ public class ExportExcelUtil {
 //				String source = jsonObject.getString("source");
 //				source = getString(source);
 				HSSFCell cell2x=row2.createCell(columnIndex);
-				cell2x.setCellValue("案件来源");
+				cell2x.setCellValue("来源");
 				cell2x.setCellStyle(style);
 				
 				HSSFCell cell3x=row3.createCell(columnIndex);
@@ -302,17 +298,17 @@ public class ExportExcelUtil {
 				if(i==1)
 					cell3x.setCellValue("法院委托移送");
 				if(i==2)
-					cell3x.setCellValue("主动调解");
+					cell3x.setCellValue("主动");
 				if(i==3)
 					cell3x.setCellValue("公安机关委托移送");
 				if(i==4)
 					cell3x.setCellValue("其他部门委托移送");
 				if(i==5)
-					cell3x.setCellValue("依申请调解");
+					cell3x.setCellValue("依申请");
 				if(i==6)
 					cell3x.setCellValue("检察院委托移送");
 				if(i==7)
-					cell3x.setCellValue("接受委托移送调解");
+					cell3x.setCellValue("接受委托移送");
 				cell3x.setCellStyle(style);
 				HSSFCell cell4x=row4.createCell(columnIndex);
 				cell4x.setCellValue("件");
@@ -323,7 +319,7 @@ public class ExportExcelUtil {
 			//合并单元格CellRangeAddress构造参数依次表示起始行，截至行，起始列， 截至列  
 			sheet.addMergedRegion(new CellRangeAddress(2,2,index2-sourceNumList,index2-1));
 			
-			//3.循环案件分类情况数据
+			//3.循环分类情况数据
 //			List<Map<String, Object>> typeNumList = dto.getTypeNumList();
 			for(int i = 0; i < typeBranch.size(); i ++){
 				String data = typeBranch.get(i);
@@ -331,7 +327,7 @@ public class ExportExcelUtil {
 //				String type = jsonObject.getString("type");
 //				type = getString(type);
 				HSSFCell cell2x=row2.createCell(columnIndex);
-				cell2x.setCellValue("案件分类情况");
+				cell2x.setCellValue("分类情况");
 				cell2x.setCellStyle(style);
 				
 				HSSFCell cell3x=row3.createCell(columnIndex);
@@ -439,10 +435,10 @@ public class ExportExcelUtil {
 		columnIndex += 1;
 		
 		HSSFCell cell211=row2.createCell(columnIndex);
-		cell211.setCellValue("防止民\r\n间纠纷\r\n转化为\r\n刑事案件");
+		cell211.setCellValue("防止民\r\n间纠纷\r\n转化为\r\n刑事");
 		cell211.setCellStyle(style);
 		HSSFCell cell311=row3.createCell(columnIndex);
-		cell311.setCellValue("防止民\r\n间纠纷\r\n转化为\r\n刑事案件");
+		cell311.setCellValue("防止民\r\n间纠纷\r\n转化为\r\n刑事");
 		cell311.setCellStyle(style);
 		HSSFCell cell411=row4.createCell(columnIndex);
 		cell411.setCellValue("件");
@@ -541,7 +537,7 @@ public class ExportExcelUtil {
 			cellx0.setCellValue(getValue(dto.get("jiedao")));
 			cellx0.setCellStyle(style);
 			columnIndex2 += 1;
-			//第2列 案件总数
+			//第2列 总数
 			HSSFCell cellx1=rowx.createCell(columnIndex2);
 			cellx1.setCellValue(getValue(dto.get("tiaojzs")));
 			cellx1.setCellStyle(style);
@@ -556,7 +552,7 @@ public class ExportExcelUtil {
 			cellx3.setCellValue(getValue(dto.get("cgla")));
 			cellx3.setCellStyle(style);
 			columnIndex2 += 1;
-			//第5列 疑难复杂案件
+			//第5列 疑难复杂
 			HSSFCell cellx4=rowx.createCell(columnIndex2);
 			cellx4.setCellValue(getValue(dto.get("ynfzaj")));
 			cellx4.setCellStyle(style);
@@ -580,7 +576,7 @@ public class ExportExcelUtil {
 				columnIndex2 += 1;
 			}
 			
-			//2.循环案件来源数据
+			//2.循环来源数据
 			int sourceNumList = 8;
 //			List<Map<String, Object>> sourceNumList = dto.getSourceNumList();
 			for(int j = 0; j < sourceNumList; j ++){
@@ -592,13 +588,13 @@ public class ExportExcelUtil {
 					cellxx.setCellValue(getValue(dto.get("xinfan")));
 				else if(j==1)//法院
 					cellxx.setCellValue(getValue(dto.get("fayuan")));
-				else if(j==2)//主动调解
+				else if(j==2)//主动
 					cellxx.setCellValue(getValue(dto.get("zhudong")));
 				else if(j==3)//公安
 					cellxx.setCellValue(getValue(dto.get("gongan")));
 				else if(j==4)//其他
 					cellxx.setCellValue(getValue(dto.get("qita")));
-				else if(j==5)//依申请调解
+				else if(j==5)//依申请
 					cellxx.setCellValue(getValue(dto.get("yishen")));
 				else if(j==6)//检察院
 					cellxx.setCellValue(getValue(dto.get("jiancha")));
@@ -608,7 +604,7 @@ public class ExportExcelUtil {
 				columnIndex2 += 1;
 			}
 			
-			//3.循环案件分类情况数据
+			//3.循环分类情况数据
 //			List<Map<String, Object>> typeNumList = dto.getTypeNumList();
 			for(int j = 0; j < typeBranch.size(); j ++){
 //				Map<String, Object> data = typeNumList.get(j);

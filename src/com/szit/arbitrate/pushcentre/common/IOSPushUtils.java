@@ -62,7 +62,7 @@ public class IOSPushUtils {
 	
 	private ApnConfig apnConfig;
 	
-	private  JPushClient meApnsService;//调解员端证书
+	private  JPushClient meApnsService;//员端证书
 	
 	private  JPushClient usApnsService;//用户端证书
 	
@@ -75,7 +75,7 @@ public class IOSPushUtils {
 		
 	}
 	 
-	//获取调解员端根证书
+	//获取员端根证书
 	private  JPushClient getMeApnsService(){
 //		if(meApnsService == null){
 //			try{
@@ -314,13 +314,13 @@ public class IOSPushUtils {
 //			if(isdebug){
 //				if(iostoken.equals(IosClientTypeEnum.Normal.toString())){//用户端
 //					apnConfig = new ApnConfig(PushSetting.devCertificationJunitTest,PushSetting.devCertPassword,PushSetting.prodCertificationJunitTest,PushSetting.prodCertPassword,false);
-//				}else if(iostoken.equals(IosClientTypeEnum.Mediator.toString())){//调解员端
+//				}else if(iostoken.equals(IosClientTypeEnum.Mediator.toString())){//员端
 //					apnConfig = new ApnConfig(PushSetting.mediatorCertificationJunitTest,PushSetting.devCertPassword,PushSetting.mediatorprodCertificationJunitTest,PushSetting.prodCertPassword,false);
 //				}
 //			}else{
 //				if(iostoken.equals(IosClientTypeEnum.Normal.toString())){//用户端
 //					apnConfig = new ApnConfig(PushSetting.devCertification,PushSetting.devCertPassword,PushSetting.prodCertification,PushSetting.prodCertPassword,true);
-//				}else if(iostoken.equals(IosClientTypeEnum.Mediator.toString())){//调解员端
+//				}else if(iostoken.equals(IosClientTypeEnum.Mediator.toString())){//员端
 //					apnConfig = new ApnConfig(PushSetting.mediatordevCertification,PushSetting.devCertPassword,PushSetting.mediatorprodCertification,PushSetting.prodCertPassword,true);
 //				}
 //			}

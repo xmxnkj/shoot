@@ -86,7 +86,7 @@ public class FileMediationToDoc {
 		String templateurl = "/com/hsit/common/template";
 		DocUtil util = new DocUtil();
 		String filename = entity.getCaseExplain();
-		filename = "人民调解申请书";
+		filename = "人民申请书";
 		util.createDoc(dataMap, templateurl, "applymediation.ftl", url, filename);
 	}
 
@@ -109,9 +109,9 @@ public class FileMediationToDoc {
 		String template = "mediationprotocol.ftl";//模板 
 		docparams.put("template", template);
 		if(mediationProtocol.getTitle()==null || "".equals(mediationProtocol.getTitle())){
-			docparams.put("filename","人民调解协议书");//导出的文件名
+			docparams.put("filename","人民协议书");//导出的文件名
 		}else{
-			docparams.put("filename","人民调解协议书");
+			docparams.put("filename","人民协议书");
 		}
 		DocExecuteReflectFactory fac = new DocExecuteReflectFactory(docparams);
 		fac.createProduct(BuildMediationProtocolProduct.class);
@@ -130,11 +130,11 @@ public class FileMediationToDoc {
 				Map<String, Object> dataMap=new HashMap<String, Object>();  
 				if(entity.getRecordTypeEnum().equals(RecordTypeEnum.AskRecord)){
 					template = "mediationrecord1.ftl";
-					filename = "人民调解记录"+i;
+					filename = "人民记录"+i;
 					i += 1;
 				}else if(entity.getRecordTypeEnum().equals(RecordTypeEnum.SurveyRecord)){
 					template = "mediationrecord2.ftl"; 
-					filename = "人民调解调查记录"+j;
+					filename = "人民调查记录"+j;
 					j += 1;
 				}
 				dataMap.put("recordContent", entity.getRecordContent()==null?"":entity.getRecordContent());

@@ -42,7 +42,7 @@ public class NotifyTimer {
 				ClientNotOnlineNotify entity = list.get(i);
 				String caseExplain = entity.getCaseExplain();
 				String clientId = entity.getClientId();
-				String alertMessage = "关于案件:"+caseExplain+",被申述人:"+entity.getClientName()
+				String alertMessage = "关于:"+caseExplain+",被申述人:"+entity.getClientName()
 						+" 未回复已超过7天,请及时处理.";
 				ClientToken clientToken = clientTokenService.getClientTokenByClientId(clientId);
 				
