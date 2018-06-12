@@ -638,7 +638,7 @@
           <w:rFonts w:hint="fareast"/>
           <wx:font wx:val="宋体"/>
         </w:rPr>
-        <w:t>经调解，自愿达成以下协议</w:t>
+        <w:t>经，自愿达成以下协议</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00D10E5B" wsp:rsidRDefault="00D10E5B" wsp:rsidP="00D10E5B">
@@ -689,7 +689,7 @@
           <w:rFonts w:hint="fareast"/>
           <wx:font wx:val="宋体"/>
         </w:rPr>
-        <w:t>份，当事人、人民调解委员会各持一份</w:t>
+        <w:t>份，当事人、人民委员会各持一份</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00D10E5B" wsp:rsidRDefault="00D10E5B" wsp:rsidP="00D10E5B">
@@ -719,7 +719,7 @@
           <w:rFonts w:hint="fareast"/>
           <wx:font wx:val="宋体"/>
         </w:rPr>
-        <w:t>人民调解员（签名）：</w:t>
+        <w:t>人民员（签名）：</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00D10E5B" wsp:rsidRDefault="00D10E5B" wsp:rsidP="00D10E5B">

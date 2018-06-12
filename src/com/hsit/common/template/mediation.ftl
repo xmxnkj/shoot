@@ -3,7 +3,7 @@
 <w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
   <w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
   <o:DocumentProperties>
-    <o:Title>厦门市XX区XX镇（街）XX村居（社区）人民调解委员会</o:Title>
+    <o:Title>厦门市XX区XX镇（街）XX村居（社区）人民委员会</o:Title>
     <o:Author>Lenovo User</o:Author>
     <o:LastAuthor>Administrator</o:LastAuthor>
     <o:Revision>2</o:Revision>
@@ -612,7 +612,7 @@
           <w:sz w:val="52"/>
           <w:sz-cs w:val="52"/>
         </w:rPr>
-        <w:t>厦门市XX区XX镇（街）XX村居（社区）人民调解委员会</w:t>
+        <w:t>厦门市XX区XX镇（街）XX村居（社区）人民委员会</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="005F40D5">
@@ -683,7 +683,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>调解卷宗</w:t>
+        <w:t>卷宗</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="005F40D5">
@@ -848,7 +848,7 @@
           <w:sz w:val="30"/>
           <w:sz-cs w:val="30"/>
         </w:rPr>
-        <w:t>人民调解员：</w:t>
+        <w:t>人民员：</w:t>
       </w:r>
       <w:r wsp:rsidRPr="00A80291">
         <w:rPr>
@@ -868,7 +868,7 @@
           <w:sz w:val="30"/>
           <w:sz-cs w:val="30"/>
         </w:rPr>
-        <w:t>调解日期：</w:t>
+        <w:t>日期：</w:t>
       </w:r>
       <w:r wsp:rsidRPr="00A80291">
         <w:rPr>
@@ -1453,7 +1453,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>人民调解申请书（</w:t>
+              <w:t>人民申请书（</w:t>
             </w:r>
             <w:r wsp:rsidR="001807F1">
               <w:rPr>
@@ -1461,7 +1461,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>人民调解受理登记表</w:t>
+              <w:t>人民受理登记表</w:t>
             </w:r>
             <w:r wsp:rsidRPr="00684324">
               <w:rPr>
@@ -2046,7 +2046,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>人民调解调查记录</w:t>
+              <w:t>人民调查记录</w:t>
             </w:r>
           </w:p>
         </w:tc>
@@ -2260,7 +2260,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>人民调解记录</w:t>
+              <w:t>人民记录</w:t>
             </w:r>
           </w:p>
         </w:tc>
@@ -2367,7 +2367,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>人民调解协议书</w:t>
+              <w:t>人民协议书</w:t>
             </w:r>
             <w:r wsp:rsidR="001807F1">
               <w:rPr>
@@ -2375,7 +2375,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>（人民调解口头协议登记表）</w:t>
+              <w:t>（人民口头协议登记表）</w:t>
             </w:r>
           </w:p>
         </w:tc>
@@ -2482,7 +2482,7 @@
                 <wx:font wx:val="仿宋_GB2312"/>
                 <w:sz w:val="24"/>
               </w:rPr>
-              <w:t>人民调解回访记录</w:t>
+              <w:t>人民回访记录</w:t>
             </w:r>
           </w:p>
         </w:tc>
@@ -2887,7 +2887,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解申请书</w:t>
+        <w:t>人民申请书</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -3677,7 +3677,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会已将申请人民调解的相关规定告知我，现自愿申请人民调</w:t>
+        <w:t>人民委员会已将申请人民的相关规定告知我，现自愿申请人民调</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -3696,7 +3696,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>解委员会进行调解。</w:t>
+        <w:t>解委员会进行。</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -3865,7 +3865,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解受理登记表</w:t>
+        <w:t>人民受理登记表</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -3945,7 +3945,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>日，人民调解委员会依当事人申请（人民调解委员会主动调解），经当事人同意，调解</w:t>
+        <w:t>日，人民委员会依当事人申请（人民委员会主动），经当事人同意，</w:t>
       </w:r>
       <w:r wsp:rsidR="005F40D5" wsp:rsidRPr="00271998">
         <w:rPr>
@@ -4074,7 +4074,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>案件来源：</w:t>
+        <w:t>来源：</w:t>
       </w:r>
       <w:r wsp:rsidRPr="00271998">
         <w:rPr>
@@ -4108,7 +4108,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会主动调解</w:t>
+        <w:t>人民委员会主动</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRPr="00271998" wsp:rsidRDefault="005F40D5" wsp:rsidP="001A5810">
@@ -4442,7 +4442,7 @@
           <wx:font wx:val="仿宋_GB2312"/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会</w:t>
+        <w:t>人民委员会</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRPr="006D61C8" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -4542,7 +4542,7 @@
           <wx:font wx:val="仿宋_GB2312"/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>备注：此表由人民调解委员会填写</w:t>
+        <w:t>备注：此表由人民委员会填写</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -4565,7 +4565,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解调查记录</w:t>
+        <w:t>人民调查记录</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -6053,7 +6053,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解记录</w:t>
+        <w:t>人民记录</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -6349,7 +6349,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会已将人民调解的相关规定告知各方当事人。</w:t>
+        <w:t>人民委员会已将人民的相关规定告知各方当事人。</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -6368,7 +6368,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>调解记录：</w:t>
+        <w:t>记录：</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -7442,7 +7442,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>调解结果：</w:t>
+        <w:t>结果：</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -7469,7 +7469,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>、调解成功；</w:t>
+        <w:t>、成功；</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -7486,7 +7486,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>、调解不成；</w:t>
+        <w:t>、不成；</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -7503,7 +7503,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>、有待继续调解</w:t>
+        <w:t>、有待继续</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -8015,7 +8015,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解协议书</w:t>
+        <w:t>人民协议书</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRPr="00CB07AC" wsp:rsidRDefault="005F40D5" wsp:rsidP="002514D8">
@@ -8865,7 +8865,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>经调解，自愿达成如下协议：</w:t>
+        <w:t>经，自愿达成如下协议：</w:t>
       </w:r>
       <w:r wsp:rsidR="00316E7D" wsp:rsidRPr="00316E7D">
         <w:rPr>
@@ -9108,7 +9108,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>份，当事人、人民调解委员会各持一份。</w:t>
+        <w:t>份，当事人、人民委员会各持一份。</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -9159,7 +9159,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解员（签名）</w:t>
+        <w:t>人民员（签名）</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -9341,7 +9341,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>（人民调解委员会印章）</w:t>
+        <w:t>（人民委员会印章）</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -9425,7 +9425,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解口头协议登记表</w:t>
+        <w:t>人民口头协议登记表</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00FB08A5" wsp:rsidRPr="00CB07AC" wsp:rsidRDefault="00FB08A5" wsp:rsidP="00FB08A5">
@@ -10179,7 +10179,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>经调解，自愿达成如下协议：</w:t>
+        <w:t>经，自愿达成如下协议：</w:t>
       </w:r>
       <w:r wsp:rsidRPr="00316E7D">
         <w:rPr>
@@ -10343,7 +10343,7 @@
               <w:b/>
               <w:sz w:val="24"/>
             </w:rPr>
-            <w:delText>份，当事人、人民调解委员会各持一份。</w:delText>
+            <w:delText>份，当事人、人民委员会各持一份。</w:delText>
           </w:r>
         </aml:content>
       </aml:annotation>
@@ -10363,7 +10363,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解员（签名）</w:t>
+        <w:t>人民员（签名）</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -10442,7 +10442,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>（人民调解委员会印章）</w:t>
+        <w:t>（人民委员会印章）</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00FB08A5" wsp:rsidRDefault="00FB08A5" wsp:rsidP="00FB08A5">
@@ -10526,7 +10526,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解回访记录</w:t>
+        <w:t>人民回访记录</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">
@@ -10629,7 +10629,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>调解协议编号</w:t>
+        <w:t>协议编号</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -11160,7 +11160,7 @@
           <wx:font wx:val="仿宋_GB2312"/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会</w:t>
+        <w:t>人民委员会</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="005F40D5" wsp:rsidRDefault="005F40D5" wsp:rsidP="000E2BE0">

@@ -35,7 +35,7 @@ public class UploadAccResourceUtil {
 	
 	//用户资源上传路径
 	public static String CLIENT_RES_UPLOAD_FILEPATH = "uploads\\client";
-	//调解资源上传路径
+	//资源上传路径
 	public static String MEDIATION_RES_UPLOAD_FILEPATH = "uploads\\mediation";
 	//用户资源上传路径
 	public static String NEWS_RES_UPLOAD_FILEPATH = "uploads\\news";

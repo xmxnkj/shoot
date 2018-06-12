@@ -402,7 +402,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解申请书</w:t>
+        <w:t>人民申请书</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00FA790E" wsp:rsidRDefault="00FA790E" wsp:rsidP="00FA790E">
@@ -1472,7 +1472,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会已将申请人民调解的相关规定告知我，现自愿申请人民调</w:t>
+        <w:t>人民委员会已将申请人民的相关规定告知我，现自愿申请人民调</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="00FA790E" wsp:rsidRDefault="00FA790E" wsp:rsidP="00FA790E">
@@ -1491,7 +1491,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>解委员会进行调解。</w:t>
+        <w:t>解委员会进行。</w:t>
       </w:r>
       <w:r>
         <w:rPr>

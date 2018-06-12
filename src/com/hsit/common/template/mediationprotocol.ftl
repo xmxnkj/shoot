@@ -501,7 +501,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解协议书</w:t>
+        <w:t>人民协议书</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001A2F5D" wsp:rsidRPr="00CB07AC" wsp:rsidRDefault="001A2F5D" wsp:rsidP="001A2F5D">
@@ -1337,7 +1337,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>经调解，自愿达成如下协议：</w:t>
+        <w:t>经，自愿达成如下协议：</w:t>
       </w:r>
       <w:r wsp:rsidR="008300DF">
         <w:rPr>
@@ -1500,7 +1500,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>份，当事人、人民调解委员会各持一份。</w:t>
+        <w:t>份，当事人、人民委员会各持一份。</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001A2F5D" wsp:rsidRDefault="001A2F5D" wsp:rsidP="001A2F5D">
@@ -1551,7 +1551,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解员（签名）</w:t>
+        <w:t>人民员（签名）</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -1733,7 +1733,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>（人民调解委员会印章）</w:t>
+        <w:t>（人民委员会印章）</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001A2F5D" wsp:rsidRDefault="001A2F5D" wsp:rsidP="001A2F5D">

@@ -496,7 +496,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解记录</w:t>
+        <w:t>人民记录</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001B6D84" wsp:rsidRDefault="001B6D84" wsp:rsidP="001B6D84">
@@ -808,7 +808,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>人民调解委员会已将人民调解的相关规定告知各方当事人。</w:t>
+        <w:t>人民委员会已将人民的相关规定告知各方当事人。</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001B6D84" wsp:rsidRDefault="001B6D84" wsp:rsidP="001B6D84">
@@ -827,7 +827,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>调解记录：</w:t>
+        <w:t>记录：</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -1853,7 +1853,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>调解结果：</w:t>
+        <w:t>结果：</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001B6D84" wsp:rsidRDefault="001B6D84" wsp:rsidP="001B6D84">
@@ -1880,7 +1880,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>、调解成功；</w:t>
+        <w:t>、成功；</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -1897,7 +1897,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>、调解不成；</w:t>
+        <w:t>、不成；</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -1914,7 +1914,7 @@
           <w:b/>
           <w:sz w:val="24"/>
         </w:rPr>
-        <w:t>、有待继续调解</w:t>
+        <w:t>、有待继续</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="001B6D84" wsp:rsidRDefault="001B6D84" wsp:rsidP="001B6D84">

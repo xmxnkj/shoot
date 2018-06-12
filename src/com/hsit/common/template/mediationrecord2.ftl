@@ -498,7 +498,7 @@
           <w:sz w:val="44"/>
           <w:sz-cs w:val="44"/>
         </w:rPr>
-        <w:t>人民调解调查记录</w:t>
+        <w:t>人民调查记录</w:t>
       </w:r>
     </w:p>
     <w:p wsp:rsidR="007B6F67" wsp:rsidRDefault="007B6F67" wsp:rsidP="007B6F67">
