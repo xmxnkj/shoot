@@ -47,7 +47,7 @@ public class MediationAgencyAction extends BaseJsonAction<MediationAgency, Media
 	/**
 	    * 
 	   * @Title: getMediationAgencyComboJson 
-	   * @Description: 取得调解机构下拉
+	   * @Description: 取得机构下拉
 	   * @param 
 	   * @return void 
 	   * @throws

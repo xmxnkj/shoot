@@ -7,7 +7,7 @@ import com.szit.arbitrate.client.entity.query.TempClientQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: TempClientDao
 * @Description:虚拟用户dao接口类
 * @author Administrator
@@ -23,7 +23,7 @@ public interface TempClientDao extends BaseHibernateDao<TempClient, TempClientQu
 	/**
 	 * 
 	* @Title: isCaseClientAllCalled 
-	* @Description: 判断案件所有当事人是否召集
+	* @Description: 判断所有当事人是否召集
 	* @param @param caseid
 	* @param @return
 	* @param @throws ErrorException

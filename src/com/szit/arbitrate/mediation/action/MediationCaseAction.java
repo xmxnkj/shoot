@@ -141,14 +141,14 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 			end = end+" 00:00:00";
 		}
 		//HashMap<String,HashMap<String,Object>> list = service.statMediationCaseExcelDto(begin,end);
-		//获取所有案件分类
+		//获取所有分类
 		//List<String> typeBranch = basicDataService.getTypeClassify();
 		StringBuffer hql = new StringBuffer();
 		hql.append("FROM MediationCase where caseState=:caseState");
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("caseState", CaseStateEnum.Completed);
 		List<MediationCase> list = dao.findHql(hql.toString(), map);
-		StringBuilder basePath = new StringBuilder(getServletContext().getRealPath("/")).append("\\content\\template\\调解案件统计.xls");
+		StringBuilder basePath = new StringBuilder(getServletContext().getRealPath("/")).append("\\content\\template\\统计.xls");
 		
 		//单位
 		Map<String,Map<Integer,Float>> unitMap = new HashMap<String,Map<Integer,Float>>();
@@ -170,19 +170,19 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 					unitMap.put(unit, caseMap);
 				}
 				
-				//案件总数	++
+				//总数	++
 				caseMap.put(1, caseMap.get(1)+1);
 				//涉及当事人数
 				caseMap.put(2, caseMap.get(2)+mCase.getPeople());
-				//成功案件数
+				//成功数
 				caseMap.put(3, caseMap.get(3)+1);
-				//疑难案件
+				//疑难
 				if(mCase.isDifficult()){
 					caseMap.put(4, caseMap.get(4)+1);
 				}
 				//涉及金额
 				caseMap.put(5, caseMap.get(5)+Float.parseFloat(mCase.getCaseMoney()));
-				//不同主体调解情况  6-11
+				//不同主体情况  6-11
 				MediationProtocolQuery mediationProtocolQuery = new MediationProtocolQuery();
 				mediationProtocolQuery.setCaseId(mCase.getId());
 				MediationProtocol mediationProtocol = mediationProtocolService.getEntity(mediationProtocolQuery);
@@ -209,7 +209,7 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 					default:
 						break;
 				}
-				//案件来源  12-19
+				//来源  12-19
 				switch(mCase.getCaseSource().trim()){
 					case "信访部门委托移送":
 						caseMap.put(12, caseMap.get(12)+1);
@@ -217,7 +217,7 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 					case "法院委托移送":
 						caseMap.put(13, caseMap.get(13)+1);
 						break;
-					case "主动调解":
+					case "主动":
 						caseMap.put(14, caseMap.get(14)+1);
 						break;
 					case "公安机关委托移送":
@@ -226,18 +226,18 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 					case "其他部门委托移送":
 						caseMap.put(16, caseMap.get(16)+1);
 						break;
-					case "依申请调解":
+					case "依申请":
 						caseMap.put(17, caseMap.get(17)+1);
 						break;
 					case "检察院委托移送":
 						caseMap.put(18, caseMap.get(18)+1);
 						break;
-					case "接受委托移送调解":
+					case "接受委托移送":
 						caseMap.put(19, caseMap.get(19)+1);
 						break;
 				}
 				
-				// 案件分类情况   20-38
+				// 分类情况   20-38
 				switch(mCase.getCaseType().trim()){
 					case "其他劳动争议纠纷":
 						caseMap.put(20, caseMap.get(21)+1);
@@ -331,7 +331,7 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 			}
 			//写入流
 			getResponse().setHeader("content-disposition", 
-					"attachment;filename=" + URLEncoder.encode("调解案件统计", "UTF-8")+".xls"); 
+					"attachment;filename=" + URLEncoder.encode("统计", "UTF-8")+".xls"); 
 			getResponse().setContentType("application/vnd.ms-excel");
 			bos = getResponse().getOutputStream();
 			//保存
@@ -456,7 +456,7 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 		}
 	}
 	
-	String clientId; //调节机构管理员ID  或     调解中心管理员ID
+	String clientId; //调节机构管理员ID  或     中心管理员ID
 	String startTime;
 	String endTime;
 	String mediationAgencyId;
@@ -485,7 +485,7 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 		this.mediationAgencyId = mediationAgencyId;
 	}
 	
-	//获取案件类型统计数据页面
+	//获取类型统计数据页面
 	@Action(value="caseDistribution", 
 			results={
 		@Result(name="success", location="/WEB-INF/jsp/admin/mediation/mediationcase/caseDistribution.jsp")}
@@ -494,7 +494,7 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 			return SUCCESS;
 		}
 	
-	//获取案件类型统计数据
+	//获取类型统计数据
 	@Action("getCaseDistribution")
 	public void getCaseDistribution(){
 		try{
@@ -504,8 +504,8 @@ public class MediationCaseAction extends BaseJsonAction<MediationCase, Mediation
 			
 			Map<String,Object> map = service.statisticsMediationCaseByClientId(clientId, startTime, endTime, mediationAgencyId);
 			Map<String,Object> mapsuccess = service.statisticsMediationCaseByClientIdSuccess(clientId, startTime, endTime, mediationAgencyId);
-			li.add(map);		//在线调解总数
-			li.add(mapsuccess);	//调解成功案例
+			li.add(map);		//在线总数
+			li.add(mapsuccess);	//成功案例
 			outJson(jsonMapper.toJson(li));
 		} catch (Exception e) {
 			outFailJson(e);
