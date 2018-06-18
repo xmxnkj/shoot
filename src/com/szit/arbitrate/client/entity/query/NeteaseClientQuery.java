@@ -7,7 +7,7 @@ public class NeteaseClientQuery extends EntityQueryParam{
 	private static final long serialVersionUID = 1621761956631790196L;
 	
 	private String clientId;//我们的用户id
-	private String accid;//网易云信id
+	private String accid;//
 	private String name;//昵称
 	private String token;//口令
 	

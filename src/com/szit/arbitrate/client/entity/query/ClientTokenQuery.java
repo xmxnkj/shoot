@@ -7,7 +7,7 @@ import com.szit.arbitrate.client.entity.enumvo.TerminalType;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: ClientTokenQuery
 * @Description:用户用户唯一登录验证
 * @author Administrator

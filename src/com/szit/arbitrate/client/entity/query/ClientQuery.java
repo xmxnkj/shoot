@@ -32,7 +32,7 @@ public class ClientQuery extends EntityQueryParam{
 	//会员类型
 	private ClientTypeEnum clientType;
 	
-	private String mediationAgencyId;//属于哪个调解机构
+	private String mediationAgencyId;//属于哪个机构
 	//第三方登录ID
 	private String thirdPartyId;
 	//第三方登陆类型
@@ -47,7 +47,7 @@ public class ClientQuery extends EntityQueryParam{
 	
 	private CertificateStateEnum auditInfo;//认证审核状态
 
-	private Integer mediatorType;	//调解员类型   1 行政 2司法 3人民
+	private Integer mediatorType;	//员类型   1 行政 2司法 3人民
 	
 	private Integer showDisplay;	//排序
 	

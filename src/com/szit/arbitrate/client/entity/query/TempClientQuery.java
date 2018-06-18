@@ -6,7 +6,6 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
 * @ClassName: TempClientQuery
 * @Description:临时用户实体查询类
 * @author Administrator
@@ -19,7 +18,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
  */
 public class TempClientQuery extends EntityQueryParam{
 
-	private String caseId;//案件id
+	private String caseId;//id
 	private String identifyName;//姓名
 	private String identify;//身份证号码
 	private String tel;//电话

@@ -7,7 +7,6 @@ import com.hsit.common.kfbase.entity.EntityQueryParam;
 /**
  * 
 * @ClassName: ClientNotOnlineNotifyQuery  
-* @Description:召集被申述人未回复通知实体查询类   
 * @author   
 * @date 2017年6月16日 下午2:57:49  
 * @Copyright
@@ -18,10 +17,10 @@ public class ClientNotOnlineNotifyQuery extends EntityQueryParam{
 	
 	private String clientId;//用户id
 	private String clientName;//用户姓名
-	private Date gatherTime;//召集时间
+	private Date gatherTime;//
 	
-	private String caseId;//案件id
-	private String caseExplain;//案件申述点
+	private String caseId;//
+	private String caseExplain;//
 	
 	public String getClientId() {
 		return clientId;
