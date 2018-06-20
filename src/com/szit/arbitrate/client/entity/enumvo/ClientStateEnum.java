@@ -6,15 +6,15 @@ public enum ClientStateEnum {
 	Normal,//已注册未认证
 	Certificated,//已实名认证
 	/**
-	 * 调解分发中心
+	 * 分发中心
 	 */
 	MediationCenter,
 	/**
-	 * 调解机构
+	 * 机构
 	 */
 	MediationAgency,
 	/**
-	 * 调解员
+	 * 员
 	 */
 	Mediator;
 }
