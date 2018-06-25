@@ -11,7 +11,6 @@ import com.szit.arbitrate.client.entity.enumvo.ClientTypeEnum;
 import com.szit.arbitrate.client.entity.enumvo.ThirdPartyEnum;
 
 /**
- * 用户类，包括普通用户、调解员
  * @author yuyb
  *
  */
@@ -46,7 +45,7 @@ public class Client extends DomainEntity{
 	private String identifyImgFile2;//身份证反面照
 	private String identifyImgFile3;//手持照
 	private CertificateStateEnum auditInfo;//认证审核状态
-	private String mediationAgencyId;//属于哪个调解机构
+	private String mediationAgencyId;//属于哪个机构
 	private String agencyName;//机构名称
 	//第三方登录ID
 	private String thirdPartyId;
@@ -73,7 +72,7 @@ public class Client extends DomainEntity{
 	//用户来源
 	private ClientLoginTypeEnum loginType;
 	
-	private Integer mediatorType;	//调解员类型   1 行政 2司法 3人民
+	private Integer mediatorType;	//员类型   1 行政 2司法 3人民
 
 	private Integer showDisplay;	//排序
 	

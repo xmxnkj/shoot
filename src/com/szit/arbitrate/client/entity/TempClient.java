@@ -10,9 +10,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
 * @ClassName: TempClient
-* @Description:临时虚拟会员实体类，用于添加乙方对象显示,召集时与client对象进行关联
 * @author Administrator
 * @date 2017年3月24日 下午3:10:05
 * @UpdateUser:
@@ -24,7 +22,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
 @JsonIgnoreProperties({"name","description","displayOrder","createTime"})
 public class TempClient extends DomainEntity{
 	
-	private String caseId;//案件id
+	private String caseId;//id
 	private String identifyName;//姓名
 	private boolean gender;//性别
 	private Date birth;//生日

@@ -7,7 +7,7 @@ public class NeteaseClient extends DomainEntity{
 	private static final long serialVersionUID = -4661684027315337682L;
 	
 	private String clientId;//我们的用户id
-	private String accid;//网易云信id
+	private String accid;//
 	private String name;//昵称
 	private String token;//口令
 	

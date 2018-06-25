@@ -10,7 +10,6 @@ import com.szit.arbitrate.client.entity.enumvo.ResTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
 * @ClassName: ClientResource
 * @Description:用户资源实体类
 * @author Administrator

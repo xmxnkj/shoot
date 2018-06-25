@@ -6,9 +6,7 @@ import com.szit.arbitrate.client.entity.enumvo.AuthorityGroupEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
 * @ClassName: ClientAuthorityGroup
-* @Description:用户权限组映射    用户属于哪些权限组
 * @author Administrator
 * @date 2017年3月20日 下午3:25:28
 * @UpdateUser: 

@@ -8,7 +8,6 @@ import com.hsit.common.kfbase.entity.DomainEntity;
 /**
  * 
 * @ClassName: ClientNotOnlineNotify  
-* @Description:召集被申述人未回复通知实体   
 * @author   
 * @date 2017年6月16日 下午2:57:26  
 * @Copyright
@@ -20,11 +19,11 @@ public class ClientNotOnlineNotify extends DomainEntity{
 	
 	private String clientId;//用户id
 	private String clientName;//用户姓名
-	private Date gatherTime;//召集时间
+	private Date gatherTime;//
 	
-	private String caseId;//案件id
-	private String caseExplain;//案件申述点
-	private String mediatorClientId;//调解员id
+	private String caseId;//
+	private String caseExplain;//
+	private String mediatorClientId;//
 	
 	public String getClientId() {
 		return clientId;

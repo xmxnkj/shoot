@@ -7,13 +7,9 @@ import com.szit.arbitrate.client.entity.enumvo.TerminalType;
 @JsonIgnoreProperties({"name","description","displayOrder","createTime"})
 public class Terminal extends DomainEntity{
 	
-	//用户
 	private String clientId;
-	//设备的ID号
 	private String terminalCode;
-	//类型
 	private TerminalType terminalType;
-	//设备型号
 	private String spec;
 	public String getClientId() {
 		return clientId;
