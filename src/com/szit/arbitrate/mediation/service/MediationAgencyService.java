@@ -11,9 +11,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationAgencyQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationAgencyService
-* @Description:调解机构业务接口类
+* @Description:机构业务接口类
 * @author yuyb
 * @date 2017年3月23日 上午11:24:30
 * @UpdateUser:
@@ -27,7 +27,7 @@ public interface MediationAgencyService extends AppBaseService<MediationAgency, 
 	/**
 	 * 
 	* @Title: searchMediationAgencyList 
-	* @Description: 根据条件筛选调解机构列表
+	* @Description: 根据条件筛选机构列表
 	* @param @param address
 	* @param @param casetype
 	* @param @param agencytype
@@ -42,7 +42,7 @@ public interface MediationAgencyService extends AppBaseService<MediationAgency, 
 	/**
 	 * 
 	* @Title: searchOpenedMediationAgencyList 
-	* @Description: 查询已开通线上服务的，可分配案件的机构列表
+	* @Description: 查询已开通线上服务的，可分配的机构列表
 	* @param @return
 	* @param @throws BizException
 	* @param @throws ErrorException

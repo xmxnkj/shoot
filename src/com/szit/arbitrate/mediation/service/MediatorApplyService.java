@@ -8,9 +8,9 @@ import com.szit.arbitrate.mediation.entity.query.MediatorApplyQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediatorApplyService
-* @Description:调解申请业务接口类
+* @Description:申请业务接口类
 * @author Administrator
 * @date 2017年3月23日 上午11:39:10
 * @UpdateUser:
@@ -22,7 +22,7 @@ import com.szit.arbitrate.mediation.entity.query.MediatorApplyQuery;
 public interface MediatorApplyService extends AppBaseService<MediatorApply, MediatorApplyQuery>{
 	
 	/**
-	 * 申请成为调解员
+	 * 申请成为员
 	 * @param clientId
 	 * @param applyReason
 	 * @return
@@ -32,7 +32,7 @@ public interface MediatorApplyService extends AppBaseService<MediatorApply, Medi
 	/**
 	 * 
 	* @Title: getMediatorApply 
-	* @Description: 获取调解员申请信息
+	* @Description: 获取员申请信息
 	* @param @param clientid
 	* @param @return
 	* @param @throws BizException
@@ -43,7 +43,7 @@ public interface MediatorApplyService extends AppBaseService<MediatorApply, Medi
 	public MediatorApply getMediatorApply(String clientid)throws BizException,ErrorException;
 	
 	/**
-	 * 审核调解员的申請
+	 * 审核员的申請
 	 * @param id				申請事件id
 	 * @param applyClientId		申請人id
 	 * @param auditState		申請狀態

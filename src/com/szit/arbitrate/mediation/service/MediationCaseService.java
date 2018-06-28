@@ -17,9 +17,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationCaseQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationCaseService
-* @Description:调解案件业务接口类
+* @Description:业务接口类
 * @author Administrator
 * @date 2017年3月23日 上午11:28:35
 * @UpdateUser:
@@ -33,9 +33,9 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: applyMediation 
-	* @Description: 申请调解
+	* @Description: 申请
 	* @param @param clientid
-	* @param @param casetype 案件类型
+	* @param @param casetype 类型
 	* @param @param caseexplain 申述点
 	* @param @param mediatorInfo
 	* @param @throws BizException
@@ -49,8 +49,8 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: addTempClient 
-	* @Description: 添加案件申述对象
-	* @param @param caseId 案件id
+	* @Description: 添加申述对象
+	* @param @param caseId id
 	* @param @param identifyName
 	* @param @param tel
 	* @param @return
@@ -75,9 +75,9 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: acceptMediationCase 
-	* @Description: 接受调解申请
-	* @param @param caseid 案件id
-	* @param @param mediatorid 调解员id
+	* @Description: 接受申请
+	* @param @param caseid id
+	* @param @param mediatorid 员id
 	* @return void 
 	* @throws
 	 */
@@ -86,10 +86,10 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: allocateMediationCase 
-	* @Description: 调解案件分配
+	* @Description: 分配
 	* @param @param caseid
 	* @param @param clientid 分配人id
-	* @param @param mediatorid 被分配调解id
+	* @param @param mediatorid 被分配id
 	* @param @throws BizException
 	* @param @throws ErrorException
 	* @return void 
@@ -100,7 +100,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: refuseClientMediationApplication 
-	* @Description: 拒绝用户的案件申请
+	* @Description: 拒绝用户的申请
 	* @param @param clientid
 	* @param @param caseid
 	* @param @throws BizException
@@ -113,7 +113,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: backToUpperLevel 
-	* @Description: 案件退回上一级
+	* @Description: 退回上一级
 	* @param @param client
 	* @param @param caseid
 	* @param @param reason
@@ -127,7 +127,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: getMediationListByClientId 
-	* @Description: 根据调解员id以及案件状态获取调解员的所有调解案例
+	* @Description: 根据员id以及状态获取员的所有案例
 	* @param @param clientid casestate
 	* @param @return
 	* @param @throws BizException
@@ -140,7 +140,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: searchMediationCaseByName  
-	* @Description: 调解员搜索案件
+	* @Description: 员搜索
 	* @param @param clientid
 	* @param @param casename
 	* @param @return
@@ -154,7 +154,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: getListByClientIdAndCaseType 
-	* @Description: 根据用户id以及分页索引查询案件列表--适用于调解员
+	* @Description: 根据用户id以及分页索引查询列表--适用于员
 	* @param @param clientid
 	* @param @param tabindex
 	* @param @return
@@ -184,7 +184,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: giveupMediation 
-	* @Description: 放弃调解，或者转为线下调解
+	* @Description: 放弃，或者转为线下
 	* @param @param clientid
 	* @param @param caseid
 	* @param @throws BizException
@@ -197,7 +197,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: gatherTempClient 
-	* @Description: 召集案件的被申请人
+	* @Description: 召集的被申请人
 	* @param @param tempclientid
 	* @param @throws BizException
 	* @param @throws ErrorException
@@ -221,7 +221,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: getListForNormalClient 
-	* @Description: 普通用户查询调解案件，包括自己申请的和被他人投诉的
+	* @Description: 普通用户查询，包括自己申请的和被他人投诉的
 	* @param @param clientid
 	* @param @param casestate
 	* @param @return
@@ -247,7 +247,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: toMediateOffLine 
-	* @Description: 转为线下调解
+	* @Description: 转为线下
 	* @param @param clientid
 	* @param @param caseid
 	* @param @throws BizException
@@ -273,7 +273,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: statisticsMediationCaseByClientId  
-	* @Description: 统计调解员的案件分布
+	* @Description: 统计员的分布
 	* @param @param clientid
 	* @param @return
 	* @param @throws BizException
@@ -288,7 +288,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: statisticsMediationCaseByClientId  
-	* @Description: 统计调解员的案件分布
+	* @Description: 统计员的分布
 	* @param @param clientid
 	* @param @return
 	* @param @throws BizException
@@ -316,7 +316,7 @@ public interface MediationCaseService extends AppBaseService<MediationCase, Medi
 	/**
 	 * 
 	* @Title: statMediationCaseExcelDto  
-	* @Description:案件数据统计 
+	* @Description:数据统计 
 	* @param @param statmonth
 	* @param @return
 	* @param @throws BizException

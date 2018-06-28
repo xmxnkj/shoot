@@ -13,9 +13,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationProtocolQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationProtocolService
-* @Description:调解协议业务接口类
+* @Description:协议业务接口类
 * @author yuyb
 * @date 2017年3月23日 上午11:31:26
 * @UpdateUser:
@@ -29,7 +29,7 @@ public interface MediationProtocolService extends AppBaseService<MediationProtoc
 	/**
 	 * 
 	* @Title: createMediationProtocol 
-	* @Description: 生成调解协议书
+	* @Description: 生成协议书
 	* @param @param tempclientlist
 	* @param @param protocolinbo
 	* @param @param content

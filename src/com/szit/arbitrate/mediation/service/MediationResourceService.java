@@ -8,9 +8,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationResourceQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationResourceService
-* @Description:调解资源业务接口类
+* @Description:资源业务接口类
 * @author yuyb
 * @date 2017年3月23日 上午11:36:44
 * @UpdateUser:

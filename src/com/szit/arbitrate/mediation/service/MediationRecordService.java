@@ -10,9 +10,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationRecordQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationRecordService
-* @Description:调解笔录业务接口类
+* @Description:笔录业务接口类
 * @author Administrator
 * @date 2017年3月23日 上午11:34:05
 * @UpdateUser:
@@ -23,10 +23,10 @@ import com.szit.arbitrate.mediation.entity.query.MediationRecordQuery;
  */
 public interface MediationRecordService extends AppBaseService<MediationRecord, MediationRecordQuery>{
 	/**
-	 * 添加调解记录
+	 * 添加记录
 	 * @param caseId
 	 * @param recordContent
-	 * @param mediatorId	调解员ID
+	 * @param mediatorId	员ID
 	 * @param involvedPerson	当事人
 	 * @param joinPerson	参与人
 	 * @param address		地点
@@ -65,7 +65,7 @@ public interface MediationRecordService extends AppBaseService<MediationRecord, 
 									String recordtype)throws BizException, ErrorException;
 	
 	/**
-	 * 获取案件笔录列表
+	 * 获取笔录列表
 	 * @param caseId
 	 * @throws BizException
 	 * @throws ErrorException
