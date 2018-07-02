@@ -76,9 +76,9 @@ import com.szit.arbitrate.pushcentre.vm.PushTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationCaseServiceImpl
-* @Description:调解案件业务接口实现类
+* @Description:业务接口实现类
 * @author yuyb
 * @date 2017年3月23日 上午11:30:24
 * @UpdateUser:
@@ -149,7 +149,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 				throw new BizException("你没有该操作权限,请先实名认证!");
 			}
 		}
-		//3.新增调解案件
+		//3.新增
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
 			entity = new MediationCase();
@@ -158,7 +158,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		entity.setApplyClientName(client.getIdentifyName());
 		entity.setCaseType(casetype);
 		entity.setCaseExplain(caseexplain);
-		if(StringUtils.isNotEmpty(mediatorInfo)){//空的时候表示没有指定调解员
+		if(StringUtils.isNotEmpty(mediatorInfo)){//空的时候表示没有指定员
 			entity.setMediatorInfo(mediatorInfo);
 		}
 		if(StringUtils.isNotEmpty(entity.getRefuseReason())){
@@ -170,7 +170,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		entity.setAllocationState(CaseAllocationStateEnum.MediationCenterNotAccepted);
 		String caseId = this.saveSimple(entity);
 		
-		//4.保存案件当事人信息
+		//4.保存当事人信息
 		if(jsonlist != null && jsonlist.size() > 0){
 			for(int i = 0; i < jsonlist.size(); i ++){
 				TClientInBo tClientInBo = jsonlist.get(i);
@@ -189,7 +189,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		
 		//推送
 		String pushClientId = "1";
-		String alertMessage = "有一个新的用户调解申请,请及时处理";
+		String alertMessage = "有一个新的用户申请,请及时处理";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pushAlertMessage", alertMessage);
 		map.put("pushClientId", pushClientId);
@@ -204,7 +204,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			String identify, boolean ispartb) {
 		MediationCase mediationCase = this.getById(caseId);
 		if(mediationCase == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		if(mediationCase.getApplyClient().getTel().equals(tel)){
 			throw new BizException("申述人电话不能为自己!");
@@ -250,8 +250,8 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 	}
 
 	/** 
-	 * 案件受理用
-	 * caseid 案件id
+	 * 受理用
+	 * caseid id
 	 * mediatorid 受理人id
 	 */
 	@Override
@@ -266,26 +266,26 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		if(!client.getClientType().equals(ClientTypeEnum.Mediator)){
 			throw new BizException("你没有该操作权限，无法受理!");
 		}
-		//2.受理案件
+		//2.受理
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
-		//2.1判断用户是否属于调解中心管理员
+		//2.1判断用户是否属于中心管理员
 		boolean authoritygroup = clientAuthorityGroupService.isClientInAuthorityGroupOrNot(mediatorid, "MediationCenter");
-		//如果受理者属于中心管理员权限组，且案件分配状态属于调解中心未受理，说明是中心管理员在受理案件，案件状态改为分配中，分配状态到MediationCenter
+		//如果受理者属于中心管理员权限组，且分配状态属于中心未受理，说明是中心管理员在受理，状态改为分配中，分配状态到MediationCenter
 		if(authoritygroup && entity.getAllocationState().equals(CaseAllocationStateEnum.MediationCenterNotAccepted)){
 			entity.setCaseState(CaseStateEnum.Allocation);
 			entity.setAllocationState(CaseAllocationStateEnum.MediationCenterAccepted);
 		}
 		authoritygroup = clientAuthorityGroupService.isClientInAuthorityGroupOrNot(mediatorid, "MediationAgency");
-		//2.2如果受理者属于机构管理员权限组，且案件分配状态属于调解中心已分配，说明是机构管理员在受理案件，案件状态还是分配中，分配状态到AgencyManager
+		//2.2如果受理者属于机构管理员权限组，且分配状态属于中心已分配，说明是机构管理员在受理，状态还是分配中，分配状态到AgencyManager
 		if(authoritygroup && entity.getAllocationState().equals(CaseAllocationStateEnum.MediationCenterAllocated)){
 			entity.setCaseState(CaseStateEnum.Allocation);
 			entity.setAllocationState(CaseAllocationStateEnum.AgencyManagerAccepted);
 		}
 		authoritygroup = clientAuthorityGroupService.isClientInAuthorityGroupOrNot(mediatorid, "Mediator");
-		//2.3如果受理者属于普通调解员权限组，且案件分配状态属于调解机构管理员已分配，说明是普通调解员在受理案件，案件状态变成已受理调节中，分配状态到Mediator
+		//2.3如果受理者属于普通员权限组，且分配状态属于机构管理员已分配，说明是普通员在受理，状态变成已受理调节中，分配状态到Mediator
 		if(authoritygroup && entity.getAllocationState().equals(CaseAllocationStateEnum.AgencyManagerAllocated)){
 			
 			entity.setCaseState(CaseStateEnum.Mediating);
@@ -305,7 +305,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			}
 			//推送
 			String pushClientId = entity.getApplyClientId();
-			String alertMessage = "您于"+entity.getApplyTime()+"申请的案件,已被受理,请前往登录app进行调解";
+			String alertMessage = "您于"+entity.getApplyTime()+"申请的,已被受理,请前往登录app进行";
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("pushAlertMessage", alertMessage);
 			map.put("pushClientId", pushClientId);
@@ -316,9 +316,9 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 	}
 	
 	/**
-	 * 分配案件
+	 * 分配
 	 * clientid 分配人id
-	 * caseid 案件id
+	 * caseid id
 	 * mediatorid 受理人id
 	 */
 	@Override
@@ -334,14 +334,14 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			throw new BizException("你没有该操作权限!");
 		}
 		
-		//2.根据用户id确认用户属于哪个权限组，确定是调解中心分配还是调解机构管理员在分配，开始案件分配
+		//2.根据用户id确认用户属于哪个权限组，确定是中心分配还是机构管理员在分配，开始分配
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		String pushClientId = "";
-		//2.1判断用户是否属于调解中心管理员
-		//如果用户是调解中心管理员，且案件分类状态为调解中心已受理，则可以分配，分配对象为调解机构
+		//2.1判断用户是否属于中心管理员
+		//如果用户是中心管理员，且分类状态为中心已受理，则可以分配，分配对象为机构
 		if(client.getClientState().equals(ClientStateEnum.MediationCenter) 
 				&& entity.getAllocationState().equals(CaseAllocationStateEnum.MediationCenterAccepted)){
 			MediationAgency agency = mediationAgencyService.getById(mediatorid);
@@ -356,10 +356,10 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			entity.setCaseState(CaseStateEnum.Allocation);//分配中
 			pushClientId = agency.getManagerClientId();
 		}
-		//2.2如果用户是调解机构管理员，且案件分类状态为调解机构已受理，则可以分配，分配对象为普通调解员
+		//2.2如果用户是机构管理员，且分类状态为机构已受理，则可以分配，分配对象为普通员
 		if(client.getClientState().equals(ClientStateEnum.MediationAgency) 
 				&& entity.getAllocationState().equals(CaseAllocationStateEnum.AgencyManagerAccepted)){
-			if(clientid.equals(mediatorid)){//如果机构管理员分配给自己，案件直接进入进行中
+			if(clientid.equals(mediatorid)){//如果机构管理员分配给自己，直接进入进行中
 				entity.setCaseState(CaseStateEnum.Mediating);
 				entity.setAllocationState(CaseAllocationStateEnum.MediatorAccepted);
 				MediationAgency agency;
@@ -383,7 +383,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			entity.setRefuseReason(null);
 		}
 		this.save(entity);
-		String alertMessage = "您有一个新的被指派调解案件,请及时处理!";
+		String alertMessage = "您有一个新的被指派,请及时处理!";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pushAlertMessage", alertMessage);
 		map.put("pushClientId", pushClientId);
@@ -408,7 +408,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		//2.
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		entity.setRefuseReason(refusereason);
 		entity.setAllocationState(CaseAllocationStateEnum.Refuse);
@@ -417,7 +417,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		
 		//3.推送
 		String pushClientId = entity.getApplyClientId();
-		String alertMessage = "系统拒绝了您申请的调解："+entity.getCaseExplain()+"，拒绝理由："+refusereason;
+		String alertMessage = "系统拒绝了您申请的："+entity.getCaseExplain()+"，拒绝理由："+refusereason;
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pushAlertMessage", alertMessage);
 		map.put("pushClientId", pushClientId);
@@ -435,33 +435,33 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		}
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		String pushClientId = "";
-		//1.如果用户是机构管理员，则案件退回到调解中心管理员
+		//1.如果用户是机构管理员，则退回到中心管理员
 		if(client.getClientState().equals(ClientStateEnum.MediationAgency)
 				&& entity.getCaseState().equals(CaseStateEnum.Allocation)){
-			//案件分配状态变回：调解中心已受理
+			//分配状态变回：中心已受理
 			entity.setAllocationState(CaseAllocationStateEnum.MediationCenterAccepted);
 			//填写退回理由
 			if(StringUtils.isNotEmpty(reason)){
 				entity.setRefuseReason(reason);
 			}
-			//修改状态,退给调解中心管理员
+			//修改状态,退给中心管理员
 			entity.setMediatorClientId("1");
 			pushClientId = "1";
 		}
-		//2.如果用户是普通调解员，则案件退回到调解机构管理员
+		//2.如果用户是普通员，则退回到机构管理员
 		if(client.getClientState().equals(ClientStateEnum.Mediator)
 				&& entity.getCaseState().equals(CaseStateEnum.Allocation)){
-			//案件分配状态变回：调解中心已受理
+			//分配状态变回：中心已受理
 			entity.setAllocationState(CaseAllocationStateEnum.AgencyManagerAccepted);
 			//填写退回理由
 			if(StringUtils.isNotEmpty(reason)){
 				entity.setRefuseReason(reason);
 			}
 			
-			//退给调解机构管理员
+			//退给机构管理员
 			MediationAgency mediationAgency = mediationAgencyService.getById(client.getMediationAgencyId());
 			if(mediationAgency==null){
 				throw new BizException("机构不存在");
@@ -472,7 +472,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		
 		this.save(entity);
 		
-		String alertMessage = "您指派给!"+client.getIdentifyName()+"的调解案件被退回了，请重新指派!";
+		String alertMessage = "您指派给!"+client.getIdentifyName()+"的被退回了，请重新指派!";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pushAlertMessage", alertMessage);
 		map.put("pushClientId", pushClientId);
@@ -524,7 +524,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 				e.printStackTrace();
 			}
 		}
-		//1.查询[调解管理]列表,根据案件分配状态
+		//1.查询[管理]列表,根据分配状态
 		if(tabindex==0){
 			list = mediationCaseDao.getMediationCaseListByClientState(clientid, clientStateEnum,mediationAgency == null ? null : mediationAgency.getId());
 		}else{
@@ -545,13 +545,13 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		}
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		if(!entity.getCaseState().equals(CaseStateEnum.WaitSign)){
-			throw new BizException("案件状态不对，不能结案!");
+			throw new BizException("状态不对，不能结案!");
 		}
 		if(!entity.getMediatorClientId().equals(mediatorid)){
-			throw new BizException("你不是案件调解员，无权结案!");
+			throw new BizException("你不是员，无权结案!");
 		}
 		entity.setMediateType(mediatetype);
 		entity.setCaseType(casetype);
@@ -573,14 +573,14 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 	@Override
 	public void giveupMediation(String clientid, String caseid)
 			throws BizException, ErrorException {
-		//转为线下调解，视为放弃调解，案件状态改为已关闭
+		//转为线下，视为放弃，状态改为已关闭
 		
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		if(!entity.getApplyClientId().equals(clientid)){
-			throw new BizException("不是申请人无权限放弃调解!");
+			throw new BizException("不是申请人无权限放弃!");
 		}
 		entity.setCaseState(CaseStateEnum.GiveUp);
 		this.save(entity);
@@ -625,7 +625,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		tempClient.setGather(true);
 		tempClient.setIdentifyName(client.getIdentifyName());
 		tempClientService.save(tempClient);
-		//4.如果案件聊天室已经开启，则将召集的用户加入聊天室
+		//4.如果聊天室已经开启，则将召集的用户加入聊天室
 		ChatRoom chatRoom = chatRoomService.getChatRoomByCaseId(tempClient.getCaseId());
 		if(chatRoom != null){
 			ChatRoomClientQuery chatRoomClientQuery = new ChatRoomClientQuery();
@@ -693,7 +693,6 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 //		paramsarry.put(agencyName);
 //		paramsarry.put(entity.getMediatorClient().getIdentifyName());
 //		paramsarry.put(tempClient.getTel());
-//		关于 “（申诉人与被申诉人的xx）”纠纷案件，“ xx你好，”“调解员” 调解员邀请您参与在线调解，请登录海沧调解在线参与调解，账号为您的手机号：“”，初始密码为：123456。
 		smsVerifyRecordService.sendSmsMessage(phonearry.toString(), SmsBizModelEnum.sms, templateid, paramsarry.toString());
 	}
 	
@@ -702,10 +701,10 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			ErrorException {
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		if(!entity.getCaseState().equals(CaseStateEnum.Mediating)){
-			throw new BizException("案件状态不对，不能操作!");
+			throw new BizException("状态不对，不能操作!");
 		}
 		entity.setCaseState(CaseStateEnum.WaitSign);
 		this.save(entity);
@@ -725,7 +724,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		entity.setCaseState(CaseStateEnum.WaitSign);
 		this.save(entity);
@@ -759,7 +758,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		}
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		if(!clientid.equals(entity.getMediatorClientId())){
 			throw new BizException("没有操作权限!");
@@ -783,7 +782,7 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 					JSONArray  paramsarry = new JSONArray();
 					paramsarry.put(t.getIdentifyName());//被申述名字
 					paramsarry.put(entity.getApplyClientName()); //申诉人
-					paramsarry.put(entity.getCaseType());//案件类型
+					paramsarry.put(entity.getCaseType());//类型
 					paramsarry.put(failreason);//原因
 					this.sendSmsMessage(t.getTel(),paramsarry);
 				}
@@ -853,13 +852,13 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 			throws BizException, ErrorException {
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		if(clientid.equals(entity.getApplyClientId())){
 			return "申述人";
 		}
 		if(clientid.equals(entity.getMediatorClientId())){
-			return "调解员";
+			return "员";
 		}
 		TempClientQuery tempClientQuery = new TempClientQuery();
 		tempClientQuery.setCaseId(caseid);
@@ -887,10 +886,10 @@ public class MediationCaseServiceImpl extends AppBaseServiceImpl<MediationCase, 
 		
 		MediationCase entity = this.getById(caseid);
 		if(entity == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
 		String url = "uploads/mediation/"+caseid;
-		//1. 导出案件申请书
+		//1. 导出申请书
 		new FileMediationToDoc().fileMediationApplyToDoc(caseid);
 		//2. 导出协议书
 		new FileMediationToDoc().fileMediationProtocolToDoc(caseid);

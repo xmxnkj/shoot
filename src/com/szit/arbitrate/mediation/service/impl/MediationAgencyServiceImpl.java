@@ -16,9 +16,9 @@ import com.szit.arbitrate.mediation.service.MediationAgencyService;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationAgencyServiceImpl
-* @Description:调解机构业务接口实现类
+* @Description:机构业务接口实现类
 * @author Administrator
 * @date 2017年3月23日 上午11:27:23
 * @UpdateUser:

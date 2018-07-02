@@ -46,9 +46,9 @@ import com.szit.arbitrate.pushcentre.vm.PushTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationProtocolServiceImpl
-* @Description:调解协议业务接口实现类
+* @Description:协议业务接口实现类
 * @author Administrator
 * @date 2017年3月23日 上午11:32:46
 * @UpdateUser:
@@ -101,9 +101,9 @@ public class MediationProtocolServiceImpl extends AppBaseServiceImpl<MediationPr
 		}
 		MediationCase mediationCase = mediationCaseService.getById(protocolinbo.getCaseId());
 		if(mediationCase == null){
-			throw new BizException("案件不存在!");
+			throw new BizException("不存在!");
 		}
-		//1. 查询此案件是否有协议书存在
+		//1. 查询此是否有协议书存在
 		MediationProtocolQuery query = new MediationProtocolQuery();
 		query.setCaseId(protocolinbo.getCaseId());
 		MediationProtocol entity = this.getEntity(query);
@@ -183,11 +183,11 @@ public class MediationProtocolServiceImpl extends AppBaseServiceImpl<MediationPr
 		String caseId = entity.getCaseId();
 		MediationCase mediationCase = mediationCaseService.getById(caseId);
 		if(mediationCase == null){
-			throw new BizException("案件不存在!"); 
+			throw new BizException("不存在!"); 
 		}
 		
 		//1.推送通知
-		String alertMessage = "您申请的调解协议书已生成，请注意查收!";
+		String alertMessage = "您申请的协议书已生成，请注意查收!";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pushAlertMessage", alertMessage);
 		String caseid = entity.getCaseId();
@@ -235,7 +235,7 @@ public class MediationProtocolServiceImpl extends AppBaseServiceImpl<MediationPr
 		String caseId = entity.getCaseId();
 		MediationCase mediationCase = mediationCaseService.getById(caseId);
 		
-		String alertMessage = "您参与调解的案件:"+mediationCase.getCaseExplain()+",所有当事人都已同意协议书，请及时跟进!";
+		String alertMessage = "您参与的:"+mediationCase.getCaseExplain()+",所有当事人都已同意协议书，请及时跟进!";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pushAlertMessage", alertMessage);
 		map.put("caseId", caseId);
@@ -269,7 +269,7 @@ public class MediationProtocolServiceImpl extends AppBaseServiceImpl<MediationPr
 				tempClientService.save(tempClient);
 				
 				
-				//查询所有乙方是否同意，同意案件就变为待结案状态
+				//查询所有乙方是否同意，同意就变为待结案状态
 				int count = dao.getTempClientNotAcceptCount(caseId);
 				if(count == 0 && entity.getPartAState().equals(ProtocolStateEnum.Accepted)){//说明没有同意的人数为0
 					mediationCase.setCaseState(CaseStateEnum.WaitComplete);
@@ -278,7 +278,7 @@ public class MediationProtocolServiceImpl extends AppBaseServiceImpl<MediationPr
 			}
 		}
 		
-		if(type == 1){//1说明拒绝协议书,案件状态变回调解中
+		if(type == 1){//1说明拒绝协议书,状态变回中
 			entity.setPartAState(ProtocolStateEnum.Init);
 			tempClientQuery.setCaseId(caseId);
 			List<TempClient> list = tempClientService.getEntities(tempClientQuery);

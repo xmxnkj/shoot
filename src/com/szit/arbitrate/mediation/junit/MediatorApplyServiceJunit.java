@@ -16,7 +16,7 @@ public class MediatorApplyServiceJunit extends BaseApiJunitTest{
 	
 	private Logger logger = LoggerFactory.getLogger(ClientServiceJunit.class);
 	
-	//申请成为调解员
+	//申请成为员
 	@Test
 	public void saveMediatorApply(){
 		

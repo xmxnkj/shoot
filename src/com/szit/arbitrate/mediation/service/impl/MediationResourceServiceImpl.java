@@ -22,9 +22,9 @@ import com.szit.arbitrate.mediation.service.MediationResourceService;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationResourceServiceImpl
-* @Description:调解资源业务实现类
+* @Description:资源业务实现类
 * @author Administrator
 * @date 2017年3月23日 上午11:38:22
 * @UpdateUser:

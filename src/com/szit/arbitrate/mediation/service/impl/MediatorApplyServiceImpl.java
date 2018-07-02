@@ -39,9 +39,9 @@ import com.szit.arbitrate.pushcentre.vm.PushTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediatorApplyServiceImpl
-* @Description:调解申请业务实现类
+* @Description:申请业务实现类
 * @author Administrator
 * @date 2017年3月23日 上午11:41:26
 * @UpdateUser:
@@ -87,10 +87,10 @@ public class MediatorApplyServiceImpl extends AppBaseServiceImpl<MediatorApply, 
 			throw new BizException("用户不存在!");
 		}
 		if(client.getClientState() != ClientStateEnum.Certificated){
-			throw new BizException("只有实名认证用户才能申请成为调解员!");
+			throw new BizException("只有实名认证用户才能申请成为员!");
 		}
 		if(client.getMediationAgencyId() != null){
-			throw new BizException("已经是调解员!");
+			throw new BizException("已经是员!");
 		}
 		
 		if(StringUtils.isEmpty(applyReason)){
@@ -151,12 +151,12 @@ public class MediatorApplyServiceImpl extends AppBaseServiceImpl<MediatorApply, 
 			json.put("data", "");
 			Map<String,Object> map = new HashMap<String,Object>();
 			map.put("receiveClientId", applyClientId);
-			map.put("pushAlertMessage", "申请调解员失败");
+			map.put("pushAlertMessage", "申请员失败");
 			PushMessageDisposeFactory.bulidPush(PushTypeEnum.MediatorApply, map);
 			return json;
 		}
 		
-		//2.分配调解机构
+		//2.分配机构
 		
 		Client client=clientService.getById(applyClientId);
 		if(client==null){
@@ -164,7 +164,7 @@ public class MediatorApplyServiceImpl extends AppBaseServiceImpl<MediatorApply, 
 		}
 		boolean isRegister = clientService.checkIsAccountRegister(client.getAccount(), "Mediator");
 		if(isRegister){
-			throw new BizException("该手机号已经被注册调解员!");
+			throw new BizException("该手机号已经被注册员!");
 		}
 		
 		MediationAgency mediationAgency = mediationAgencyService.getById(mediationAgencyId);
@@ -172,7 +172,7 @@ public class MediatorApplyServiceImpl extends AppBaseServiceImpl<MediatorApply, 
 			throw new BizException("不存在的机构!");
 		}
 		
-		//新添加一条client 用户类型为调解员
+		//新添加一条client 用户类型为员
 		try {
 			Client newClient = (Client) BeanCopyUtils.beanUtilsCopy(client, Client.class, new String[]{"id"});
 			newClient.setClientType(ClientTypeEnum.Mediator);
@@ -200,7 +200,7 @@ public class MediatorApplyServiceImpl extends AppBaseServiceImpl<MediatorApply, 
 			//發送通知消息
 			Map<String,Object> map = new HashMap<String,Object>();
 			map.put("receiveClientId", applyClientId);
-			map.put("pushAlertMessage", "您已成为调解员");
+			map.put("pushAlertMessage", "您已成为员");
 			PushMessageDisposeFactory.bulidPush(PushTypeEnum.MediatorApply, map);
 			
 		} catch (Exception e) {
