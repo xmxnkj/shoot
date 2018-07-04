@@ -8,7 +8,7 @@
             <generator class="uuid2"/>
         </id>
         <property name="caseId" column="CASE_ID" />	
-        <property name="recordContent" column="RECORD_CONTENT" />			<!-- 调解记录 -->
+        <property name="recordContent" column="RECORD_CONTENT" />			<!-- 记录 -->
         
         <property name="recordTypeEnum" column="RECORD_TYPE_ENUM" >
         	<type name="org.hibernate.type.EnumType">

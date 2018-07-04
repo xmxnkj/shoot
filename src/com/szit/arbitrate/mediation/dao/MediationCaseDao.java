@@ -16,9 +16,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationCaseQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: CaseDao
-* @Description:案件实体dao接口类
+* @Description:实体dao接口类
 * @author Administrator
 * @date 2017年3月23日 上午10:56:43
 * @UpdateUser:
@@ -32,7 +32,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: getMediationCaseListByClientState 
-	* @Description: 根据调解员的类型获取 调解管理的列表数据
+	* @Description: 根据员的类型获取 管理的列表数据
 	* @param @param clientid
 	* @param @param clientStateEnum
 	* @param @return
@@ -46,7 +46,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: getMediatingCaseListByClientId 
-	* @Description: 根据调解员id获得调解进行中的案件列表 包括进行中和暂停中的
+	* @Description: 根据员id获得进行中的列表 包括进行中和暂停中的
 	* @param @param clientid
 	* @param @return
 	* @param @throws ErrorException
@@ -58,7 +58,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: searchMediationCaseByName  
-	* @Description: 调解员搜索案件
+	* @Description: 员搜索
 	* @param @param clientid
 	* @param @param casename
 	* @param @return
@@ -72,7 +72,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: getListForNormalClient 
-	* @Description: 普通用户查询调解案件，包括自己申请的和被他人投诉的
+	* @Description: 普通用户查询，包括自己申请的和被他人投诉的
 	* @param @param clientid
 	* @param @param casestate
 	* @param @return
@@ -86,7 +86,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: statisticsMediationCaseByClientId  
-	* @Description: 调解员案件分布统计
+	* @Description: 员分布统计
 	* @param @param clientid
 	* @param @return
 	* @param @throws ErrorException    设定文件  
@@ -99,7 +99,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: statisticsMediationCaseByClientId  
-	* @Description: 调解员案件分布统计按时间和id查询
+	* @Description: 员分布统计按时间和id查询
 	* @param @param clientid
 	* @param @return
 	* @param @throws ErrorException    设定文件  
@@ -112,7 +112,7 @@ public interface MediationCaseDao extends BaseHibernateDao<MediationCase, Mediat
 	/**
 	 * 
 	* @Title: statMediationCaseExcelDto  
-	* @Description: 案件数据统计
+	* @Description: 数据统计
 	* @param @return
 	* @param @throws ErrorException    设定文件  
 	* @return List<MediationCaseExcelDto>    返回类型  

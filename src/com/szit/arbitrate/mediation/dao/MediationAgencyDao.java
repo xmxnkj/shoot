@@ -22,7 +22,7 @@ public interface MediationAgencyDao extends BaseHibernateDao<MediationAgency, Me
 	public List<MediationAgency> searchMediationAgencyList(String agencytype, String casetype, String agencyname)throws ErrorException;
 
 	/**
-	 * 通过调解员id获取对应的机构
+	 * 通过员id获取对应的机构
 	 * @param mediationId
 	 * @return
 	 * @throws ErrorException

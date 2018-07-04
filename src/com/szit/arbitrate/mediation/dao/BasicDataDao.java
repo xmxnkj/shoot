@@ -9,7 +9,7 @@ import com.szit.arbitrate.mediation.entity.query.BasicDataQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: BasicDataDao
 * @Description:基础数据dao接口类
 * @author Administrator

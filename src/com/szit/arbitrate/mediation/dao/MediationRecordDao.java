@@ -6,9 +6,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationRecordQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationRecordDao
-* @Description:调解笔录dao接口类
+* @Description:笔录dao接口类
 * @author Administrator
 * @date 2017年3月23日 上午11:21:36
 * @UpdateUser:

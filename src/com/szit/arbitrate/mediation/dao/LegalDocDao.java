@@ -6,7 +6,7 @@ import com.szit.arbitrate.mediation.entity.query.LegalDocQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: LegalDocDao
 * @Description:法律文档dao接口类
 * @author Administrator
