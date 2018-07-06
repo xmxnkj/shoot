@@ -13,9 +13,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationResourceQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationResourceDaoImpl
-* @Description:调解资源dao实现类
+* @Description:资源dao实现类
 * @author Administrator
 * @date 2017年3月23日 上午11:03:50
 * @UpdateUser:

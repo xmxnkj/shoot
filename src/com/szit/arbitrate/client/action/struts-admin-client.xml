@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<package name="admin-client" namespace="/admin/client" extends="per-default">
+		<action name="clientlist" class="clientAction" method="list">
+			<result>/WEB-INF/jsp/admin/client/clientlist.jsp</result>
+		</action>
+		<action name="showEditView" class="clientAction" method="dispatcherEditPage">
+			<result>/WEB-INF/jsp/admin/client/editform.jsp</result>
+		</action>
+		<action name="showAddView" class="clientAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/client/addform.jsp</result>
+		</action>
+		<action name="showIdentifyView" class="clientAction" method="showAddView">
+			<result>/WEB-INF/jsp/admin/client/showview.jsp</result>
+		</action>
+	</package>
+
+	<package name="admin-client-mediatorapply" namespace="/admin/client/mediatorapply" extends="per-default">
+		<action name="list" class="mediatorApplyAction" method="list">
+			<result>/WEB-INF/jsp/admin/client/mediatorapply.jsp</result>
+		</action>
+		<action name="showEditView" class="mediatorApplyAction" method="showEditView">
+			<result>/WEB-INF/jsp/admin/client/applyform.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="admin-client-authority" namespace="/admin/client/authority" extends="per-default">
+		<action name="list" class="authorityGroupAction" method="list">
+			<result>/WEB-INF/jsp/admin/client/authoritylist.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="admin-client-clientauthoritygroup" namespace="/admin/client/clientauthoritygroup" extends="per-default">
+		<action name="list" class="clientAuthorityGroupAction" method="list">
+			<result>/WEB-INF/jsp/admin/client/authoritylist.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>

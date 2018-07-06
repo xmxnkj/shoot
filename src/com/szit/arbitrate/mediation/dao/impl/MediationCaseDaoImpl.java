@@ -33,9 +33,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationCaseQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: CaseDaoImpl
-* @Description:案件dao接口实现类
+* @Description:dao接口实现类
 * @author Administrator
 * @date 2017年3月23日 上午10:57:29
 * @UpdateUser:
@@ -157,19 +157,19 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 		hql.append(" WHERE 1=1 ");
 		if(clientStateEnum.equals(ClientStateEnum.MediationCenter)){
 //			hql.append(" mc.ALLOCATION_STATE in (:allocationState1,:allocationState2)");
-			//案件状态 Init,//初始化，未受理,申请中	Allocation,//分配中
+			//状态 Init,//初始化，未受理,申请中	Allocation,//分配中
 			hql.append(" AND mc.CASE_STATE IN (0,1)");
 //			paramMap.put("allocationState1", CaseAllocationStateEnum.MediationCenterNotAccepted.ordinal());
 //			paramMap.put("allocationState2", CaseAllocationStateEnum.MediationCenterAccepted.ordinal());
 		}else if(StringUtils.isNotEmpty(mediationAgencyId) ){
-			//绑定案件机构id
+			//绑定机构id
 			hql.append(" AND mc.MEDIATION_AGENCY_ID=:mediationAgencyId ");
 			paramMap.put("mediationAgencyId", mediationAgencyId);
 		}
 		
 		if(clientStateEnum.equals(ClientStateEnum.MediationAgency)){
 //			hql.append(" mc.MEDIATOR_CLIENT_ID=:CLIENTIDPARAM and mc.ALLOCATION_STATE in (:allocationState1,:allocationState2)");
-			//案件状态 Allocation,//分配中
+			//状态 Allocation,//分配中
 			hql.append("AND mc.CASE_STATE ='1'");
 			hql.append("and mc.ALLOCATION_STATE > 1");
 //			paramMap.put("CLIENTIDPARAM", clientid);
@@ -230,9 +230,9 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 		sql.append(" WHERE 1=1 ");
 //		sql.append(" mc.MEDIATOR_CLIENT_ID=:CLIENTIDPARAM ");
 //		paramMap.put("CLIENTIDPARAM", clientid);
-		if(tabindex == 1){//当前调解
+		if(tabindex == 1){//当前
 			sql.append(" AND mc.CASE_STATE IN (2,3,4) ");
-		}else if(tabindex == 2){//历史调解
+		}else if(tabindex == 2){//历史
 			sql.append(" AND mc.CASE_STATE IN (5,6,7,8) ");
 		}
 		//如果不是管理员按机构查  是管理员查所有
@@ -461,7 +461,7 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 			sqlparam.append(" and MEDIATION_AGENCY_ID = ? ");
 			query.add(mediationAgencyId.trim());
 		}
-		//按调解机构查
+		//按机构查
 		if(clientstate.equals(ClientStateEnum.MediationAgency.toString())){
 			String me_mediation_case = "(select CASE_TYPE,MEDIATOR_CLIENT_ID from me_mediation_case where 1=1" + sqlparam.toString()+")";
 			
@@ -676,19 +676,19 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 			test.put("jiedao",liMap.get("jiedao").toString().trim());
 			//涉案人数
 			test.put("ajsjrs", getInt(test.get("ajsjrs")) + getInt(liMap.get("ajsjrs")));		
-			//案件总调解数
+			//总数
 			test.put("tiaojzs", getInt(test.get("tiaoj"))+ getInt(liMap.get("val")));		
 			//调节成功
 			test.put("cgla",getInt(test.get("cgla"))+ getInt(liMap.get("cgla")));		
-			//疑难复杂案件
+			//疑难复杂
 			test.put("ynfzaj", getInt(test.get("ajsjrs"))+ getInt(liMap.get("ynfzaj")));		
 			//涉案金额
 			test.put("ajsjje",getInt(test.get("ajsjje"))+ getInt(liMap.get("ajsjje")));		
 			//信访
 			test.put("xinfan", getInt(test.get("xinfan"))+ getInt(liMap.get("xinfan")));		
-			//法院调解
+			//法院
 			test.put("fayuan", getInt(test.get("fayuan"))+ getInt(liMap.get("fayuan")));		
-			//主动调解
+			//主动
 			test.put("zhudong", getInt(test.get("zhudong"))+ getInt(liMap.get("zhudong")));		
 			
 			test.put("gongan",getInt(test.get("gongan"))+ getInt(liMap.get("gongan")));		
@@ -705,10 +705,10 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 			//书面协议
 			test.put("smxy", getInt(test.get("smxy"))+ getInt(liMap.get("smxy")));
 			
-			//企事业单位委员调解案件数
+			//企事业单位委员数
 			test.put("QSYTJAJS", getInt(test.get("QSYTJAJS")) + getInt(liMap.get("QSYTJAJS")));		
 			
-			//街道委员会调解案件数
+			//街道委员会数
 			test.put("JDWYHTJAJS", getInt(test.get("JDWYHTJAJS")) + getInt(liMap.get("JDWYHTJAJS")));		
 			
 			getMap(test,liMap.get("name").toString(),getInt(liMap.get("val")));
@@ -765,15 +765,15 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 	
 	
 	/**
-	 * 统计案件分类 按照下面
-	 * 案件类型 caseType
-	 * 调节案件总数
-	 * difficult=false;//是否疑难复杂案件
-	 * people;//案件涉及人数
-	 * caseState;//案件状态 枚举  Completed,//调解员点击结案，已结案  7
+	 * 统计分类 按照下面
+	 * 类型 caseType
+	 * 调节总数
+	 * difficult=false;//是否疑难复杂
+	 * people;//涉及人数
+	 * caseState;//状态 枚举  Completed,//员点击结案，已结案  7
 	 * protocolForm //协议形式
 	 * CASE_MONEY //涉案金额
-	 * CASE_SOURCE //案件来源
+	 * CASE_SOURCE //来源
 	 * @return
 	 * @throws SQLException 
 	 */ 
@@ -782,11 +782,11 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 //		//中文转义不出 匹配不了查询条件
 //		String sql = "SELECT "
 //		+ "COUNT(CASE_TYPE) as val, "
-//		+ "MAX(CASE_TYPE) as name, " //案件分类
+//		+ "MAX(CASE_TYPE) as name, " //分类
 //		+" sum(people) as ajsjrs, "//涉案人数
 //		+" case when CASE_STATE = 7  then SUM(1) else SUM(0) end as cgla, "//是否调节成功
 //		+" sum(CASE_MONEY) as ajsjje, "//涉案金额
-//		+" case when difficult = 1  then SUM(1) else SUM(0) end as ynfzaj," //是否疑难复杂案件
+//		+" case when difficult = 1  then SUM(1) else SUM(0) end as ynfzaj," //是否疑难复杂
 //		
 //		+" case when PROTOCOL_FORM = 0  then SUM(1)  else SUM(0) end as ktxy, "//口头协议
 //		
@@ -796,17 +796,17 @@ public class MediationCaseDaoImpl extends BaseHibernateDaoImpl<MediationCase, Me
 //
 //		+" case when CASE_SOURCE = '法院委托移送'  then SUM(1)  else SUM(0) end as fayuan, "//来源
 //
-//		+" case when CASE_SOURCE = '主动调解'  then SUM(1)  else SUM(0) end as zhudong ," //来源
+//		+" case when CASE_SOURCE = '主动'  then SUM(1)  else SUM(0) end as zhudong ," //来源
 //
 //		+" case when CASE_SOURCE = '公安机关委托移送'  then SUM(1)  else SUM(0) end as gongan ," //来源
 //
 //		+" case when CASE_SOURCE = '其他部门委托移送'  then SUM(1)  else SUM(0) end as qita ," //来源
 //
-//		+" case when CASE_SOURCE = '依申请调解'  then SUM(1)  else SUM(0) end as yishen ," //来源
+//		+" case when CASE_SOURCE = '依申请'  then SUM(1)  else SUM(0) end as yishen ," //来源
 //		
 //		+" case when CASE_SOURCE = '检察院委托移送'  then SUM(1)  else SUM(0) end as jiancha ,"//来源
 //		
-//		+" case when CASE_SOURCE = '接受委托移送调解'  then SUM(1)  else SUM(0) end as jiesou ," //来源
+//		+" case when CASE_SOURCE = '接受委托移送'  then SUM(1)  else SUM(0) end as jiesou ," //来源
 //
 //		+" AGENCY_BELONGS_TO as jiedao "
 //		

@@ -16,9 +16,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationProtocolQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationProtocolDaoImpl
-* @Description:调解协议dao实现类
+* @Description:协议dao实现类
 * @author Administrator
 * @date 2017年3月23日 上午11:20:00
 * @UpdateUser:

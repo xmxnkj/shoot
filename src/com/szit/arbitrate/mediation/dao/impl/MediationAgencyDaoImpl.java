@@ -19,9 +19,9 @@ import com.szit.arbitrate.mediation.entity.query.MediationAgencyQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationAgencyDaoImpl
-* @Description:调解机构dao实现类
+* @Description:机构dao实现类
 * @author Administrator
 * @date 2017年3月23日 上午10:59:40
 * @UpdateUser:
@@ -72,7 +72,7 @@ public class MediationAgencyDaoImpl extends BaseHibernateDaoImpl<MediationAgency
 	
 	
 	/**
-	 * 通过调解员id获取对应的机构
+	 * 通过员id获取对应的机构
 	 * @param mediationId
 	 * @return
 	 * @throws Exception 

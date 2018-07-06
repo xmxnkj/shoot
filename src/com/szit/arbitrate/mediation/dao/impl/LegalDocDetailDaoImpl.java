@@ -13,7 +13,7 @@ import com.szit.arbitrate.mediation.entity.query.LegalDocDetailQuery;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: LegalDocMomentsDaoImpl
 * @Description:法规文档详情dao实现类
 * @author Administrator
