@@ -4,7 +4,7 @@ import com.szit.arbitrate.mediation.docfactory.product.IDocDisposeProduct;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: DocReflectFactory
 * @Description:抽象工厂类
 * @author Administrator

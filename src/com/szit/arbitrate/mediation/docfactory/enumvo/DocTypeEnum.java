@@ -2,7 +2,7 @@ package com.szit.arbitrate.mediation.docfactory.enumvo;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: DocTypeEnum
 * @Description:导出doc文档类型
 * @author Administrator
@@ -16,6 +16,6 @@ package com.szit.arbitrate.mediation.docfactory.enumvo;
 public enum DocTypeEnum {
 	
 	LegalDoc,//导出法规文档
-	MediationProtocol;//导出调解协议书
+	MediationProtocol;//导出协议书
 
 }
