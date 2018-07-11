@@ -14,7 +14,7 @@ import com.szit.arbitrate.mediation.entity.LegalDocDetail;
 
 /**
  *  
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: BuildLegalDocProduct
 * @Description:导出法规文档doc产品类
 * @author Administrator

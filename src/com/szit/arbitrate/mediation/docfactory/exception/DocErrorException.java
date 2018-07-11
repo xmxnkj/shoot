@@ -2,7 +2,7 @@ package com.szit.arbitrate.mediation.docfactory.exception;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: DocErrorException
 * @Description:生成doc系统异常处理类
 * @author Administrator

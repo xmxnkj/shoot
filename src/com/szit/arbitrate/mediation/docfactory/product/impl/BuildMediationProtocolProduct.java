@@ -14,9 +14,9 @@ import com.szit.arbitrate.mediation.entity.MediationProtocol;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: BuildMediationProtocolProduct
-* @Description:导出调解协议书doc产品类
+* @Description:导出协议书doc产品类
 * @author Administrator
 * @date 2017年5月12日 下午3:37:18
 * @UpdateUser:

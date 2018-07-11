@@ -7,7 +7,7 @@ import com.szit.arbitrate.mediation.docfactory.exception.DocErrorException;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: IDocDisposeProduct
 * @Description:导出doc文档车间接口类
 * @author Administrator
