@@ -11,9 +11,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.AgencyTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationAgency
-* @Description:调解机构实体类
+* @Description:机构实体类
 * @author Administrator
 * @date 2017年3月23日 上午10:21:37
 * @UpdateUser:
@@ -28,7 +28,7 @@ public class MediationAgency extends DomainEntity{
 	
 	private static final long serialVersionUID = -3892793688471801964L;
 	
-	private AgencyTypeEnum agencyType;//机构类型,包括人民调解机构，行政调解机构，司法调解机构
+	private AgencyTypeEnum agencyType;//机构类型,包括人民机构，行政机构，司法机构
 	private String agencyName;//机构名称
 	private String belongsTo;//所属街道 
 	private String agencyClassify;//主体分类
@@ -37,7 +37,7 @@ public class MediationAgency extends DomainEntity{
 	private String mediationResourceId="3.jpg";//头像资源id
 	private String managerClientId;//机构管理员用户id
 	private Client managerClient;//机构管理员用户
-	private boolean openOrNot=true;//是否开通线上调解服务
+	private boolean openOrNot=true;//是否开通线上服务
 	
 	//经度
 	private BigDecimal lon;	//

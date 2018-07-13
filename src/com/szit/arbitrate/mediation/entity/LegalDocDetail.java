@@ -6,7 +6,7 @@ import com.hsit.common.kfbase.entity.DomainEntity;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: LegalDocMoments
 * @Description:法律法规文档评论实体类
 * @author Administrator

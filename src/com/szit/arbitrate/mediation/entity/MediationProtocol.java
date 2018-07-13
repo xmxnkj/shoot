@@ -10,9 +10,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: Protocol
-* @Description:调解协议书实体类
+* @Description:协议书实体类
 * @author Administrator
 * @date 2017年3月22日 下午3:44:19
 * @UpdateUser:
@@ -26,10 +26,10 @@ public class MediationProtocol extends DomainEntity{
 
 	private static final long serialVersionUID = -1178921271197388683L;
 	
-	private String caseId;//案件id
+	private String caseId;//id
 	private String title;//标题
 	private String serialNumber;//编号
-	private String mediatorTel;//调解员电话
+	private String mediatorTel;//员电话
 	
 	private String applyClientId;//申请人id 甲方
 	private String identifyName;//姓名

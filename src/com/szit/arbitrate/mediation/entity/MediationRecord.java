@@ -11,9 +11,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.RecordTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: Record
-* @Description:调解笔录实体类
+* @Description:笔录实体类
 * @author Administrator
 * @date 2017年3月22日 下午3:59:15
 * @UpdateUser:
@@ -24,11 +24,11 @@ import com.szit.arbitrate.mediation.entity.enumvo.RecordTypeEnum;
  */
 public class MediationRecord extends DomainEntity{
 	
-	//调解员录入时间、地点、当事人、参加人和调解记录
+	//员录入时间、地点、当事人、参加人和记录
 
 	private static final long serialVersionUID = -1346341624034110458L;
 	
-	private String caseId;			//案件id
+	private String caseId;			//id
 	private RecordTypeEnum recordTypeEnum;//记录类型
 	private String recordContent;	//笔录内容
 	private RecordStateEnum recordStateEnum;//状态

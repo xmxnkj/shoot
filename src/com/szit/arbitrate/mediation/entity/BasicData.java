@@ -5,7 +5,7 @@ import com.hsit.common.kfbase.entity.DomainEntity;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: BasicData
 * @Description:基础数据实体类
 * @author Administrator

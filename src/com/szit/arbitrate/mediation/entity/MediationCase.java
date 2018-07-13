@@ -13,9 +13,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.CaseStateEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: Case
-* @Description:案件总类,调解申请书也用这个实体
+* @Description:总类,申请书也用这个实体
 * @author Administrator
 * @date 2017年3月22日 下午3:04:08
 * @UpdateUser:
@@ -29,16 +29,16 @@ public class MediationCase extends DomainEntity{
 
 	private static final long serialVersionUID = 3073898801236771354L;
 	
-	private String mediateType;//调解类别
-	private String caseType;//案件类型
+	private String mediateType;//类别
+	private String caseType;//类型
 	private String caseExplain;//申述点
 	private String address;//发生地
 	
-	private boolean difficult=false;//是否疑难复杂案件
-	private Integer people;//案件涉及人数
-	private String caseMoney;//案件涉及金额
+	private boolean difficult=false;//是否疑难复杂
+	private Integer people;//涉及人数
+	private String caseMoney;//涉及金额
 	private String protocolForm;//协议形式
-	private String caseSource;//案件来源
+	private String caseSource;//来源
 	
 	private String applyClientId;//申请人id
 	private Client applyClient;//申请人client
@@ -46,18 +46,18 @@ public class MediationCase extends DomainEntity{
 	private Date applyTime;//申请时间
 	private boolean acceptProtocol=false;//申请人是否同意协议书
 	
-	private CaseStateEnum caseState;//案件状态
-	private CaseAllocationStateEnum allocationState;//案件分配状态
+	private CaseStateEnum caseState;//状态
+	private CaseAllocationStateEnum allocationState;//分配状态
 	private String refuseReason;//拒绝理由
 	private String failReason;//失败理由
-	private String mediatorClientId;//调解人id
-	private String mediationAgencyId;//属于调解机构id
-	private String agencyBelongsTo;//属于调解机构id
+	private String mediatorClientId;//人id
+	private String mediationAgencyId;//属于机构id
+	private String agencyBelongsTo;//属于机构id
 	private String agencyClassify;//机构主题分类
-	private Date mediateTime;//调解时间
-	private Client mediatorClient;//调解人
-	private String mediatorInfo;//调解人信息
-	private String mediatorName;	//案件结束人
+	private Date mediateTime;//时间
+	private Client mediatorClient;//人
+	private String mediatorInfo;//人信息
+	private String mediatorName;	//结束人
 	
 	private List<String> complainant;		//被申诉人
 	
@@ -67,7 +67,7 @@ public class MediationCase extends DomainEntity{
 	public void setMediatorName(String mediatorName) {
 		this.mediatorName = mediatorName;
 	}
-	private Integer differenceSubject;//不同主体调解情况
+	private Integer differenceSubject;//不同主体情况
 	
 	private boolean roomOpen=false;//会议室是否开启过 
 	

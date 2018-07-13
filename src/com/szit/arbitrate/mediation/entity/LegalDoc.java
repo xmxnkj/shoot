@@ -12,7 +12,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.DocTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: LegalDoc
 * @Description:法律法规文档实体类
 * @author yuyb
@@ -30,7 +30,7 @@ public class LegalDoc extends DomainEntity{
 	
 	private DocTypeEnum docType;//文档类型
 	private ClassicCaseTypeEnum classicCase;//经典案例类型
-	private String mediatorClientId;//调解员ID
+	private String mediatorClientId;//员ID
 	private String image;//配图
 	private String title;//标题
 	private String publishUnit;//发布单位

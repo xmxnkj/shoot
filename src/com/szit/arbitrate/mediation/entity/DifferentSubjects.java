@@ -10,9 +10,9 @@ import com.alibaba.fastjson.JSONArray;
 
 public enum DifferentSubjects {
 	 
-	QSYTJAJS("企事业单位委员调解案件数","QSYTJAJS"),
+	QSYTJAJS("企事业单位委员数","QSYTJAJS"),
 	
-	JDWYHTJAJS("街道委员会调解案件数", "JDWYHTJAJS");
+	JDWYHTJAJS("街道委员会数", "JDWYHTJAJS");
 	
 	private String name;
 	

@@ -15,21 +15,21 @@ public class MediationCaseInfoDto implements Serializable{
 	private String caseId;//按键id
 	private String caseExplain;//申述点
 	private String applyClientName;//申述人
-	private Integer caseState;//案件状态
+	private Integer caseState;//状态
 	private Date applyDate;//申请时间
 	private List<String> nameList;//申述对象列表
 	
-	private String mediatorId;//调解员name
+	private String mediatorId;//员name
 	
-	private String mediatorName;//调解员id
+	private String mediatorName;//员id
 	
-	private String mediatorTel;//调解员电话
+	private String mediatorTel;//员电话
 	
-	private Integer allocationState;//案件状态
+	private Integer allocationState;//状态
 	
-	private String  mediatorClientId;//调解人id
+	private String  mediatorClientId;//人id
 	
-	private String agencyName;//调解员机构名称
+	private String agencyName;//员机构名称
 	
 	private String resultName;
 	

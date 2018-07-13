@@ -10,9 +10,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.CaseResTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationResource
-* @Description:调解证明材料 资源实体类
+* @Description:证明材料 资源实体类
 * @author Administrator
 * @date 2017年3月22日 下午4:22:47
 * @UpdateUser:
@@ -27,7 +27,7 @@ public class MediationResource extends DomainEntity{
 	
 	private static final long serialVersionUID = -5825654864758601630L;
 	
-	private String caseId;//案件id
+	private String caseId;//id
 	private String clientId;//上传用户id
 	private String clientName;
 	private String clientImage;

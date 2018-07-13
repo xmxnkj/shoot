@@ -8,7 +8,7 @@
 //	
 //	FYWTYS("法院委托移送", "FYWTYS"),
 //	
-//	ZDTJ("主动调解", "FYWTYS"),
+//	ZDTJ("主动", "FYWTYS"),
 //	
 //	GAJGWTYS("公安机关委托移送", "FYWTYS");
 //	

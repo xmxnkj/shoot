@@ -8,15 +8,15 @@ import java.util.Map;
 public class MediationCaseExcelDto implements Serializable{
 	
 	private String street;//街道
-	private BigDecimal totalNum;//案件总数
+	private BigDecimal totalNum;//总数
 	private BigDecimal people;//涉及人数
-	private BigDecimal successNum;//成功案件数
-	private BigDecimal specialNum;//疑难复杂案件数
+	private BigDecimal successNum;//成功数
+	private BigDecimal specialNum;//疑难复杂数
 	private BigDecimal money;
-	private List<Map<String, Object>> hostNumList;//不同主题调解数
-	private List<Map<String, Object>> sourceNumList;//案件来源调解数
-	private List<Map<String, Object>> typeNumList;//案件分类调解数
-	private List<Map<String, Object>> protocolNumList;//协议形式调解数
+	private List<Map<String, Object>> hostNumList;//不同主题数
+	private List<Map<String, Object>> sourceNumList;//来源数
+	private List<Map<String, Object>> typeNumList;//分类数
+	private List<Map<String, Object>> protocolNumList;//协议形式数
 	public String getStreet() {
 		return street;
 	}
