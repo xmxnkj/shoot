@@ -9,6 +9,6 @@ public enum CaseStateEnum {
 	WaitComplete,//待结案
 	Closed,//已关闭
 	Refused,//已拒绝
-	Completed,//调解员点击结案，已结案
-	GiveUp;//用户放弃调解
+	Completed,//员点击结案，已结案
+	GiveUp;//用户放弃
 }

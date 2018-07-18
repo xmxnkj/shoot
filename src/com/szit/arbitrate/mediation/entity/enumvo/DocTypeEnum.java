@@ -2,7 +2,7 @@ package com.szit.arbitrate.mediation.entity.enumvo;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: DocTypeEnum
 * @Description:法律法规文档类型枚举
 * @author Administrator

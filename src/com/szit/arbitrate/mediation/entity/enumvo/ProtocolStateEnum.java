@@ -2,9 +2,9 @@ package com.szit.arbitrate.mediation.entity.enumvo;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: ProtocolStateEnum
-* @Description:调解协议书状态枚举类
+* @Description:协议书状态枚举类
 * @author Administrator
 * @date 2017年3月22日 下午3:52:06
 * @UpdateUser:
