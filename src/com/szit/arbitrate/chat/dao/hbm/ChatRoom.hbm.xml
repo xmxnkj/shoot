@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.chat.entity">
+	<class name="ChatRoom" table="CH_CHAT_ROOM">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="caseid" column="CASE_ID" />
+        <property name="roomName" column="ROOM_NAME" />
+        <property name="openClientId" column="OPEN_CLIENT_ID" />
+        <property name="openTime" column="OPEN_TIME" />
+        <property name="notice" column="NOTICE" />
+        <property name="videoRoomOpen" column="VIDEO_ROOM_OPEN" />
+        <property name="voiceRoomOpen" column="VOICE_ROOM_OPEN" />
+        
+        <property name="roomState" column="ROOM_STATE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.RoomStateEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+	</class>
+</hibernate-mapping>

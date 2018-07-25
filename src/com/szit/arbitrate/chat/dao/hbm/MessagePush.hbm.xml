@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.chat.entity">
+	<class name="MessagePush" table="CH_MESSAGE_PUSH">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="chatMessageId" column="CHAT_MESSAGE_ID" />
+        <property name="content" column="CONTENT" />
+        <property name="contentType" column="CONTENT_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.ContentTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="sendClientId" column="SEND_CLIENT_ID" />
+        <property name="sendClientName" column="SEND_CLIENT_NAME" />
+        <property name="sendClientDesc" column="SEND_CLIENT_DESC" />
+        <property name="sendClientImage" column="SEND_CLIENT_IMAGE" />
+			
+        <property name="chatRoomId" column="CHAT_ROOM_ID" />
+        <property name="caseId" column="CASE_ID" />
+        <property name="receiveClientId" column="RECEIVE_CLIENT_ID" />
+			
+        <property name="readflag" column="READ_FLAG" />
+        <property name="pushTime" column="PUSH_TIME" />
+	</class>
+</hibernate-mapping>

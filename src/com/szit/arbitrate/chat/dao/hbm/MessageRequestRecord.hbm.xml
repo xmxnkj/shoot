@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.chat.entity">
+	<class name="MessageRequestRecord" table="CH_MESSAGE_REQUEST_RECORD">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="requestClientId" column="REQUEST_CLIENT_ID" />
+        <property name="requestTime" column="REQUEST_TIME" />
+        <property name="goalType" column="GOAL_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.RecTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        <property name="goalId" column="GOAL_ID" />
+	</class>
+</hibernate-mapping>

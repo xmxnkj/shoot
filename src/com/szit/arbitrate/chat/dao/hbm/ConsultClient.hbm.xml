@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.chat.entity">
+	<class name="ConsultClient" table="CH_Consult_Client">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="clientId" column="CLIENT_ID" />
+        <property name="clientImage" column="CLIENT_IMAGE" />
+        <property name="clientName" column="CLIENT_NAME" />
+        <property name="consultTime" column="CONSULT_TIME" />
+        <property name="sendClientId" column="SEND_CLIENT_ID" />
+        <property name="content" column="CONTENT" />
+        <property name="readflag" column="READ_FLAG" />
+        
+        <property name="contentType" column="CONTENT_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.ContentTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+	</class>
+</hibernate-mapping>

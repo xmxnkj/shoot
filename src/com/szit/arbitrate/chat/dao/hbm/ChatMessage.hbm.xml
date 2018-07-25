@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.chat.entity">
+	<class name="ChatMessage" table="CH_CHAT_MESSAGE">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="sendClientId" column="SEND_CLIENT_ID" />
+        <property name="sendClientDesc" column="SEND_CLIENT_DESC" />
+        <many-to-one name="sendClient" column="SEND_CLIENT_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.client.entity.Client" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>
+			
+        <property name="receiveId" column="RECEIVE_ID" />
+        <property name="caseId" column="CASE_ID" />
+        
+        <property name="recType" column="REC_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.RecTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="contentType" column="CONTENT_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.ContentTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="content" column="CONTENT" />
+        <property name="oriFileName" column="ORI_FILE_NAME" />
+        
+        <property name="sendTime" column="SEND_TIME" />
+	</class>
+</hibernate-mapping>

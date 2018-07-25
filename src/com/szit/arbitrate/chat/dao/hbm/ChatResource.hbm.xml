@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.szit.arbitrate.chat.entity">
+	<class name="ChatResource" table="CH_CHAT_RESOURCE">
+		<id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id>
+        <property name="clientId" column="CLIENT_ID" />
+        
+        <property name="resType" column="RES_TYPE" >
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.chat.entity.enumvo.ContentTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>
+        
+        <property name="oriFileName" column="ORI_FILE_NAME" />
+        <property name="resuploadfilename" column="RES_UPLOAD_FILE_NAME" />
+        <property name="resuploadfilepath" column="RES_UPLOAD_FILE_PATH" />
+        <property name="rescreatedatatime" column="RES_CREATE_DATATIME" />
+	</class>
+</hibernate-mapping>
