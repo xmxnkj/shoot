@@ -8,19 +8,19 @@ import com.szit.arbitrate.mediation.entity.enumvo.CaseStateEnum;
 
 public class MediationCaseQuery extends EntityQueryParam{
 	
-	private String mediateType;//调解类别
-	private String caseType;//案件类型
+	private String mediateType;//类别
+	private String caseType;//类型
 	private String caseExplain;//申述点
 	private String protocolForm;//协议形式
-	private String caseSource;//案件来源
+	private String caseSource;//来源
 	
 	private String applyClientId;//申请人id
 	private String applyClientName;//申请人姓名
 	private Date applyTime;//申请时间
 	
-	private CaseStateEnum caseState;//案件状态
-	private CaseAllocationStateEnum allocationState;//案件分配状态
-	private String mediatorClientId;//调解人id
+	private CaseStateEnum caseState;//状态
+	private CaseAllocationStateEnum allocationState;//分配状态
+	private String mediatorClientId;//人id
 	
 	public String getMediateType() {
 		return mediateType;

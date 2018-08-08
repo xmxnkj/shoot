@@ -8,7 +8,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.DocTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: LegalDocQuery
 * @Description:法律法规文档查询类
 * @author Administrator
@@ -23,8 +23,8 @@ public class LegalDocQuery extends EntityQueryParam{
 	
 	private DocTypeEnum docType;//文档类型
 	private ClassicCaseTypeEnum classicCase;//经典案例类型
-	private String mediatorClientId;//调解员ID
-	private String mediatorClientName;//调解员姓名
+	private String mediatorClientId;//员ID
+	private String mediatorClientName;//员姓名
 	private String title;//标题
 	private String publishUnit;//发布单位
 	private Date publishTime;//发布时间

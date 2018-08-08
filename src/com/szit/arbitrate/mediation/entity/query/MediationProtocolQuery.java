@@ -8,9 +8,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: ProtocolQuery
-* @Description:调解协议书查询类
+* @Description:协议书查询类
 * @author Administrator
 * @date 2017年3月22日 下午5:34:51
 * @UpdateUser:
@@ -21,7 +21,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.ProtocolStateEnum;
  */
 public class MediationProtocolQuery extends EntityQueryParam{
 	
-	private String caseId;//案件id
+	private String caseId;//id
 	private String title;//标题
 	
 	private String applyClientId;//申请人id 甲方

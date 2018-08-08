@@ -7,7 +7,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.RecordTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: RecordQuery
 * @Description:笔录查询类
 * @author Administrator
@@ -20,7 +20,7 @@ import com.szit.arbitrate.mediation.entity.enumvo.RecordTypeEnum;
  */
 public class MediationRecordQuery extends EntityQueryParam{
 	
-	private String caseId;			//案件id
+	private String caseId;			//id
 	private String recordContent;	//笔录内容
 	private RecordTypeEnum recordTypeEnum;//记录类型
 	

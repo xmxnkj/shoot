@@ -8,9 +8,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.ApplyStateEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediatorApplyQuery
-* @Description:调解申请查询类
+* @Description:申请查询类
 * @author Administrator
 * @date 2017年3月22日 下午5:33:52
 * @UpdateUser:

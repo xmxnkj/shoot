@@ -5,9 +5,9 @@ import com.szit.arbitrate.client.entity.enumvo.ResTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationResourceQuery
-* @Description:调解资源查询类
+* @Description:资源查询类
 * @author Administrator
 * @date 2017年3月22日 下午5:33:07
 * @UpdateUser:
@@ -18,7 +18,7 @@ import com.szit.arbitrate.client.entity.enumvo.ResTypeEnum;
  */
 public class MediationResourceQuery extends EntityQueryParam{
 	
-	private String caseId;//案件id
+	private String caseId;//id
 	private String clientId;//上传用户id
 	private ResTypeEnum resType;//资源类型
 	private String resuploadfileid;//资源上传的文件ID

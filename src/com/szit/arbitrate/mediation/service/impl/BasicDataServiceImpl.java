@@ -16,7 +16,7 @@ import com.szit.arbitrate.mediation.service.BasicDataService;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: BasicDataServiceImpl
 * @Description:基础数据
 * @author Administrator

@@ -5,9 +5,9 @@ import com.szit.arbitrate.mediation.entity.enumvo.AgencyTypeEnum;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: MediationAgencyQuery
-* @Description:调解机构查询类
+* @Description:机构查询类
 * @author Administrator
 * @date 2017年3月23日 上午10:47:17
 * @UpdateUser:
@@ -21,7 +21,7 @@ public class MediationAgencyQuery extends EntityQueryParam{
 	private AgencyTypeEnum agencyType;
 	private String agencyName;//机构名称
 	private String managerClientId;//机构管理员用户id
-	private boolean openOrNot;//是否开通线上调解服务
+	private boolean openOrNot;//是否开通线上服务
 	private String address;//地址
 	private String tel;//电话
 	

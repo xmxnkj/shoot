@@ -13,7 +13,7 @@ import com.szit.arbitrate.mediation.service.LegalDocService;
 
 /**
  * 
-* @ProjectName:调解项目app
+* @ProjectName:
 * @ClassName: LegalDocMomentsServiceImpl
 * @Description:法规文档详情业务实现类
 * @author Administrator
