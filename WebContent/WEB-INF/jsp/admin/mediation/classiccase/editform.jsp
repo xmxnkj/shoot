@@ -23,7 +23,7 @@
 				<form id="editform" class="easyui-form" method="post">
 				<table class="formtable">
 				   文章id:<input type="hidden" id="id" name="entity.id" data-fname="id" style="width:300px">
-				   调解员id:<input type="hidden" id="mediatorClientId" name="entity.mediatorClientId" data-fname="mediatorClientId" style="width:300px">
+				   员id:<input type="hidden" id="mediatorClientId" name="entity.mediatorClientId" data-fname="mediatorClientId" style="width:300px">
 					<input id="image" name="entity.image" data-fname="image" style="width:300px">
 				<tr>
 				<td class="tdHeader" style="width: 150px">文档类型<label class="required">*</label>:</td>
@@ -37,12 +37,12 @@
 					 </td>
 				</tr>
 				<tr>
-					<td class="tdHeader" style="width: 150px">调解机构:</td>
+					<td class="tdHeader" style="width: 150px">机构:</td>
 					<td class="tdContent">
 					<input readonly id="mediatorAgency" class="easyui-combobox" data-fname="mediatorAgency" name="entity.mediatorAgency" />
 				</tr>
 				<tr>
-					<td class="tdHeader" style="width: 150px">调解员:</td>
+					<td class="tdHeader" style="width: 150px">员:</td>
 					<td class="tdContent">
 					<input readonly id="mediatorClient" class="easyui-combobox" data-fname="mediatorClient" name="entity.mediatorClient" />
 				</tr>

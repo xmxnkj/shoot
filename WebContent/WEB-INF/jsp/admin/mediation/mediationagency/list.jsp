@@ -29,7 +29,7 @@
 		</div> 
 		<table id="dgmediationagencylist" ></table>
 		</div>
-	<div data-options="region:'south'" style="height:400px" title="机构下辖调解员">
+	<div data-options="region:'south'" style="height:400px" title="机构下辖员">
 		<table id="dgmediatorlist" ></table>
 	</div>
 </div>	

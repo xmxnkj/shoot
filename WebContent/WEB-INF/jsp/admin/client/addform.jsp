@@ -51,7 +51,7 @@
 				<tr>
 					<td class="tdHeader" style="width: 150px">用户类型<label class="required">*</label>:</td>
 					<td class="tdContent">
-					<input id="clientType" readonly data-fname="clientType" class="easyui-validatebox" value="调解员" />
+					<input id="clientType" readonly data-fname="clientType" class="easyui-validatebox" value="员" />
 				</tr>
 				<tr>
 					<td class="tdHeader" style="width: 150px">用户身份<label class="required">*</label>:</td>
@@ -59,7 +59,7 @@
 					<input id="clientState" data-fname="clientState" class="easyui-combobox" name="entity.clientState" />
 				</tr>
 				<tr>
-					<td class="tdHeader" style="width: 150px">分配到调解机构:</td>
+					<td class="tdHeader" style="width: 150px">分配到机构:</td>
 					<td class="tdContent">
 					<input id="mediationAgencyId" data-fname="mediationAgencyId" class="easyui-combobox" name="entity.mediationAgencyId" />
 				</tr>

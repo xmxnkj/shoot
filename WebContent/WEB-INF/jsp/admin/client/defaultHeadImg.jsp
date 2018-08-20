@@ -49,7 +49,7 @@
 			</form>
 			</div>
 			
-			<div title="调解机构默认图片" style="overflow-y:auto;overflow-x:hidden;padding:10px">
+			<div title="机构默认图片" style="overflow-y:auto;overflow-x:hidden;padding:10px">
 				<form id="addform" class="easyui-form" method="post">
 				<table class="formtable">
 				<tr>

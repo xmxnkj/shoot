@@ -28,7 +28,7 @@
   	<div data-options="region:'center'" style="height:400px" title="基本信息">
      	<div class="easyui-layout" data-options="fit:true,border:false">
         	<div class="container">          
-        		<h1 align="center" style="font-weight:bold; font-size:30px; color:#000000;">案件统计</h1>  
+        		<h1 align="center" style="font-weight:bold; font-size:30px; color:#000000;">统计</h1>  
         		<p align="center"><span id="today" style="font-size:18px; color:#A52A2A;"></span><span id="now" style="font-size:18px; color:#A52A2A;"></span></p><br />       
        			<div class="row">  
             		<div class="col-xs-6" style = "padding-right: 0px; padding-left: 0px;">  
@@ -42,7 +42,7 @@
      <div data-options="region:'south'" style="height:500px" title="案例评论">
      	<div class="easyui-layout" data-options="fit:true,border:false">
         	<div class="container">          
-        		<h1 align="center" style="font-weight:bold; font-size:30px; color:#000000;">成功案件统计</h1>  
+        		<h1 align="center" style="font-weight:bold; font-size:30px; color:#000000;">成功统计</h1>  
         		<p align="center"><span id="today" style="font-size:18px; color:#A52A2A;"></span><span id="now" style="font-size:18px; color:#A52A2A;"></span></p><br />       
        			<div class="row">  
             		<div class="col-xs-6" style = "padding-right: 0px; padding-left: 0px;">  

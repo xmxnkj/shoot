@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;" />
-<title>海沧调解在线后台管理系统</title>
+<title>Mobile 3D</title>
 <script src="<s:url value="/content/scripts/jquery-easyui/jquery-1.7.2.min.js"/>"></script>
 <link href="<s:url value="/content/styles/login.css"/>" rel="stylesheet" />
 </head>
@@ -57,7 +57,7 @@
 		</table>
 		</div>
 	</div>
-	<div style="padding-top:20px;color:#fff">版本所有：海沧调解在线</div>
+	<div style="padding-top:20px;color:#fff">版本所有：</div>
 	</div>
 	</s:form>
 </body>

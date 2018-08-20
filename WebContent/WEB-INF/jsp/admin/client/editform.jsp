@@ -65,7 +65,7 @@
 					<input id="showDisplay" data-fname="showDisplay" class="easyui-validatebox" name="entity.showDisplay" />
 				</tr>
 				<tr>
-					<td class="tdHeader" style="width: 150px">调解员类型<label class="required">*</label>:</td>
+					<td class="tdHeader" style="width: 150px">员类型<label class="required">*</label>:</td>
 					<td class="tdContent">
 					<select id="mediatorType"  name="entity.mediatorType" style="width:200px;">
 

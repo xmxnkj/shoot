@@ -60,7 +60,7 @@
 					<span style="color:red;font-weight:bold;margin-left: 80px;">请选择!</span>
 				</tr>
 				<tr>
-					<td class="tdHeader" style="width: 150px">分配到调解机构:</td>
+					<td class="tdHeader" style="width: 150px">分配到机构:</td>
 					<td class="tdContent">
 					<input id="mediationAgencyId" data-fname="mediationAgencyId" class="easyui-combobox" />
 					<span style="color:red;font-weight:bold;margin-left: 80px;">请选择分配机构!</span>

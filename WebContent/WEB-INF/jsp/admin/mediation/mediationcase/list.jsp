@@ -20,7 +20,7 @@
 		    <%-- <span>会员昵称:</span>
 		    <input id="nickName" name="nickName" data-options="width:150"/> --%>
 		    <!-- <a id="btnSearch" href="javascript:void(0);" plain="true" class="easyui-linkbutton" iconcls='icon-search'>查询</a> -->
-		  	<a id="btnEdit"  href="javascript:void(0);"  plain="true" class="easyui-linkbutton" iconcls='icon-edit'>案件详情</a>
+		  	<a id="btnEdit"  href="javascript:void(0);"  plain="true" class="easyui-linkbutton" iconcls='icon-edit'>详情</a>
 <%-- 		  	<span>年:</span>
 		  	<input id="year" name="beginyear" class="easyui-datebox" data-options="width:100"/> 
 		  	<span>月:</span>
@@ -46,7 +46,7 @@
 					
 				</span>
 				<span class="search-item"> 
-					调解员：<input id="mediatorClient" name="mediatorClient" class="easyui-combobox" data-fname="mediatorClient" />
+					员：<input id="mediatorClient" name="mediatorClient" class="easyui-combobox" data-fname="mediatorClient" />
 				</span>
 				<span class="search-item">
 					状态：

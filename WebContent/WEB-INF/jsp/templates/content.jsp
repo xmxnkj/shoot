@@ -21,7 +21,7 @@ pageContext.setAttribute("basePath",basePath,PageContext.REQUEST_SCOPE);
 <meta content="telephone=no" name="format-detection"/>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>海沧调解</title>
+<title>Mobile 3D</title>
 <script type="text/javascript">
 var $homebasepath = "<%=basePath%>";
 var $homepath = "<%=path%>";

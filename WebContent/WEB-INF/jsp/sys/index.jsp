@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;" />
-<title>海沧调解在线APP后台管理系统</title>
+<title>Mobile 3D</title>
     <script src="<s:url value="/pluginresource/jeasyui-extensions/jquery-1.11.1.min.js"/>"></script>
     <script src="<s:url value="/content/scripts/jquery-easyui/jquery.easyui.min.js"/>"></script>
     <link href="<s:url value="/content/scripts/jquery-easyui/themes/icon.css"/>" rel="stylesheet" />
@@ -178,21 +178,21 @@
                            },
                            {text:"账户管理", children:[
                                                    		 {text:"用户管理", attributes:{url:"<s:url action="clientlist" namespace="/admin/client"/>"}},
-                                                   		 {text:"调解员管理", attributes:{url:"<s:url action="list" namespace="/admin/client/mediatorapply"/>"}},
+                                                   		 {text:"员管理", attributes:{url:"<s:url action="list" namespace="/admin/client/mediatorapply"/>"}},
                                                    		 {text:"权限组", attributes:{url:"<s:url action="list" namespace="/admin/client/authority"/>"}},
                                                    		 {text:"用户默认头像设置", attributes:{url:"<s:url action="defaultHeadImg" namespace="/admin/client"/>"}}
                                                    ],
                                 defaultUrl:"<s:url action="clientlist" namespace="/admin/client"/>"
                         	   
                            },
-                           {text:"调解管理", children:[
-                                                   		 {text:"调解机构", attributes:{url:"<s:url action="list" namespace="/admin/mediation/mediationagency"/>"}},
-                                                   		 {text:"案件管理", attributes:{url:"<s:url action="list" namespace="/admin/mediation/mediationcase"/>"}},
+                           {text:"管理", children:[
+                                                   		 {text:"机构", attributes:{url:"<s:url action="list" namespace="/admin/mediation/mediationagency"/>"}},
+                                                   		 {text:"管理", attributes:{url:"<s:url action="list" namespace="/admin/mediation/mediationcase"/>"}},
                                                    		 {text:"经典案例", attributes:{url:"<s:url action="classiclist" namespace="/admin/mediation/legaldoc"/>"}},
                                                    		 {text:"法规文档", attributes:{url:"<s:url action="list" namespace="/admin/mediation/legaldoc"/>"}},
                                                    		 {text:"基础数据录入", attributes:{url:"<s:url action="list" namespace="/admin/mediation/basicdata"/>"}},
                                                    		 {text:"街道录入", attributes:{url:"<s:url action="listJsp" namespace="/admin/mediation/street"/>"}},
-                                                   		 {text:"案件类型统计数据", attributes:{url:"<s:url action="caseDistribution" namespace="/admin/mediation/mediationcase"/>"}}
+                                                   		 {text:"类型统计数据", attributes:{url:"<s:url action="caseDistribution" namespace="/admin/mediation/mediationcase"/>"}}
                                                    		
                                                    	],
                                 defaultUrl:"<s:url action="list" namespace="/admin/mediation/mediationcase"/>"
@@ -298,7 +298,7 @@
 	            </div>
 	         </div>
         </div>
-        <div title="海沧调解APP" region="center" style="overflow: visible; height: 100%;" data-options="border:true" id="plContent">
+        <div title="Mobile 3D APP" region="center" style="overflow: visible; height: 100%;" data-options="border:true" id="plContent">
             <iframe id="divFrame" name="divFrame" style="width: 100%; height: 100%; border: 0;" frameborder="0" ></iframe>
         </div>
         <div data-options="region:'south',split:true" style="background-repeat: repeat-x; height:30px; text-align: center; font-size: small; color: #000;">

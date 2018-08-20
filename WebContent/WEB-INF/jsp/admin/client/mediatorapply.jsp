@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>调解列表</title>
+<title>列表</title>
 </head>
 <body>
 <div id="mediatorapplylist_layout" class="easyui-layout" data-options="fit:true,border:false,plain:true">

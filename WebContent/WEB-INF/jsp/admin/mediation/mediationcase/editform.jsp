@@ -17,12 +17,12 @@
 <div class="easyui-layout" data-options="fit:true,border:false">
 	<div data-options="region:'center',border:false" title="">
 		<div id="editform_tabs" class="easyui-tabs" >
-			<div title="案件基本信息" style="overflow-y:auto;overflow-x:hidden;padding:10px">
+			<div title="基本信息" style="overflow-y:auto;overflow-x:hidden;padding:10px">
 				<form id="editform" class="easyui-form" method="post">
 					<table class="formtable">
 						 <input id="id" hidden name="entity.id" data-fname="id" style="width:300px">
 						<tr>
-						<td class="tdHeader" style="width: 150px">案件类型<label class="required">*</label>:</td>
+						<td class="tdHeader" style="width: 150px">类型<label class="required">*</label>:</td>
 							<td class="tdContent">
 							   <input readonly id="caseType" data-fname="caseType" name="entity.caseType" />
 							 </td>
@@ -70,7 +70,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="tdHeader" style="width: 150px">案件状态<label class="required">*</label>:</td>
+							<td class="tdHeader" style="width: 150px">状态<label class="required">*</label>:</td>
 							<td class="tdContent">
 							<input readonly id="caseState" data-fname="caseState" name="entity.caseState" style="width:300px;"/>
 							</td>
@@ -85,15 +85,15 @@
 					</form>
 			</div>
 			
-			<div title="人民调解调查记录" style="overflow-y:auto;overflow-x:hidden;padding:10px">
+			<div title="人民调查记录" style="overflow-y:auto;overflow-x:hidden;padding:10px">
 				<table id="dgmediationrecordlist" ></table>
 			</div>
 			
-			<div title="人民调解记录" style="overflow-y:auto;overflow-x:hidden;padding:10px">
+			<div title="人民记录" style="overflow-y:auto;overflow-x:hidden;padding:10px">
 				<table id="dgmediationresourcelist" ></table>
 			</div>
 			
-			<div title="调解协议书" style="overflow-y:auto;overflow-x:hidden;padding:10px">
+			<div title="协议书" style="overflow-y:auto;overflow-x:hidden;padding:10px">
 				<form id="protocolform" class="easyui-form" method="post">
 					<table class="formtable">
 						<tr>

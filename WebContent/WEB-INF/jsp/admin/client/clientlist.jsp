@@ -46,7 +46,7 @@
 				<table id="dgclientlist" ></table>
 			</div>
 			<!-- 选项卡02 -->
-			<div title="调解员用户" style="overflow-y:auto;overflow-x:hidden;padding:10px">
+			<div title="员用户" style="overflow-y:auto;overflow-x:hidden;padding:10px">
 				<div id="mediatorlist_toolbar" >
 					<div>
 						<span>注册时间段:</span>
