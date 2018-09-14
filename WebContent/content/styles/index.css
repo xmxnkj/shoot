@@ -1,0 +1,111 @@
+﻿/* CSS Document */
+body{ font-family: "宋体";	font-size: 12px; color: #4a4f53; margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;}
+.denglu_bg{ background:url(images/denglu_bg.jpg); background-repeat:no-repeat; height:270px;}
+.denglu_p{
+     font-family:"宋体"; 
+	 font-size:14px; 	
+	 line-height:30px; color:#ffffff;
+}
+.denglu_w{ width:43px;}
+.top_bg {
+	background-image: url(images/indexbg.jpg);
+}
+.top_banner{
+	background-image:url(images/banner.jpg);
+	background-repeat:no-repeat;
+	width:614px;
+	height:111px;
+	float:left;
+}
+.nav{
+	background-image:url(images/navbg.jpg);
+	overflow: hidden;
+}
+.navmenu{
+	background:#e4f8ed;
+}
+.top_color {
+	background-color: #03203e;
+}
+.top_pw{     
+     font-family:"宋体"; 
+	 font-size:12px; 
+	 line-height: 20px;	
+	 color:#ffffff;
+	 padding-right:30px;
+}
+.top_py{     
+     font-family:"宋体"; 
+	 font-size:12px; 
+	 line-height: 20px;	
+	 color:#fccb6d;
+	 padding-right:30px;
+}
+.left_bg1{ background:url(images/shouye_lft_icon1.png) right; background-repeat:no-repeat; height:39px; padding-left:38px;}
+.left_bg2{ background:url(images/shouye_lft_icon2.png) right; background-repeat:no-repeat; height:42px; line-height:41px; padding-left:38px;}
+.left_bg3{ background:url(images/shouye_lft_icon3.png) right; background-repeat:no-repeat; height:42px; line-height:41px; padding-left:38px;}
+.left_bg4{ background:url(images/shouye_lft_icon4.png) right; background-repeat:no-repeat; height:42px; line-height:41px; padding-left:38px;}
+.left_cd_bg1_on{ background:url(images/shouye_lft_icon6.jpg) right; background-repeat:no-repeat; height:41px; padding-left:38px;}
+.left_cd_bg2_on{ background:url(images/shouye_lft_icon7.jpg) right; background-repeat:no-repeat; height:41px; padding-left:38px;}
+.left_cd_bg3_on{ background:url(images/shouye_lft_icon8.jpg) right; background-repeat:no-repeat; height:41px; padding-left:38px;}
+.left_cd_bg4_on{ background:url(images/shouye_lft_icon9.jpg) right; background-repeat:no-repeat; height:41px; padding-left:38px;}
+.shouye_bottom_bg1{
+	background-repeat: no-repeat;
+	height:510;
+	width:5px;
+	background-image: url(images/shouye_bottom_bg1.png);
+	background-position: top;
+}
+.shouye_bottom_bg2{ background:url(images/shouye_bottom_bg3.jpg) ; background-repeat:repeat-x; height:510; }
+.shouye_liebiao_bg1{
+	background-repeat:no-repeat;
+	width:180px;
+	height:510px;
+	background-image: url(images/liebiao_bg1.jpg);
+	background-position: 5px 10px;
+	padding-left:6px;
+	padding-top:9px;
+}
+.shouye_liebiao_bg2{
+	background-repeat:no-repeat;
+	width:180px;
+	height:510px;
+	background-image: url(images/liebiao_bg2.jpg);
+	background-position: 6px 10px;
+}
+.shouye_neirong_bg1{
+	background-repeat:no-repeat;
+	padding-top:104px;
+	background-image: url(images/neirong_bg.jpg);
+	background-position: 7px 10px;
+}
+.shouye_neirong_p{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #4a4f53;
+	width:100px;;
+	padding-left:2px;
+	float: left;
+}
+.shouye_neirong_icon1{background:url(images/shouye_right_icon6.jpg); background-repeat:no-repeat; height:21px;}
+.shouye_neirong_icon2{background:url(images/shouye_right_icon7.jpg); background-repeat:no-repeat;  height:21px;}
+.shouye_neirong_icon3{background:url(images/shouye_right_icon8.jpg); background-repeat:no-repeat;  height:21px;}
+.shouye_neirong_icon4{background:url(images/shouye_right_icon9.jpg); background-repeat:no-repeat;  height:21px;}
+.shouye_neirong_icon5{background:url(images/shouye_right_icon10.jpg); background-repeat:no-repeat;  height:21px; width:58px;}
+.shouye_neirong_icon6{background:url(images/shouye_right_icon11.jpg); background-repeat:no-repeat;  height:21px; width:58px;}
+.daohangtiao{ background:url(images/shouye_neirong_nav2.jpg); height:26px; }
+.shouye_neirong_weizhi{ padding-top:10px; padding-left:10px;}
+.shouye_meirong_bottom_p{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #4a4f53;
+	width: 46px;
+}
+
+.topbtn{float:left;height:79px;width:74px;text-align:center;}
+.topbtns{float:left;height:79px;width:74px;background:url(images/btnbg.png);text-align:center;vertical-align: middle;}
+.topsplit{float:left;width:14px;height:79px}
+.topimg{border: 0px;padding-top:10px;padding-bottom:5px}
+.topcontainer{padding-top:5px;padding-left:28px;clear: both};
+.topcontainer a:hover{background:url(images/btnbg.png) no-repeat;height:79px;width:74px}
+.infotext{color:#ff6c00}

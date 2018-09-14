@@ -1,0 +1,75 @@
+﻿body
+{
+    font-family: "宋体"; font-size: 12px; color: #4a4f53;
+}
+table.formtable{border:1px solid #cacaca;border-collapse:collapse; width:99%; margin-left:auto; margin-right:auto; margin-top:10px}
+table.formtable  td{font-size:12px; height:22px; border:1px solid #cacaca; border-collapse:collapse; padding:5px; text-align:left}
+table.formtable td.labelfield{border:1px solid #cacaca; text-align:right; padding-left:7px; border-collapse:collapse; font-weight:bold}
+table.formtable td.field{border:1px solid #cacaca; color:#4a4f53;  background-color: #ecf0f0; padding-left:7px;border-collapse:collapse}
+table.formtable td.tdHeader{border:1px solid #cacaca; text-align:right; width:100px; color:#4a4f53; background-color: #e7f8ee; padding-left:2px;border-collapse:collapse}
+/*table.formtable input[type="text"]{width:300px}*/
+table.formtable select{width:100%}
+table.formtable textarea{width:99%;}
+table.cleartable{border:0px solid #cacaca;border-collapse:collapse; margin-left:0px; margin-right:0px; margin-top:0px}
+table.cleartable  td{border:0px solid #cacaca; padding:0px;}
+.textbox{
+	padding:5px
+}
+.formdiv{
+	padding:10px
+}
+.buttonbox
+{
+    text-align:center;
+    padding:10px;
+}
+    .buttonbox input
+    {
+        width:100px;
+        height:25px
+    }
+input.formtext
+{
+    width:100%;
+}
+input.formselect{
+	width:100%;
+}
+.formtextarea
+{
+    width:100%;
+    height:75px;
+}
+.textareaauto
+{
+    width:100%;
+}
+input.formShortText
+{
+    width:50px;
+}
+input.formMiddleText
+{
+    width:100px;
+}
+input.formselect
+{
+    width:300px;
+}
+table.clearform
+{
+    border:0px;
+}
+table.clearform td
+{
+    border:0px;
+}
+.required{
+	color:red;
+}
+.formtitle{
+	padding-top:20px;
+	font-size:20px;
+	text-align:center;
+	font-weight:bold
+}

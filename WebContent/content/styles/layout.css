@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+.xsnazzy {margin:7px 3px; letter-spacing:1px; }
+#xsnazzy h1, #xsnazzy h2, #xsnazzy p {margin:0 3px; letter-spacing:1px;}
+#xsnazzy h1 {font-size:14px; color:#fff;}
+#xsnazzy h2 {font-size:14px;color:#06a; border:0;}
+#xsnazzy p {padding-bottom:0.5em;}
+#xsnazzy h2 {padding-top:0.5em;}
+#xsnazzy {background: transparent; margin:3px;}
+
+.xtop, .xbottom {display:block; background:transparent; font-size:1px;}
+.xb1, .xb2, .xb3, .xb4 {display:block; overflow:hidden; background:#e0f8ed}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {border-left:1px solid #20af88; border-right:1px solid #20af88;}
+.xb1 {margin:0 5px; background:#20af88;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+.topbar{background:#e0f8ed}
+
+.xboxcontent {display:block; background:#transparent; border:0 solid #20af88; border-width:0 1px;}
+.xboxcontentPadding {display:block; background:#transparent; border:0 solid #20af88; border-width:0 1px; padding:5px; 
+
+font-size:14px; font-weight:bold}
+.xboxcontentPadding div{ font-size:14px; font-weight:bold}
+.xboxcontentPadding div a{ font-size:14px; font-weight:bold}
+.xboxLine{width:100%; height:1px; border-top-color:#20af88; border-top-width:1px; border-top-style:solid}
+.textboxLine{padding-right:10px; padding-top:10px; padding-bottom:10px;}
+.bottomLine{height:1px; background:#20af88;}

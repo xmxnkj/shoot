@@ -1,0 +1,82 @@
+﻿.kfGridHeader_tr
+{
+	
+	padding-left:5px;
+	line-height:28px;
+	background: #D8F2F5 url(../images/thead_bg.gif) repeat-x;
+	color:#102359;font-weight: bold;text-align: center;padding:0 2px;
+	font-size:10pt;
+}
+
+.kfGridHeader_split
+{
+	padding-left:0px;
+	padding-right:0px;
+	background-image:url(../images/grid/split.jpg);
+	width:2px;
+}
+
+.kfGridRow
+{
+	height:22px;
+	padding-left:5px;
+}
+.kfGridRow_split
+{
+	padding-left:0px;
+	padding-right:0px;
+	
+	width:2px;
+	background-image: url(../images/grid/colsplit.jpg);
+}
+
+.kfGridSplitRow
+{
+	height:1px;
+	padding:0px;
+	background-image: url(../images/grid/rowsplit.jpg);
+}
+
+.kfGridSplitCol
+{
+	background-image: url(../images/grid/rowsplit.jpg);
+}
+
+	.list_tr_small{
+		background-color:white;
+		font-size:9pt;
+		height:22px;
+		padding-left:5px;
+		cursor:default;
+	}
+	.list_tr_small_selected{
+		background-color:#1BBBE6;
+		font-size:9pt;
+		color:White;
+		height:22px;
+		padding-left:5px;
+		cursor:default;
+		
+	}
+	.list_tr_small_active{
+		background-color:#DEF8FA;
+		font-size:9pt;
+		height:22px;
+		padding-left:5px;
+		cursor:default;
+	}
+	.list_tr_small_dif{
+		background-color:#effdfd;
+		font-size:9pt;
+		height:22px;
+		padding-left:5px;
+		cursor:default;
+	}
+	.list_tr_small_check_selected{
+		background-color:#e9e883;
+		font-size:9pt;
+		color:White;
+		height:22px;
+		padding-left:5px;
+		cursor:default;
+	}
