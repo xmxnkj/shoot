@@ -31,13 +31,13 @@ function formLoadEditData(rowdata){
   			$("#caseState").val("分配中");
   			break;
   		case "Mediating":
-  			$("#caseState").val("调解中");
+  			$("#caseState").val("中");
   			break;
   		case "WaitSign":
   			$("#caseState").val("待签署");
   			break;
   		case "Closed":
-  			$("#caseState").val("已调解");
+  			$("#caseState").val("已");
   			break;
   		case "Refused":
   			$("#caseState").val("已拒绝");
@@ -49,7 +49,7 @@ function formLoadEditData(rowdata){
   			$("#caseState").val("已结案");
   			break;
   		case "GiveUp":
-  			$("#caseState").val("用户放弃调解");
+  			$("#caseState").val("用户放弃");
   			break;
   }
 	   
@@ -209,7 +209,7 @@ function getMediationProtocol(caseid){
 function getMediationCaseFile(){
 	var caseid = $("#id").val();
 	if(caseState!='Completed'){
-		alert("该案件还未结案，不能导出卷宗！");
+		alert("该还未结案，不能导出卷宗！");
 		return;
 	}
 	$.ajax({

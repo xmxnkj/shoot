@@ -46,18 +46,18 @@ function clientTypeFormat(rowdata){
 	}else if(rowdata.clientType=="Visitor"){
        return "游客";
 	}else if(rowdata.clientType=="Mediator"){
-    	 return "调解员";
+    	 return "员";
     }
        
 }
 
 function clientState(rowdata){
 	if(rowdata.clientState=="MediationCenter") 
-		return "调解中心管理员";
+		return "中心管理员";
 	else if(rowdata.clientState=="MediationAgency") 
-		return "调解机构管理员";
+		return "机构管理员";
 	else if(rowdata.clientState=="Mediator") 
-		return "普通调解员";
+		return "普通员";
 	else if(rowdata.clientState=="Certificated")
 		return "实名认证";
 	else if(rowdata.clientState=="Normal")

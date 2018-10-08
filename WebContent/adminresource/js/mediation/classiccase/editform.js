@@ -17,7 +17,7 @@ $(function(){
 	$classicCase_combobox =  $("#classicCase").combobox({
 		id:'classicCase',
 		data: [
-		       {"id":"CivilMediationCase","text":"人民调解案例",selected:true},
+		       {"id":"CivilMediationCase","text":"人民案例",selected:true},
 		       {"id":"JudicialDecisionCase","text":"法院判决案例",selected:false}
        ],
        valueField: 'id', 
@@ -87,7 +87,7 @@ function getAgency(){
 	});
 }
 
-//加载调解员
+//加载员
 function getAgencyClient(agencyId){
 	$.post($homebasepath+"/admin/client/getAgencyClient.shtml",{"agencyId":agencyId},function(data){
 		data = eval('('+data+')');
@@ -106,7 +106,7 @@ function getAgencyClient(agencyId){
 	        textField: 'text',
 	        editable:false,
 	        onChange:function(newValue,oldValue){
-	        	//复值给调解员ID
+	        	//复值给员ID
 	        	$("#mediatorClientId").val(newValue);
 	        }
 		});

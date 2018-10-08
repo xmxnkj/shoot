@@ -2,7 +2,7 @@
  * 
  */
 $mediatorapplylist=null;//申请列表
-$dig_editMediatorapply=null;//编辑案件窗口
+$dig_editMediatorapply=null;//编辑窗口
 
 $(function(){
 	var columns = [

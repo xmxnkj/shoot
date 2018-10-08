@@ -13,9 +13,9 @@ $(function(){
 	$("#clientState").combobox({
     	id:'clientState',
 		data: [
-		    {"id":"MediationCenter","text":"调解中心管理员",selected:true},
-		    {"id":"MediationAgency","text":"调解机构管理员",selected:false},
-		    {"id":"Mediator","text":"普通调解员",selected:false},
+		    {"id":"MediationCenter","text":"中心管理员",selected:true},
+		    {"id":"MediationAgency","text":"机构管理员",selected:false},
+		    {"id":"Mediator","text":"普通员",selected:false},
 		],        
         valueField: 'id', 
         textField: 'text',

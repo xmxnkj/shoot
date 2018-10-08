@@ -4,7 +4,7 @@
  
 $dgclientlist=null;
 $dgmediatorlist=null;
-$dig_addMediator=null;//新增调解员窗口
+$dig_addMediator=null;//新增员窗口
 $dig_showidentifyview=null;
 
 function timeStyle(val,row){
@@ -47,8 +47,8 @@ $(function() {
        {field :'account',title:'会员账号',sortable:true,width :parseInt($(this).width()*0.08),halign:'center',align:'left'},
        {field :'clientType',title:'会员类型',sortable:true,formatter:clientTypeFormat,width :parseInt($(this).width()*0.07),halign:'center',align:'center'},
        {field :'clientState',title:'会员身份',sortable:true,formatter:clientStateFormat,width :parseInt($(this).width()*0.07),halign:'center',align:'center'},
-       {field :'agencyName',title:'属于调解机构',sortable:true,width :parseInt($(this).width()*0.2),halign:'center',align:'right'},
-       {field :'mediatorType',title:'调解员类型',sortable:true,width :parseInt($(this).width()*0.2),halign:'center',align:'right',formatter:function(val,row){
+       {field :'agencyName',title:'属于机构',sortable:true,width :parseInt($(this).width()*0.2),halign:'center',align:'right'},
+       {field :'mediatorType',title:'员类型',sortable:true,width :parseInt($(this).width()*0.2),halign:'center',align:'right',formatter:function(val,row){
     	   switch(val){
     	   		case 1:
     	   			return "行政";
@@ -255,15 +255,15 @@ function clientTypeFormat(val,row){
     else if(val=="Visitor") 
        return "游客";
     else if(val=="Mediator") 
-        return "调解员";
+        return "员";
 }
 function clientStateFormat(val,row){  
 	if(val=="MediationCenter") 
-		return "调解中心管理员";
+		return "中心管理员";
 	else if(val=="MediationAgency") 
-		return "调解机构管理员";
+		return "机构管理员";
 	else if(val=="Mediator") 
-		return "普通调解员";
+		return "普通员";
 }
 function formatCertificate(val,row){  
 	if(val=="WaitAudit") 

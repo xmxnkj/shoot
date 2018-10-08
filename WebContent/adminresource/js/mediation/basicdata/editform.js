@@ -12,7 +12,7 @@ $(function(){
     	id:'dataType',
     	data: [
    		    {"id":"RefuseReason","text":"拒绝理由",selected:false},
-   		    {"id":"CaseSource","text":"案件来源",selected:false},
+   		    {"id":"CaseSource","text":"来源",selected:false},
    		    {"id":"ProtocolForm","text":"协议形式",selected:false}
    		],
         valueField: 'id', 

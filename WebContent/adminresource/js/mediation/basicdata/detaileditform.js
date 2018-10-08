@@ -25,15 +25,15 @@ $(function(){
  * @param row
  */
 function formLoadAddData(rowdata){
-	if(rowdata.dataValue=="人民调解"){
+	if(rowdata.dataValue=="人民"){
 		$('#dataType').val("CivilCaseType");
-		$('#dataTypeDesc').val("人民调解类型");
-	}else if(rowdata.dataValue=="行政调解"){
+		$('#dataTypeDesc').val("人民类型");
+	}else if(rowdata.dataValue=="行政"){
 		$('#dataType').val("AdministrationCaseType");
-		$('#dataTypeDesc').val("行政调解类型");
-	}else if(rowdata.dataValue=="司法调解"){
+		$('#dataTypeDesc').val("行政类型");
+	}else if(rowdata.dataValue=="司法"){
 		$('#dataType').val("JudicialCaseType");
-		$('#dataTypeDesc').val("司法调解类型");
+		$('#dataTypeDesc').val("司法类型");
 	}
 	$('#parentType').val(rowdata.id);
 }

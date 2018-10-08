@@ -1,8 +1,8 @@
 /**
  * 
  */
-$dgmediationcaselist=null;//案件列表
-$dig_editMediationCase=null;//编辑案件窗口
+$dgmediationcaselist=null;//列表
+$dig_editMediationCase=null;//编辑窗口
 $(function(){
 	
 	loadData();
@@ -58,14 +58,14 @@ $(function(){
    		    {"id":"Closed","text":"已关闭",selected:false},
    		    {"id":"Refused","text":"已拒绝",selected:false},
    		    {"id":"Completed","text":"已结案",selected:false},
-   		    {"id":"GiveUp","text":"用户放弃调解",selected:false}
+   		    {"id":"GiveUp","text":"用户放弃",selected:false}
    		],
         valueField: 'id', 
         textField: 'text',
         editable:false
 	});
 	
-	//初始化调解机构
+	//初始化机构
 	mediationAgency();
 });
 
@@ -74,19 +74,19 @@ function loadData(){
 	var endDate = $("#endDate").datebox('getValue');
 	
 	var mediationAgency = $("#mediationAgency").combobox('getValue');	//委员会
-	var mediatorClient = $("#mediatorClient").combobox('getValue');		//调解员
+	var mediatorClient = $("#mediatorClient").combobox('getValue');		//员
 	var caseStatus = $("#caseStatus").combobox('getValue');				//状态
 	
 	var columns = [
-		       	    {field :'caseType',title:'案件类型',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'left'},
+		       	    {field :'caseType',title:'类型',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'left'},
 		       	    {field :'caseExplain',title:'申述点',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'left'},
 		       	    {field :'address',title:'发生地',sortable:true,width :parseInt($(this).width()*0.15),halign:'center',align:'left'},
 		       	    {field :'applyClient',title:'申诉人',formatter :clientFormat,sortable:true,width :parseInt($(this).width()*0.05),halign:'center',align:'center'},
 		       	    {field :'applyTime',title:'申请时间',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'center'},
-		       	    {field :'caseState',title:'案件状态',formatter:stateFormat,sortable:true,width :parseInt($(this).width()*0.08),halign:'center',align:'center'},
+		       	    {field :'caseState',title:'状态',formatter:stateFormat,sortable:true,width :parseInt($(this).width()*0.08),halign:'center',align:'center'},
 		       	    //{field :'allocationState',title:'分配状态',formatter:allstateFormat,sortable:true,width :parseInt($(this).width()*0.08),halign:'center',align:'center'},
 		       	    {field :'refuseReason',title:'拒绝理由',sortable:true,width :parseInt($(this).width()*0.15),halign:'center',align:'center'},
-		       	    {field :'mediatorClient',title:'调解人',formatter:mediatorclient,sortable:true,width :parseInt($(this).width()*0.05),halign:'center',align:'center'}
+		       	    {field :'mediatorClient',title:'人',formatter:mediatorclient,sortable:true,width :parseInt($(this).width()*0.05),halign:'center',align:'center'}
 		       	    ];
 		
 		$dgmediationcaselist = $('#dgmediationcaselist').datagrid({
@@ -115,7 +115,7 @@ function loadData(){
 		});
 }
 
-//初始化调解机构
+//初始化机构
 function mediationAgency(){
 	$.ajax({
 		url:$homebasepath+'/admin/mediation/mediationagency/getMediationAgencyComboJson.shtml',
@@ -138,7 +138,7 @@ function mediationAgency(){
 		}
 	});
 }
-//加载调解员
+//加载员
 function mediationClient(id){
 	$.ajax({
 		url:$homebasepath+'/admin/client/getAgencyClient.shtml',
@@ -223,7 +223,7 @@ function stateFormat(val,row){
 		return "分配中";
 	}
 	else if(val=="Mediating"){
-		return "调解中";
+		return "中";
 	}
 	else if(val=="WaitSign"){
 		return "待签署";
@@ -233,7 +233,7 @@ function stateFormat(val,row){
 		
 	}
 	else if(val=="Closed"){
-		return "已调解";
+		return "已";
 	}
 	else if(val=="Refused"){
 		return "已拒绝";
@@ -244,22 +244,22 @@ function stateFormat(val,row){
 }
 function allstateFormat(val,row){
 	if(val=="MediationCenterNotAccepted"){
-		return "调解中心未受理";
+		return "中心未受理";
 	}
 	else if(val=="MediationCenterAccepted"){
-		return "调解中心已受理未分配";
+		return "中心已受理未分配";
 	}
 	else if(val=="MediationCenterAllocated"){
-		return "调解中心已分配";
+		return "中心已分配";
 	}
 	else if(val=="AgencyManagerAccepted"){
-		return "调解机构管理员已受理未分配";
+		return "机构管理员已受理未分配";
 	}
 	else if(val=="AgencyManagerAllocated"){
-		return "调解机构管理员已分配";
+		return "机构管理员已分配";
 	}
 	else if(val=="MediatorAccepted"){
-		return "普通调解员";
+		return "普通员";
 	}
 	else if(val=="Refuse"){
 		return "已拒绝";

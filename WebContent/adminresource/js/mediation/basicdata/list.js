@@ -255,7 +255,7 @@ function deleteBasicDataDetail(){
 
 function deleteBasicData(){
 	var row = $('#dgbasicdatalistlist').datagrid('getSelected');
-	if(row != null && row.dataTypeDesc != "调解类别"){
+	if(row != null && row.dataTypeDesc != "类别"){
 		if(confirm("确定删除该参数？")){
 			var url = $homebasepath+'admin/mediation/basicdata/deleteBasicDataDetail.shtml?';
 			submitParams = {
@@ -269,8 +269,8 @@ function deleteBasicData(){
 				$.easyui.messager.alert(jsonData.message);
 			}
 	    }
-	}else if(row.dataTypeDesc == "调解类别"){
-		$.messager.alert('提示', '调解类别无法删除!');
+	}else if(row.dataTypeDesc == "类别"){
+		$.messager.alert('提示', '类别无法删除!');
 	}else{
 		$.messager.alert('提示', '请选择一行进行删除!');
 	}

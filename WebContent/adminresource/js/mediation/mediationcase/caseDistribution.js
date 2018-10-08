@@ -10,11 +10,11 @@ function getManagerList(){
 	                {field :'clientState',title:'身份',sortable:false,width :parseInt($(this).width()*0.12),halign:'center',align:'center',formatter:function(val,row){
 	                	
 	                	if(val=='MediationCenter'){
-	                		return "调解中心管理员";
+	                		return "中心管理员";
 	                	}
 	                	
 	                	if(val=='MediationAgency'){
-	                		return "调解机构管理员";
+	                		return "机构管理员";
 	                	}
 	                	
 	                }},
@@ -59,7 +59,7 @@ function initPie(clientId,mediationAgencyId){
 		async: false,
 		dataType:'json', 
 		success:function(data){
-			var total = data[0];	//在线调解总数
+			var total = data[0];	//在线总数
 			var name = [];
 			var value = "";
 			for(var i=0;i<total.list.length;i++){
@@ -72,7 +72,7 @@ function initPie(clientId,mediationAgencyId){
 						type="分配中";
 						break;
 					case 2:
-						type="调解中";
+						type="中";
 						break;
 					case 3:
 						type="待签署";

@@ -1,8 +1,8 @@
 /**
  * 
  */
-$dgmediationagencylist=null;//案件列表
-$dig_editMediationAgency=null;//编辑案件窗口
+$dgmediationagencylist=null;//列表
+$dig_editMediationAgency=null;//编辑窗口
 $dgmediatorlist=null;
 $(function(){
 	
@@ -119,13 +119,13 @@ function editMediationAgency(){
 }
 function typeFormat(val,row){
 	if(val=="CivilCaseType"){
-		return "人民调解机构";
+		return "人民机构";
 	}
 	if(val=="AdministrationCaseType"){
-		return "行政调解机构";
+		return "行政机构";
 	}
 	if(val=="JudicialCaseType"){
-		return "司法调解机构";
+		return "司法机构";
 	}
 }
 function managerFormat(val,row){
@@ -140,15 +140,15 @@ function clientTypeFormat(val,row){
     else if(val=="Visitor") 
        return "游客";
     else if(val=="Mediator") 
-        return "调解员";
+        return "员";
 }
 function clientStateFormat(val,row){  
 	if(val=="MediationCenter") 
-		return "调解中心管理员";
+		return "中心管理员";
 	else if(val=="MediationAgency") 
-		return "调解机构管理员";
+		return "机构管理员";
 	else if(val=="Mediator") 
-		return "普通调解员";
+		return "普通员";
 }
 
 function formatImg(val,row){
@@ -163,7 +163,7 @@ function getMediatorListInAgency(){
 	                {field :'account',title:'会员账号',sortable:true,width :parseInt($(this).width()*0.15),halign:'center',align:'left'},
 	                {field :'clientType',title:'会员类型',sortable:true,formatter:clientTypeFormat,width :parseInt($(this).width()*0.1),halign:'center',align:'center'},
 	                {field :'clientState',title:'会员身份',sortable:true,formatter:clientStateFormat,width :parseInt($(this).width()*0.1),halign:'center',align:'center'},
-	                {field :'agencyName',title:'属于调解机构',sortable:true,width :parseInt($(this).width()*0.15),halign:'center',align:'right'},
+	                {field :'agencyName',title:'属于机构',sortable:true,width :parseInt($(this).width()*0.15),halign:'center',align:'right'},
 	                {field :'address',title:'地址',sortable:true,width :parseInt($(this).width()*0.3),halign:'center',align:'right'}
 	         	   ];
 		

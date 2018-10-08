@@ -11,11 +11,11 @@ $(function(){
 	       	    {field :'classicCase',title:'经典案例类型',formatter:typeFormatClassic,sortable:true,width :parseInt($(this).width()*0.05),halign:'center',align:'left'},
 	       	    {field :'title',title:'标题',sortable:true,width :parseInt($(this).width()*0.15),halign:'center',align:'left'},
 	       	    {field :'publishUnit',title:'作者',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'left'},
-	       	    {field :'mediatorClient',title:'调解员',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'left',formatter:function(val,row){
+	       	    {field :'mediatorClient',title:'员',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'left',formatter:function(val,row){
 	       	    	if(row.mediatorClient){
 	       	    		return row.mediatorClient.identifyName;
 	       	    	}
-	       	    	return "未分配调解员";
+	       	    	return "未分配员";
 	       	    }},
 	       	    {field :'publishTime',title:'时间',sortable:true,width :parseInt($(this).width()*0.08),halign:'center',align:'center'},
 	       	    {field :'publishUnit',title:'发布单位',sortable:true,width :parseInt($(this).width()*0.1),halign:'center',align:'center'},
@@ -237,7 +237,7 @@ function typeFormat(val,row){
 
 function typeFormatClassic(val,row){
 	if(val=="CivilMediationCase"){
-		return "人民调解案例";
+		return "人民案例";
 	}
 	else if(val=="JudicialDecisionCase"){
 		return "法院判决案例";

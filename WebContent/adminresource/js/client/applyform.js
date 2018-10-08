@@ -105,5 +105,5 @@ function clientTypeFormat(rowdata){
     else if(rowdata.clientType=="Visitor") 
        return "游客";
     else if(rowdata.clientType=="Mediator") 
-        return "调解员";
+        return "员";
 }

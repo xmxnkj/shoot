@@ -16,12 +16,12 @@ $(function(){
 	$agencyclassfy_combobox =  $("#agencyClassify").combobox({
     	id:'agencyClassify',
     	data: [
-   		    {"id":"0","text":"企事业单位调委会调解案件数",selected:false},
-   		    {"id":"1","text":"社会团体和其他组织调委会调解案件数",selected:false},
-   		    {"id":"2","text":"村调委会调解案件数",selected:false},
-   		    {"id":"3","text":"居调委会调解案件数",selected:false},
-   		    {"id":"4","text":"乡镇调委会调解案件数",selected:false},
-   		    {"id":"5","text":"街道调委会调解案件数",selected:false},
+   		    {"id":"0","text":"企事业单位调委会数",selected:false},
+   		    {"id":"1","text":"社会团体和其他组织调委会数",selected:false},
+   		    {"id":"2","text":"村调委会数",selected:false},
+   		    {"id":"3","text":"居调委会数",selected:false},
+   		    {"id":"4","text":"乡镇调委会数",selected:false},
+   		    {"id":"5","text":"街道调委会数",selected:false},
    		],
         valueField: 'id', 
         textField: 'text',
@@ -31,9 +31,9 @@ $(function(){
 	$agencytype_combobox =  $("#agencyType").combobox({
     	id:'agencyType',
     	data: [
-   		    {"id":"CivilCaseType","text":"人民调解机构",selected:false},
-   		    {"id":"AdministrationCaseType","text":"行政调解机构",selected:false},
-   		    {"id":"JudicialCaseType","text":"司法调解机构",selected:false}
+   		    {"id":"CivilCaseType","text":"人民机构",selected:false},
+   		    {"id":"AdministrationCaseType","text":"行政机构",selected:false},
+   		    {"id":"JudicialCaseType","text":"司法机构",selected:false}
    		],
         valueField: 'id', 
         textField: 'text',
@@ -83,21 +83,21 @@ function getAgencyClassfy(rec){
 		$agencyclassfy_combobox =  $("#agencyClassify").combobox({
 	    	id:'agencyClassify',
 	    	data: [
-	   		    {"id":"0","text":"企事业单位调委会调解案件数",selected:false},
-	   		    {"id":"1","text":"社会团体和其他组织调委会调解案件数",selected:false},
-	   		    {"id":"2","text":"村调委会调解案件数",selected:false},
-	   		    {"id":"3","text":"居调委会调解案件数",selected:false},
-	   		    {"id":"4","text":"乡镇调委会调解案件数",selected:false},
-	   		    {"id":"5","text":"街道调委会调解案件数",selected:false},
+	   		    {"id":"0","text":"企事业单位调委会数",selected:false},
+	   		    {"id":"1","text":"社会团体和其他组织调委会数",selected:false},
+	   		    {"id":"2","text":"村调委会数",selected:false},
+	   		    {"id":"3","text":"居调委会数",selected:false},
+	   		    {"id":"4","text":"乡镇调委会数",selected:false},
+	   		    {"id":"5","text":"街道调委会数",selected:false},
 	   		],
 	        valueField: 'id', 
 	        textField: 'text',
 	        editable:false,
 		});
 	}else if(rec.id=="AdministrationCaseType"){
-		document.getElementById("agencyClassify").value="行政调解";
+		document.getElementById("agencyClassify").value="行政";
 	}else if(rec.id=="JudicialCaseType"){
-		document.getElementById("agencyClassify").value="司法调解";
+		document.getElementById("agencyClassify").value="司法";
 	}*/
 }
 
