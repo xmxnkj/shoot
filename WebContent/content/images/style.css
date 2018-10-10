@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	margin:0;
+	padding:0;
+	font-size:12px;
+	color: #000;
+	font-family: "宋体", "幼圆", "微软雅黑";
+	background:#ffffff;
+	line-height: 24px;
+	behavior: url("images/hover.htc");
+	background:url(bg.jpg) repeat-x top center;
+}
+div, dt, dl, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td, h1, h2, h3, h4, h5, fieldset {
+	margin: 0px;
+	padding: 0px;
+}
+select {
+	font-size: 12px;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset {
+	border: 0px;
+}
+img {
+	border: 0px;
+	vertical-align:middle;
+}
+fieldset p {
+	margin: 0px;
+	padding: 0px 0px 0px 8px;
+}
+legend {
+	display: none;
+}
+em {
+	font-style: normal;
+}
+ul, ol, {
+ list-style: none;
+}
+ blockquote::before {
+ content: "";
+}
+blockquote::after {
+ content: "";
+}
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+input, label {
+	vertical-align:middle;
+}
+input, button, select, textarea {
+	outline:none
+}
+a {
+	color: #000000;
+	text-decoration:none;
+}
+a:hover {
+	color:#3366FF;
+}
+.clear {
+	clear:both;
+	font-size:0px;
+	height:0px;
+}
+
+
+
+
+.top{
+	margin:20px auto 0 auto;
+	width:1000px;
+	height:70px;
+	text-align:center;
+	overflow:hidden;
+	_padding-top:20px;}
+	
+.main{
+	background:url(bg2.png) top center no-repeat;
+	margin:0 auto;
+	width:1000px;
+	height:400px;
+	overflow:hidden;}
+.btn{
+	width:882px;
+	height:35px;
+	margin:10px auto 10px auto;
+	overflow:hidden;
+	background:url(btn_1.png) top center no-repeat;
+	line-height:35px;
+	text-align:center;
+	color:#3366FF;
+	font-size:14px;
+	}
+.btn a{
+	color:#3366FF;
+	}
+.btn a:hover{
+	color:#f00;
+	}
+.btn:hover a{
+	color:#F00;
+	font-weight:bold;
+	}
+.btn:hover a:hover{
+	color:#F00;
+	font-weight:bold;
+	}
+	
+.content{
+	width:900px;
+	height:360px;
+	overflow:hidden;
+	margin: 0 auto;}
+.content ul li{
+	width:10%;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	float:left;
+	display:inline;
+	}
