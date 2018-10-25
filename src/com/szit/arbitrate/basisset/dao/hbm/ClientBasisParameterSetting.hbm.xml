@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.basisset.entity">
+	<class name="ClientBasisParameterSetting" table="bs_client_basis_parameter_setting">
+		<id name="id" column="ID">
+			<generator class="uuid2"/>
+		</id> 
+		<property name="clientid" column="CLIENT_ID"/>
+		<property name="seq" column="SEQ"/>
+		<property name="parameterid" column="PARAMETER_ID"/>
+		<property name="parametertype" column="PARAMETER_TYPE">
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.basisset.entity.enumvo.ParameterTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>	
+		<many-to-one name="sysparametertable" column="PARAMETER_ID"  fetch="select" 
+			entity-name="com.szit.arbitrate.basisset.entity.SysParameterTable" 
+			update="false" insert="false" lazy="false" not-found="ignore"/>	
+				
+		<property name="parametersettingval" column="PARAMETER_SETTING_VAL"/>
+		<property name="settingdatetime" column="SETTING_DATETIME"/>
+	</class>
+</hibernate-mapping>

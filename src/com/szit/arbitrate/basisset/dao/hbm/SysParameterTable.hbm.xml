@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.basisset.entity">
+	<class name="SysParameterTable" table="bs_sys_parametertable">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+		<property name="parameterseq" column="PARAMETER_SEQ"/>
+		<property name="parametertype" column="PARAMETER_TYPE">
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.basisset.entity.enumvo.ParameterTypeEnum</param>
+        		<param name="type">4</param>
+        	</type>
+        </property>			
+		<property name="parametercode" column="PARAMETER_CODE" type="string"  length="100"/>
+		<property name="parametername" column="PARAMETER_NAME" type="string"  length="50"/>
+		<property name="parameterinitvla" column="PARAMETER_INIT_VLA" type="string"  length="50"/>
+		<property name="deleteflag" column="DELETE_FLAG"/>
+		<property name="buliddatetime" column="BULID_DATETIME"/>
+	</class>
+</hibernate-mapping>
