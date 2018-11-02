@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.api.log.entity">
+	<class name="ApiRecordLog" table="api_apirecordlog">
+		<id name="id" column="ID" type="string" length="50">
+			<generator class="uuid2"/>
+		</id> 
+		<property name="modulecode" column="MODULECODE" type="string"  length="50"/>
+		<property name="bizcode" column="BIZCODE" type="string"  length="50"/>
+		<property name="bizmethod" column="BIZMETHOD" type="string"  length="50"/>
+		<property name="loginuserid" column="LOGINUSERID" type="string" length="50" />
+		<property name="inbo" column="INBO" type="string"  />
+		<property name="formatinbo" column="FORMATINBO" type="string"  />
+		<property name="outbo" column="OUTBO" type="string"  length="500"/>
+		<property name="errorcode" column="ERRORCODE" type="string"  length="50"/>
+		<property name="errormessage" column="ERRORMESSAGE" type="string"  length="500"/>
+		<property name="errorstack" column="ERRORSTACK" type="string" length="500"/>
+		<property name="errorflag" column="ISERRORFLAG" type="string"/>
+		<property name="createtime" column="CREATETIME"/>
+	</class>
+</hibernate-mapping>

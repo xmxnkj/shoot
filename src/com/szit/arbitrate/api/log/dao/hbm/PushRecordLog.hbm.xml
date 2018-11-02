@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.szit.arbitrate.api.log.entity">
+    <class name="PushRecordLog" table="api_pushrecordlog">
+        <id name="id" column="ID" type="string" length="50">
+            <generator class="uuid2"/>
+        </id> 
+		<property name="pushtype" column="PUSHTYPE">
+        	<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">com.szit.arbitrate.pushcentre.vm.PushTypeEnum</param>
+        		<param name="type">12</param>
+        	</type>
+        </property>
+		<property name="pushmode" column="PUSHMODE" type="string"  length="20"/>
+		<property name="pushkeycode" column="PUSHKEYCODE" type="string"  length="50"/>
+		<property name="pushcontent" column="PUSHCONTENT" type="string"  length="1000"/>
+		<property name="apnscount" column="APNSCOUNT"/>
+		<property name="pushdatetime" column="PUSHDATETIME"/>
+		<property name="remark" column="REMARK"/>
+     </class>
+</hibernate-mapping>
