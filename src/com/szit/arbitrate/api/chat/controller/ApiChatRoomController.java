@@ -7,7 +7,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: openChatRoom 
-	* @Description: 开启聊天室
 	* @param @param clientid
 	* @param @param caseid
 	* @param @param roomname
@@ -20,7 +19,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: ApiOutParamsVm  
-	* @Description: 操作多媒体聊天室
 	* @param @param clientid
 	* @param @param caseid
 	* @param @param roomtype
@@ -33,7 +31,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: getMediaChatRoomState  
-	* @Description: 获取语音视频聊天室开启套状态
 	* @param @param roomid
 	* @param @param roomtype
 	* @param @return    设定文件  
@@ -45,7 +42,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: getChatRoomInfo 
-	* @Description: 获取用户所属聊天室
 	* @param @param clientid
 	* @param @param caseid
 	* @param @return
@@ -57,7 +53,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: getChatRoomInfoByRoomId  
-	* @Description: 根据聊天室id获取聊天室
 	* @param @param chatroomid
 	* @param @return    设定文件  
 	* @return ApiOutParamsVm    返回类型  
@@ -68,7 +63,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: pauseChatRoom 
-	* @Description: 暂停聊天室
 	* @param @param clientid
 	* @param @param roomid
 	* @param @return
@@ -80,7 +74,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: createNeteaseCloudAccount 
-	* @Description: 创建网易云通信ID
 	* @param @param clientid
 	* @param @return
 	* @return ApiOutParamsVm 
@@ -91,7 +84,6 @@ public interface ApiChatRoomController {
 	/**
 	 * 
 	* @Title: GetNeteaseCloudAccount  
-	* @Description: 获取网易云信账号信息
 	* @param @param clientid
 	* @param @return    设定文件  
 	* @return ApiOutParamsVm    返回类型  

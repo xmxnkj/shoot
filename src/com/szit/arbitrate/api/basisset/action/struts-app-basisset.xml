@@ -4,7 +4,6 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 
-    <!--运动基础设置模块APP接口-->
     <package name="app-arbitrate-basisset"  namespace="/app/basisset" extends="per-default">
 		<action name="api" class="basisSetAppAction" method="apiBizExecution"/>
 	</package>
